@@ -1,0 +1,6 @@
+{% set lang = lang | default(locales.default) %}
+{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+
+<footer class="footer">
+  <small>© {{ t.siteName if t.siteName else 'Europlanet' }}</small>
+</footer>

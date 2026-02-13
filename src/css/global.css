@@ -1,0 +1,85 @@
+:root {
+    --font-body: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-Anton: 'Anton', sans-serif;
+
+        /* Base */
+    --color-black: #0a0a0a;
+    --color-black-soft: #181818;
+    --color-black-alpha: #0a0a0acc;
+
+    --color-white: #ffffff;
+
+    /* Gray scale */
+    --color-gray-900: #333333;
+    --color-gray-800: #555555;
+    --color-gray-850: #777777;
+    --color-gray-700: #8f8f8f;
+    --color-gray-600: #cacaca;
+
+    /* Accent / Brand */
+    --color-accent: #ff4925;
+    --color-accent-dark: #bd2608;
+    --color-accent-soft: #ff492540;
+
+    /* Surfaces */
+    --color-surface-dark: #220f0d;
+
+
+    --button-bg-transion:.55s cubic-bezier(0.16, 1, 0.3, 1);
+    --button-line-transion:.45s cubic-bezier(0.22, 1, 0.36, 1);
+    --menu__contact-link-color-transition: .3s cubic-bezier(0.44, 0, 0.56, 1);
+    --services-animation-adaptiv:300px;
+
+    --padding:24px;
+}
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body {
+  font-family: var(--font-body);
+  color: var(--color-gray-600);
+  background-color: var(--color-black);
+}
+html, body {scrollbar-width: none;}
+html::-webkit-scrollbar,body::-webkit-scrollbar {display: none;}
+
+
+.text-140 { font-size: 140px; font-family: var(--font-Anton); font-weight: 400; line-height: 100%; text-transform: uppercase; color: var(--color-gray-600); }
+.text-80 {  font-size: 80px;font-weight: 600;color: var(--color-gray-600);letter-spacing: -.07em;line-height: 100%;}
+.text-56 { font-size: 56px; font-weight: 600; line-height: 100%; letter-spacing: -0.06em; color: var(--color-gray-600); }
+.text-24 { font-size: 24px; font-weight: 500; line-height: 105%; letter-spacing: -0.05em; color: var(--color-gray-700); }
+.text-16 { font-size: 16px; font-weight: 500; line-height: 1.3em; letter-spacing: -0.02em; }
+.text-14 { font-size: 14px; font-weight: 700; line-height: 1.2em; letter-spacing: -0.04em; color: var(--color-gray-900); text-decoration: none; }
+
+
+
+
+
+
+.btn { background-color: var(--color-gray-900, rgb(51, 51, 51)); width: 100%; height: 43px; position: relative; border-radius: 1000px; cursor: pointer; align-items: center; display: flex; padding: 1px; border: none; overflow: hidden; }
+.btn__link { z-index: 1; flex-flow: row; flex: 1 0 0; place-content: center space-between; align-items: center; width: 100%; height: 100%; padding: 12px; text-decoration: none; display: flex; position: relative; overflow: visible; background-color: var(--color-black, rgb(10, 10, 10)); border-radius: 1000px; }
+.btn__bg { z-index: 0; flex: none; gap: 10px; height: 100%; position: absolute; bottom: -80px; left: 0; right: 0; background-color: var(--color-gray-900); border-radius: 0%; transform: scale(.8); will-change: transform; transform-origin: 50% 50% 0px; transition: var(--button-bg-transion); }
+.btn__text { flex-flow: column; flex: 1 0 0; place-content: center flex-start; align-items: center; gap: 10px; height: 19px; padding: 0; display: flex; position: relative; overflow: hidden; }
+.btn__label { align-items: center; display: flex; position: relative; font-size: 16px; font-weight: 700; letter-spacing: -.04em; line-height: 1.2em; color: var(--color-gray-600); font-family: var(--font-body); transition: var(--button-bg-transion); }
+.btn:hover .btn__bg { transform: scale(1); border-radius: 50px; bottom: 0px; }
+.btn__block { display: flex; justify-content: center; align-items: center; transition: var(--button-bg-transion); width: 100%; }
+.btn-svg { color: var(--color-accent); display: none; height: 13px; width: 13px; transform: translateX(-40%); transition: var(--button-bg-transion); }
+.btn-svg path { stroke: currentColor; stroke-width: .35; fill: currentColor; }
+.btn:hover .btn__block { transform: translateY(calc(-100% - 10px)); }
+.btn-arrow { width: 330px; height: min-content; background-color: var(--color-accent); }
+.btn-arrow .btn-svg { display: block; }
+.btn-arrow .btn__block { justify-content: space-between; }
+.btn-arrow .btn__link { padding: 16px 20px; background-color: var(--color-surface-dark); }
+.btn-arrow .btn__label { color: var(--color-accent); font-size: 24px; font-weight: 600; line-height: 100%; }
+.btn-arrow .btn__text { height: 24px; }
+.btn-arrow .btn__bg { background-color: var(--color-accent); }
+.btn-arrow:hover .btn__label, .btn-arrow:hover .btn-svg { color: var(--color-black-soft); }
+
+@media screen and (max-width: 1201px) {
+    .text-140{font-size:100px;}
+    .text-56{font-size:48px;}
+}
+@media screen and (max-width: 801px) {
+    :root{--padding:16px;}
+    .text-56{font-size: 40px;}
+    .text-140{font-size:80px;}
+    .text-80{font-size: 56px;}
+}

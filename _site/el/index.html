@@ -1,0 +1,855 @@
+<!doctype html>
+
+
+
+<html lang="el">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      Main
+    </title>
+
+    <meta
+      name="description"
+      content="Europlanet"
+    >
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/pages/main/page.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+    <script src="/vendor/lenis/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/CustomEase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+  </head>
+
+  <body>
+
+    
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+
+
+
+
+
+
+<header class="header">
+  <!-- <p>Europlanet</p> -->
+
+  <!-- <nav class="nav">
+    
+      
+        <span>Home</span>
+      
+    
+      
+        <a href="/el/about/">About</a>
+      
+    
+  </nav> -->
+
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href=""><img src="/img/logo.svg" alt=""></a>
+        </div>
+
+        <div class="nav__right">
+            <div class="nav__label"><!-- text -->
+
+            <div class="lang-switch">
+                <a href="/">EN</a>
+                <a href="/el/" aria-current="page">EL</a>
+            </div>
+            </div>
+            <div class="nav__actions">
+                <button class="btn btn--cta ">
+    <a href="/contact/" class="btn__link">
+        <div class="btn__bg"></div>
+        <div class="btn__text">
+            <div class="btn__block">
+                <p class="btn__label">ΑΣ ΜΙΛΗΣΟΥΜΕ</p>
+                <svg width="11" height="11" class="btn-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                    <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                </svg>
+            </div>
+            <div class="btn__block">
+                <p class="btn__label">ΑΣ ΜΙΛΗΣΟΥΜΕ</p>
+                <svg width="11" height="11" class="btn-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                    <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                </svg>                
+            </div>
+        </div>
+    </a>
+</button>
+                <div class="nav__burger">
+                    <div class="nav__burger-inner">
+                        <div class="nav__bg-burger"></div>
+                        <div class="nav__burger-items">
+                            <div class="nav__burger-line nav__line-top"></div>
+                            <div class="nav__burger-line nav__line-bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="header-menu">
+        <nav class="header-menu__nav">
+            <div class="header-menu__wrapper">
+                <div class="header-menu__top">
+                    <div class="header-menu__title">
+                        <div class="header-menu__cube"></div>
+                        <p class="header-menu__label">MENU</p>
+                    </div>
+
+                    <div class="header-menu__close">
+                        <div class="header-menu__close-wrap">
+                            <div class="header-menu__close-inner">
+                                <div class="header-menu__close-bg"></div>
+                                <div class="header-menu__close-lines">
+                                    <div class="header-menu__close-line header-menu__close-line-top"></div>
+                                    <div class="header-menu__close-line header-menu__close-line-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-menu__content">
+                    <div class="header-menu__content-wrap">
+                        <div class="header-menu__items">
+                            <a class="header-menu__item">
+                                <h3 class="header-menu__item-text">Αρχική</h3>
+                                <div class="header-menu__item-cube"></div>
+                            </a>
+
+                            <div class="header-menu__divider"></div>
+
+                            <div class="header-menu__item">
+                                <h3 class="header-menu__item-text">ΕΡΓΑ</h3>
+                                <div class="header-menu__item-cube"></div>
+                            </div>
+
+                            <div class="header-menu__divider"></div>
+
+                            <div class="header-menu__item">
+                                <h3 class="header-menu__item-text">ΣΧΕΤΙΚΑ</h3>
+                                <div class="header-menu__item-cube"></div>
+                            </div>
+
+                            <div class="header-menu__divider"></div>
+
+                            <div class="header-menu__item">
+                                <h3 class="header-menu__item-text">ΕΠΙΚΟΙΝΩΝΙΑ</h3>
+                                <div class="header-menu__item-cube"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-menu__footer">
+                    <div class="header-menu__contact">
+                        <p class="header-menu__contact-label">(EMAIL)</p>
+                        <a href="" class="header-menu__contact-link">hello@nakula.com</a>
+                    </div>
+
+                    <div class="header-menu__socials">
+                        <p class="header-menu__socials-label">(SOCIALS)</p>
+                        <div class="header-menu__socials-list">
+                            <div class="header-menu__block">
+                                <div class="header-menu__social">
+                                    <a class="header-menu__social-link">
+                                        <p class="header-menu__social-text">X/Twitter</p>
+                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <div class="header-menu__social">
+                                    <a class="header-menu__social-link">
+                                        <p class="header-menu__social-text">Instagram</p>
+                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header-menu__block">
+                                <div class="header-menu__social">
+                                    <a class="header-menu__social-link">
+                                        <p class="header-menu__social-text">LinkedIn</p>
+                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                                        </svg>
+                                    </a>
+                                </div>
+
+                                <div class="header-menu__social">
+                                    <a class="header-menu__social-link">
+                                        <p class="header-menu__social-text">Behance</p>
+                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</header>
+
+
+    
+<main>
+    
+    <!-- <h1></h1>
+    <p></p> -->
+    <section class="hero">
+        <div class="hero-video" preload="auto" playsinline>
+            <video src="https://framerusercontent.com/assets/Qc6dhglAiYjaI04EEF5RsqHBU.mp4"></video>
+        </div>
+        <div class="hero__content--bottom">
+            <div class="hero__column hero__column--left">
+                <div class="hero__description">
+                    <p>        Δημιουργούμε brands, ιστοσελίδες και ψηφιακές εμπειρίες με πρόθεση, σαφήνεια και φροντίδα.</span></p>
+                </div>
+                <div class="hero__trusted">
+                    <p class="hero__trusted-label">trusted by:</p>
+                    <section class="hero__trusted-logos">
+                        <ul class="hero__trusted-list">
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow"></li>
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow"></li>
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow"></li>
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow"></li>
+                        </ul> 
+                    </section>
+                </div>
+            </div>
+            <div class="hero__column hero__column--right">
+                <button class="btn btn--cta btn-arrow">
+    <a href="//" class="btn__link">
+        <div class="btn__bg"></div>
+        <div class="btn__text">
+            <div class="btn__block">
+                <p class="btn__label">ΕΝΑΡΞΗ ΕΡΓΟΥ</p>
+                <svg width="11" height="11" class="btn-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                    <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                </svg>
+            </div>
+            <div class="btn__block">
+                <p class="btn__label">ΕΝΑΡΞΗ ΕΡΓΟΥ</p>
+                <svg width="11" height="11" class="btn-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                    <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                </svg>                
+            </div>
+        </div>
+    </a>
+</button>
+            </div>
+        </div>
+        <div class="hero__content--right">
+            <h1 class="text-56 hero__title" data-copy data-start="top 100%"><span>Πέρα από τα Οπτικά.</span> Χτισμένο με Όραμα.</h1>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about__content">
+            <div class="about__header">
+                <p class="about__label">(ΣΧΕΤΙΚΑ)</p>
+                <div class="about__text">
+                    <h2 class="text-56 about__description">
+                        Συνδυάζουμε χρόνια εμπειρίας στον σχεδιασμό ιστοσελίδων και στο branding για να δημιουργούμε ουσιαστικές, αφηγηματικές εμπειρίες.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="work__title">
+            <div class="work__container">
+                <h2 class="text-140 work__heading" data-copy data-start="top 99%" data-opacity="0" data-duration="1.5">Latest work</h2>
+                <p class="text-16 work__count">(04)</p>
+            </div>
+        </div>
+        <div class="work__body">
+            <div class="work__left">
+                <div class="work__left-wrapper">
+                    <div class="work__meta">
+                        <div class="work__indexes">
+                            <div class="work__index"><h6 class="text-140">01</h6><div class="work__dot"></div></div>
+                            <div class="work__index"><h6 class="text-140">02</h6><div class="work__dot"></div></div>
+                            <div class="work__index"><h6 class="text-140">03</h6><div class="work__dot"></div></div>
+                        </div>
+                        <div class="work__clients">
+                            <a href="" class="text-14 work__client"><div class="work__line"></div>Bima</a>
+                            <a href="" class="text-14 work__client"><div class="work__line"></div>Arjuna</a>
+                            <a href="" class="text-14 work__client"><div class="work__line"></div>Mandala</a>
+                        </div>
+                    </div>
+                    <div class="work__details">
+                        <div class="work__titles">
+                            <h3 class="text-56 work__title-min">Arjuna</h3>
+                            <h3 class="text-56 work__title-min">Bima</h3>
+                            <h3 class="text-56 work__title-min">Mandala</h3>
+                        </div>
+                        <div class="work__descriptions">
+                            <p class="text-24 work__description">Website and branding for AI Automation Company</p>
+                            <p class="text-24 work__description">Website and branding for AI Automation Company</p>
+                            <p class="text-24 work__description">Website and branding for AI Automation Company</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="work__right">
+                <div class="work__item">
+                    <a href="" class="work__link">
+                        <div class="work__thumb">
+                            <div class="work__image">
+                                <img src="img/home/work-img1.jpg" alt="work-image" loading="lazy">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work__item">
+                    <a href="" class="work__link">
+                        <div class="work__thumb">
+                            <div class="work__image">
+                                <img src="img/home/work-img1.jpg" alt="work-image" loading="lazy">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work__item">
+                    <a href="" class="work__link">
+                        <div class="work__thumb">
+                            <div class="work__image">
+                                <img src="img/home/work-img3.jpg" alt="work-image" loading="lazy">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="work__body-adaptiv">
+            <a href="" class="work__body-adaptiv--link">
+                <div class="work__body-adaptiv--indexs">
+                    <img src="img/home/work-img1.jpg" alt="" class="work__adaptiv-img">
+                    <div class="work__adaptiv-meta">
+                        <h3 class="work__adaptiv-title">Arjuna</h3>
+                        <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="work__body-adaptiv--link">
+                <div class="work__body-adaptiv--indexs">
+                    <img src="img/home/work-img2.jpg" alt="" class="work__adaptiv-img">
+                    <div class="work__adaptiv-meta">
+                        <h3 class="work__adaptiv-title">Arjuna</h3>
+                        <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="work__body-adaptiv--link">
+                <div class="work__body-adaptiv--indexs">
+                    <img src="img/home/work-img3.jpg" alt="" class="work__adaptiv-img">
+                    <div class="work__adaptiv-meta">
+                        <h3 class="work__adaptiv-title">Arjuna</h3>
+                        <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
+                    </div>
+                </div>
+            </a>         
+        </div>
+        <div class="work__bottom">
+            <div class="work__bottom-container">
+                <button class="btn btn--cta btn-work-more">
+    <a href="//" class="btn__link">
+        <div class="btn__bg"></div>
+        <div class="btn__text">
+            <div class="btn__block">
+                <p class="btn__label">MORE PROJECTS</p>
+                <svg width="11" height="11" class="btn-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                    <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                </svg>
+            </div>
+            <div class="btn__block">
+                <p class="btn__label">MORE PROJECTS</p>
+                <svg width="11" height="11" class="btn-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
+                    <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
+                </svg>                
+            </div>
+        </div>
+    </a>
+</button>
+            </div>
+        </div>
+    </section>
+    <section class="why-us">
+        <div class="why-us__bg">
+            <img class="why-us__bg-image" src="img/home/why-us-bg.jpg" alt="background image" loading="lazy">
+        </div>
+
+        <div class="why-us__container">
+            <div class="why-us__top">
+                <div class="why-us__heading">
+                    <p class="text-16 why-us__label">(WHY US)</p>
+                    <h2 class="text-140 why-us__title">   NUMBERS DON'T LIE</h2>
+                </div>
+
+                <p class="text-24 why-us__description">           With a decade of expertise, We crafts bold brands and high-impact digital experience that get results.</p>
+            </div>
+
+            <div class="why-us__bottom">
+
+                <div class="why-us__item">
+                    <div class="why-us__item-inner">
+                        <div class="why-us__divider">
+                        </div> 
+
+                        <div class="why-us__metric">
+                            <div class="why-us__metric-header">
+                                <span class="text-80 why-us__value">300</span>
+                                <span class="text-80 why-us__icon">+</span>
+                            </div>
+
+                            <p class="text-16 why-us__text">Successful projects completed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-us__item">
+                    <div class="why-us__item-inner">
+                        <div class="why-us__divider"></div>
+
+                        <div class="why-us__metric">
+                            <div class="why-us__metric-header">
+                                <span class="text-80 why-us__value">10</span>
+                                <span class="text-80 why-us__icon">+</span>
+                            </div>
+
+                            <p class="text-16 why-us__text">Years of experience in creative industry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-us__item">
+                    <div class="why-us__item-inner">
+                        <div class="why-us__divider"></div>
+
+                        <div class="why-us__metric">
+                            <div class="why-us__metric-header">
+                                <span class="text-80 why-us__value">99</span>
+                                <span class="text-80 why-us__icon">%</span>
+                            </div>
+
+                            <p class="text-16 why-us__text">Customer satisfaction rate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-us__item">
+                    <div class="why-us__item-inner">
+                        <div class="why-us__divider"></div>
+
+                        <div class="why-us__metric">
+                            <div class="why-us__metric-header">
+                                <span class="text-80 why-us__value">25</span>
+                                <span class="text-80 why-us__icon">M</span>
+                            </div>
+
+                            <p class="text-16 why-us__text">In Client revenue growth</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="testimonial">
+        <div class="testimonial__wrapper">
+            <div class="testimonial__container">
+                <div class="testimonial__content">
+                    <div class="testimonial__quote">
+                        <span class="testimonial__mark">“</span>
+                        <p class="text-56 testimonial__text">
+                            Working with Nakula felt personal. <span>The process was smooth, the design was stunning, and everything had meaning.<span>
+                        </p>
+                    </div>
+
+                    <div class="testimonial__author-block">
+                        <div class="testimonial-polosa"></div>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar">
+                                <img src="img/home/testimonial-photo.jpg" alt="people photo" loading="lazy">
+                            </div>
+
+                            <div class="testimonial__meta">
+                                <p class="text-24 testimonial__name">Dianna Sulastri</p>
+                                <p class="text-16 testimonial__role">Founder at Mandala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial__media">
+                    <div class="testimonial__image">
+                        <img src="/img/home/work-img3.jpg" alt="photo" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services" role="region" aria-label="Services">
+        <div class="services__header">
+            <h2 class="text-140 services__title">HOW WE CAN HELP</h2>
+            <p class="text-16 services__label">(SERVICES)</p>
+        </div>
+
+        <div class="services__list">
+            <div class="services__item-wrapper">
+                <div class="services__item">
+                <div class="services__item-head">
+                    <p class="text-80 services__index">01<span>.</span></p>
+                </div>
+
+                <div class="services__item-body">
+                    <div class="services__media">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                    </div>
+
+                    <div class="services__content">
+                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Web Design & Development</h3>
+                            <div class="services__button-p-m">
+                                <div class="services__button-line--first services__minus-line"></div>
+                                <div class="services__button-line--twise services__minus-line"></div>
+                            </div>                       
+                        </div>
+
+                        <div class="services__details">
+                            <div class="services__intro">
+                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Web Design & Development</p>
+                                    <div class="services__button-p-m">
+                                        <div class="services__button-line--first services__minus-line"></div>
+                                        <div class="services__button-line--twise services__minus-line"></div>
+                                    </div>
+                                </div>
+
+                                <p class="text-24 services__text">Logos, colors, type, your brand, fully alive.</p>
+                            </div>
+
+                            <div class="services__tags">
+                                <div class="text-16 services__tag">Responsive Design</div>
+                                <div class="text-16 services__tag">Interaction Design</div>
+                                <div class="text-16 services__tag">CMS Interaction</div>
+                                <div class="text-16 services__tag">SEO Optimization</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="services__item-wrapper">
+                <div class="services__item">
+                <div class="services__item-head">
+                    <p class="text-80 services__index">01<span>.</span></p>
+                </div>
+
+                <div class="services__item-body">
+                    <div class="services__media">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                    </div>
+
+                    <div class="services__content">
+                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Web Design & Development</h3>
+                            <div class="services__button-p-m">
+                                <div class="services__button-line--first services__minus-line"></div>
+                                <div class="services__button-line--twise services__minus-line"></div>
+                            </div>                       
+                        </div>
+
+                        <div class="services__details">
+                            <div class="services__intro">
+                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Web Design & Development</p>
+                                    <div class="services__button-p-m">
+                                        <div class="services__button-line--first services__minus-line"></div>
+                                        <div class="services__button-line--twise services__minus-line"></div>
+                                    </div>
+                                </div>
+
+                                <p class="text-24 services__text">Logos, colors, type, your brand, fully alive.</p>
+                            </div>
+
+                            <div class="services__tags">
+                                <div class="text-16 services__tag">Responsive Design</div>
+                                <div class="text-16 services__tag">Interaction Design</div>
+                                <div class="text-16 services__tag">CMS Interaction</div>
+                                <div class="text-16 services__tag">SEO Optimization</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="services__item-wrapper">
+                <div class="services__item">
+                <div class="services__item-head">
+                    <p class="text-80 services__index">01<span>.</span></p>
+                </div>
+
+                <div class="services__item-body">
+                    <div class="services__media">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                    </div>
+
+                    <div class="services__content">
+                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Web Design & Development</h3>
+                            <div class="services__button-p-m">
+                                <div class="services__button-line--first services__minus-line"></div>
+                                <div class="services__button-line--twise services__minus-line"></div>
+                            </div>                       
+                        </div>
+
+                        <div class="services__details">
+                            <div class="services__intro">
+                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Web Design & Development</p>
+                                    <div class="services__button-p-m">
+                                        <div class="services__button-line--first services__minus-line"></div>
+                                        <div class="services__button-line--twise services__minus-line"></div>
+                                    </div>
+                                </div>
+
+                                <p class="text-24 services__text">Logos, colors, type, your brand, fully alive.</p>
+                            </div>
+
+                            <div class="services__tags">
+                                <div class="text-16 services__tag">Responsive Design</div>
+                                <div class="text-16 services__tag">Interaction Design</div>
+                                <div class="text-16 services__tag">CMS Interaction</div>
+                                <div class="text-16 services__tag">SEO Optimization</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="services__item-wrapper">
+                <div class="services__item">
+                <div class="services__item-head">
+                    <p class="text-80 services__index">01<span>.</span></p>
+                </div>
+
+                <div class="services__item-body">
+                    <div class="services__media">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                    </div>
+
+                    <div class="services__content">
+                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Web Design & Development</h3>
+                            <div class="services__button-p-m">
+                                <div class="services__button-line--first services__minus-line"></div>
+                                <div class="services__button-line--twise services__minus-line"></div>
+                            </div>                       
+                        </div>
+
+                        <div class="services__details">
+                            <div class="services__intro">
+                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Web Design & Development</p>
+                                    <div class="services__button-p-m">
+                                        <div class="services__button-line--first services__minus-line"></div>
+                                        <div class="services__button-line--twise services__minus-line"></div>
+                                    </div>
+                                </div>
+
+                                <p class="text-24 services__text">Logos, colors, type, your brand, fully alive.</p>
+                            </div>
+
+                            <div class="services__tags">
+                                <div class="text-16 services__tag">Responsive Design</div>
+                                <div class="text-16 services__tag">Interaction Design</div>
+                                <div class="text-16 services__tag">CMS Interaction</div>
+                                <div class="text-16 services__tag">SEO Optimization</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="process">
+        <div class="process__container">
+            <div class="process__header">
+                <h2 class="text-140 process__title">HOW WE WORK</h2>
+                <p class="text-16 process__label">(PROCESS)</p>
+            </div>
+
+            <div class="process__steps">
+                <div class="process__step">
+                    <h6 class="process__step-index">STEP 1<span>.</span></h6>
+                    <div class="process__step-content">
+                        <p class="text-56 process__step-title">Discovery Phase</p>
+                        <p class="text-24 process__step-text">Understanding your, goals, pain points, audience, and what sets you apart.</p>
+                    </div>
+                </div>
+                <div class="process__step">
+                    <h6 class="process__step-index">STEP 1<span>.</span></h6>
+                    <div class="process__step-content">
+                        <p class="text-56 process__step-title">Discovery Phase</p>
+                        <p class="text-24 process__step-text">Understanding your, goals, pain points, audience, and what sets you apart.</p>
+                    </div>
+                </div>
+                <div class="process__step">
+                    <h6 class="process__step-index">STEP 1<span>.</span></h6>
+                    <div class="process__step-content">
+                        <p class="text-56 process__step-title">Discovery Phase</p>
+                        <p class="text-24 process__step-text">Understanding your, goals, pain points, audience, and what sets you apart.</p>
+                    </div>
+                </div>
+                <div class="process__step">
+                    <h6 class="process__step-index">STEP 1<span>.</span></h6>
+                    <div class="process__step-content">
+                        <p class="text-56 process__step-title">Discovery Phase</p>
+                        <p class="text-24 process__step-text">Understanding your, goals, pain points, audience, and what sets you apart.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="testimonials__container">
+            <div class="testimonials__header">
+
+                <div class="testimonials__rating">
+                    <div class="testimonials__score">
+                        <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.661 0.111444C17.7343 -0.0372054 17.9463 -0.0372051 18.0197 0.111444L23.3778 10.9681C23.4069 11.0271 23.4632 11.068 23.5283 11.0775L35.5094 12.8185C35.6734 12.8423 35.7389 13.0439 35.6202 13.1596L26.9507 21.6103C26.9035 21.6563 26.882 21.7225 26.8931 21.7873L28.9397 33.72C28.9678 33.8833 28.7963 34.0079 28.6496 33.9308L17.9334 28.297C17.8751 28.2663 17.8055 28.2663 17.7473 28.297L7.03111 33.9308C6.88438 34.0079 6.71289 33.8833 6.74092 33.72L8.78752 21.7873C8.79865 21.7225 8.77714 21.6563 8.73 21.6103L0.0604476 13.1596C-0.0582558 13.0439 0.00724644 12.8423 0.171291 12.8185L12.1523 11.0775C12.2175 11.068 12.2738 11.0271 12.3029 10.9681L17.661 0.111444Z" fill="#FF4A25"/>
+                        </svg>
+                        <p class="text-56 testimonials__value">4.9<span class="text-24">/5</span></p>
+                    </div>
+
+                    <p class="text-16 testimonials__source">300+ Reviews on <span>Clutch</span></p>
+                </div>
+
+                <div class="testimonials__heading">
+                    <p class="text-16 testimonials__label">(TESTIMONIALS)</p>
+                    <h3 class="text-56 testimonials__title">           We deliver data-driven and result-focused deliverables. Hear what they say about us.</h3>
+                </div>
+
+            </div>
+
+            <div class="testimonials__list">
+
+                <div class="testimonials__item">
+                    <div class="testimonials__author">
+                        <div class="testimonials__avatar">
+                            <img src="img/home/testimonials-photo.jpg" alt="">
+                        </div>
+
+                        <div class="testimonials__meta">
+                            <h4 class="text-24 testimonials__name">Mario Baskoro</h4>
+                            <p class="text-16 testimonials__role">CTO of Arjuna</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonials__content">
+                        <p class="testimonials__text">Our socials used to feel scattered and inconsistent. Now, everything is on-brand, engaging, and performing better.</p>
+
+                        <div class="testimonials__mark">"</div>
+                    </div>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__author">
+                        <div class="testimonials__avatar">
+                            <img src="img/home/testimonials-photo.jpg" alt="">
+                        </div>
+
+                        <div class="testimonials__meta">
+                            <h4 class="text-24 testimonials__name">Mario Baskoro</h4>
+                            <p class="text-16 testimonials__role">CTO of Arjuna</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonials__content">
+                        <p class="testimonials__text">Our socials used to feel scattered and inconsistent. Now, everything is on-brand, engaging, and performing better.</p>
+
+                        <div class="testimonials__mark">"</div>
+                    </div>
+                </div>
+                <div class="testimonials__item">
+                    <div class="testimonials__author">
+                        <div class="testimonials__avatar">
+                            <img src="img/home/testimonials-photo.jpg" alt="">
+                        </div>
+
+                        <div class="testimonials__meta">
+                            <h4 class="text-24 testimonials__name">Mario Baskoro</h4>
+                            <p class="text-16 testimonials__role">CTO of Arjuna</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonials__content">
+                        <p class="testimonials__text">Our socials used to feel scattered and inconsistent. Now, everything is on-brand, engaging, and performing better.</p>
+
+                        <div class="testimonials__mark">"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div style="height: 100vh;"></div>
+</main>
+
+
+    
+
+
+<footer class="footer">
+  <small>© Europlanet</small>
+</footer>
+
+
+    <script src="/js/algorithms/Bottom-up_reveal.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/home.js"></script>
+    </body>
+</html>

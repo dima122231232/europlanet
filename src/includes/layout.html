@@ -1,0 +1,48 @@
+<!doctype html>
+{% set lang = lang | default(locales.default) %}
+{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      {{ pageTitle if pageTitle else (t.siteName if t.siteName else 'Europlanet') }}
+    </title>
+
+    <meta
+      name="description"
+      content="{{ pageDesc if pageDesc else (t.metaDesc if t.metaDesc else 'Europlanet') }}"
+    >
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/global.css">
+    {% if pageCss %}<link rel="stylesheet" href="{{ pageCss }}">{% endif %}
+    <link rel="stylesheet" href="/css/header.css">
+
+    <script src="/vendor/lenis/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/CustomEase.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+  </head>
+
+  <body>
+
+    {% include "header.html" %}
+
+    {{ content | safe }}
+
+    {% include "footer.html" %}
+
+    <script src="/js/algorithms/Bottom-up_reveal.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/home.js"></script>
+    </body>
+</html>

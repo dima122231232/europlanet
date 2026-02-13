@@ -1,0 +1,5 @@
+function Copy(e,t=!0,l=0){if(!e)return;const i=[],s=[];let r=e.hasAttribute("data-copy-wrapper")?[...e.children]:[e];r.forEach(o=>{const r=SplitText.create(o,{type:"lines",mask:"lines",linesClass:"line++"});i.push(r);const n=getComputedStyle(o).textIndent;n&&"0px"!==n&&(r.lines[0].style.paddingLeft=n,o.style.textIndent="0"),s.push(...r.lines)});const p=parseFloat(e.dataset.opacity||"0"),d=parseFloat(e.dataset.duration||"1");gsap.set(s,{y:"100%",opacity:p});const o={y:"0%",opacity:1,duration:d,stagger:.1,ease:"power4.out",delay:l};let n=null;const a=()=>{n&&n.kill();const r=e.dataset.start||"top 75%";n=t?gsap.to(s,{...o,scrollTrigger:{trigger:e,start:r,once:!0}}):gsap.to(s,o)},c=()=>{n&&n.kill(),i.forEach(e=>e&&e.revert&&e.revert())};return t&&a(),{play:a,kill:c}};document.querySelectorAll("[data-copy],[data-copy-wrapper]").forEach(e=>Copy(e,!0,parseFloat(e.dataset.delay||"0")));
+
+// Add data-copy and optionally data-delay:value | data-start="top 90%"
+//                  or
+//     Copy(-class-, false, 0).play(); 

@@ -1,0 +1,11 @@
+{
+    "siteName": "Europlanet",
+    "header":{
+        "menu":{"menu":"MENU", "home":"HOME", "works":"WORKS", "about":"ABOUT", "contact":"CONTACT" , "email":"(EMAIL)", "socials":"(SOCIALS)"} ,
+        "nav":{"button":"LET'S TALK"}
+    },
+    "home":{
+        "hero":{"hero_title_1": "Beyond Visuals.","hero_title_2": "Built with Vision.","hero_description":"We build brands, websites, and digital experiences with intention, clarity and care.","hero_button":"START A PROJECT"},
+        "about":{"about__label":"(ABOUT)","about_description":"We combines years of web design and branding expertise to craft meaningful, story-driven experiences."}
+    }
+}
