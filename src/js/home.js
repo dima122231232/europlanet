@@ -1,6 +1,7 @@
 (() => {
 
     CustomEase.create("services-anim", ".7, .2, .3, 1");
+    CustomEase.create("faq-anim", "0.75, 0, 0.25, 1");
     const mm = gsap.matchMedia();
 
 
@@ -70,6 +71,34 @@ if (window.innerWidth >= 1201) {
         ScrollTrigger.refresh();
     });
 }
+
+
+
+
+
+// FAQ------------------------------
+document.querySelectorAll('.faq__item').forEach(item => {
+    const $ = gsap.utils.selector(item);
+    const h = item.querySelector('.faq__answer-text').offsetHeight;
+
+    const tl = gsap.timeline({
+        paused: true,
+        defaults: { duration: .6, ease: "faq-anim" }
+    });
+
+    tl.to($(".faq__answer"), { height:h + 32}, 0)
+    .to($(".faq__toggle"), { rotate:360}, 0)
+    .to($(".faq__toggle--line-animation"), { opacity:0}, 0);
+
+    tl.reverse()
+    item.addEventListener("click", () =>
+        tl.reversed() ? tl.play() : tl.reverse()
+    );
+})
+
+
+
+
 
     
 })();

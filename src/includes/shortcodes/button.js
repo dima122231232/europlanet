@@ -1,6 +1,6 @@
 module.exports = function (text, href = "", extraClass = "") {
     return `
-<button class="btn btn--cta ${extraClass}">
+<button class="btn ${extraClass}">
     <a href="${href}" class="btn__link">
         <div class="btn__bg"></div>
         <div class="btn__text">

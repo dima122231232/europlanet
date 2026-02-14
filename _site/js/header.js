@@ -1,4 +1,5 @@
 (() => {
+    gsap.set(".nav__logo img",{scale:4})
     gsap.to(".nav__logo img", {
         scale: 1,
         duration:.72,

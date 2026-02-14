@@ -127,7 +127,7 @@ pageTitle: "Main"
         <div class="work__body-adaptiv">
             <a href="" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
-                    <img src="img/home/work-img1.jpg" alt="" class="work__adaptiv-img">
+                    <img src="img/home/work-img1.jpg" alt="" class="work__adaptiv-img" loading="lazy">
                     <div class="work__adaptiv-meta">
                         <h3 class="work__adaptiv-title">Arjuna</h3>
                         <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
@@ -136,7 +136,7 @@ pageTitle: "Main"
             </a>
             <a href="" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
-                    <img src="img/home/work-img2.jpg" alt="" class="work__adaptiv-img">
+                    <img src="img/home/work-img2.jpg" alt="" class="work__adaptiv-img" loading="lazy">
                     <div class="work__adaptiv-meta">
                         <h3 class="work__adaptiv-title">Arjuna</h3>
                         <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
@@ -145,7 +145,7 @@ pageTitle: "Main"
             </a>
             <a href="" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
-                    <img src="img/home/work-img3.jpg" alt="" class="work__adaptiv-img">
+                    <img src="img/home/work-img3.jpg" alt="" class="work__adaptiv-img" loading="lazy">
                     <div class="work__adaptiv-meta">
                         <h3 class="work__adaptiv-title">Arjuna</h3>
                         <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
@@ -571,7 +571,214 @@ pageTitle: "Main"
             </div>
         </div>
     </section>
+    <section class="pricing" role="region" aria-label="Pricing">
+        <div class="pricing__inner">
+            <div class="pricing__left">
+                <div class="pricing__left-inner">
+                    <div class="pricing__intro">
+                        <h2 class="text-140 pricing__title">PRICING</h2>
+                        <p class="text-24 pricing__lead">       From launch to scale, we’ve got you covered at every stage.</p>
+                    </div>
 
+                    <div class="pricing__billing">
+                        <div class="pricing__billing-toggle"></div>
+                        <div class="pricing__billing-option pricing__billing-option--monthly">
+                            <p class="text-16 pricing__billing-text">Monthly</p>
+                        </div>
+                        <div class="pricing__billing-option pricing__billing-option--annual">
+                            <p class="text-16 pricing__billing-text">Annual</p>
+                            <p class="text-16 pricing__billing-discount">-20%</p>
+                        </div>
+                    </div>
+                </div>
 
-    <div style="height: 100vh;"></div>
+                <div class="pricing__bespoke">
+                    <div class="pricing__bespoke-divider polosa"></div>
+                    <div class="pricing__bespoke-content">
+                        <div class="pricing__bespoke-heading">
+                            <h3 class="pricing__bespoke-title">Bespoke</h3>
+                            <p class="text-16 pricing__bespoke-text">Perfect for specialized needs or early-stage projects.</p>
+                        </div>
+                        {% btn "CONTACT US", "/contact/", "pricing__bespoke-button" %}
+                    </div>
+                </div>
+            </div>
+            <div class="pricing__right">
+                <div class="pricing-card pricing__card-1">
+                    <div class="pricing-card__badge"></div>
+
+                    <div class="pricing-card__head">
+                        <div class="pricing-card__title-group">
+                            <div class="pricing-card__title-wrapper"><h3 class="pricing-card__title">Starter</h3></div>
+                            <p class="text-16 pricing-card__subtitle">Perfect for solo founders and early stage brands.</p>
+                        </div>
+                        <div class="pricing-card__divider polosa"></div>
+                    </div>
+
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card__price">
+                        <div class="text-24 pricing-card__currency">$</div>
+                        <p class="text-56 pricing-card__amount">5999</p>
+                        <span class="text-24 pricing-card__period">/mo</span>
+                    </div>
+
+                    {% btn "BOOK THIS PACKAGE", "/contact/", "pricing-card__button" %}
+                </div>
+                <div class="pricing-card pricing__card-2">
+                    <div class="pricing-card__badge"></div>
+
+                    <div class="pricing-card__head">
+                        <div class="pricing-card__title-group">
+                            <div class="pricing-card__title-wrapper"><h3 class="pricing-card__title">Starter</h3><p class="text-16 pricing-card__min-text">(POPULAR)</p></div>
+                            <p class="text-16 pricing-card__subtitle">Perfect for solo founders and early stage brands.</p>
+                        </div>
+                        <div class="pricing-card__divider polosa"></div>
+                    </div>
+
+                    <div class="pricing-card__features">
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                        <div class="pricing-card__feature">
+                            <p class="text-24 pricing-card__feature-icon">+</p>
+                            <p class="text-24 pricing-card__feature-text">1 Senior designer</p>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card__price">
+                        <div class="text-24 pricing-card__currency">$</div>
+                        <p class="text-56 pricing-card__amount">5999</p>
+                        <span class="text-24 pricing-card__period">/mo</span>
+                    </div>
+
+                    {% btn "BOOK THIS PACKAGE", "/contact/", "pricing-card__button" %}
+                </div>
+            </div>
+            <div class="pricing__bespoke pricing__bespoke-mobile">
+                    <div class="pricing__bespoke-divider polosa"></div>
+                    <div class="pricing__bespoke-content">
+                        <div class="pricing__bespoke-heading">
+                            <h3 class="pricing__bespoke-title">Bespoke</h3>
+                            <p class="text-16 pricing__bespoke-text">Perfect for specialized needs or early-stage projects.</p>
+                        </div>
+                        {% btn "CONTACT US", "/contact/", "pricing__bespoke-button" %}
+                    </div>
+            </div>
+        </div>
+    </section>
+    {% include "components/faq.html" %}
+    <section class="blog-preview">
+        <div class="blog-preview__container">
+            <div class="blog-preview__header">
+                <div class="blog-preview__heading">
+                    <h2 class="text-140 blog-preview__title">LATEST INSIGHTS</h2>
+                    <p class="text-16 blog-preview__label">(BLOG)</p>
+                </div>
+                 {% btn "SEE ALL", "//", "btn-arrow blog-preview__button" %}
+            </div>
+
+            <div class="blog-preview__body">
+                <div class="blog-preview__column blog-preview__column--left">
+                    <a href="" class="blog-preview__card">
+                        <div class="blog-preview__card-wrapper">
+                            <div class="blog-preview__card-inner">
+                                <div class="blog-preview__image">
+                                    <div class="blog-preview__image-wp">
+                                        <img src="img/home/blog-photo1.jpg" alt="" class="blog-preview__img">
+                                        <div class="blog-preview__overlay"></div>
+                                    </div>
+                                    <div class="blog-preview__tag">
+                                        <p class="text-14 blog-preview__tag-text">Design Strategy</p>
+                                    </div>
+                                </div>
+                                <div class="blog-preview__meta">
+                                    <p class="text-14 blog-preview__date">Feb 4, 2025</p>
+                                    <h3 class="blog-preview__card-title">Why Clarity Beats Creativity in Web Design</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="blog-preview__column blog-preview__column--right">
+                    <a href="" class="blog-preview__item">
+                        <div class="blog-preview__item-image">
+                            <img src="img/blog/blog-1.jpg" alt="" class="blog-preview__item-img">
+                        </div>
+                        <div class="blog-preview__item-meta">
+                            <p class="text-14 blog-preview__item-date">FEB 4,2025</p>
+                            <div class="blog-preview__item-text">
+                                <h3 class="text-24 blog-preview__item-title">Why Motion Design Makes Your Website Feel Alive</h3>
+                                <p class="text-16 blog-preview__item-excerpt">Motion helps your website feel modern and clear. Here’s why it matters and how to use it without overdoing it.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="blog-preview__tag"><p class="text-14 blog-preview__tag-text">Design Strategy</p></div>
+                    </a>
+                    <a href="" class="blog-preview__item">
+                        <div class="blog-preview__item-image">
+                            <img src="img/home/blog-photo1.jpg" alt="" class="blog-preview__item-img">
+                        </div>
+                        <div class="blog-preview__item-meta">
+                            <p class="text-14 blog-preview__item-date">FEB 4,2025</p>
+                            <div class="blog-preview__item-text">
+                                <h3 class="text-24 blog-preview__item-title">Why Motion Design Makes Your Website Feel Alive</h3>
+                                <p class="text-16 blog-preview__item-excerpt">Motion helps your website feel modern and clear. Here’s why it matters and how to use it without overdoing it.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="blog-preview__tag"><p class="text-14 blog-preview__tag-text">Design Strategy</p></div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    {% include "components/work_together.html" %}
+    
+
+    <div style="height: 1vh;"></div>
 </main>
