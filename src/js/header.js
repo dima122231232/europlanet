@@ -12,4 +12,6 @@
     document.querySelector('.header-menu__close').addEventListener('click', () =>
             document.querySelector('.header-menu').style.transform = 'translateX(100%)'
         );
+
 })();
+

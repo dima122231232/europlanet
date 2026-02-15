@@ -41,6 +41,9 @@ body {
 html, body {scrollbar-width: none;}
 html::-webkit-scrollbar,body::-webkit-scrollbar {display: none;}
 
+.lt-line{ position:relative; display:block; }
+.lt-line::after{ content:""; position:absolute; inset:-0.12em -0.18em; background:currentColor; transform:scaleY(var(--p)); transform-origin:top; pointer-events:none; }
+
 
 .text-140 { font-size: 140px; font-family: var(--font-Anton); font-weight: 400; line-height: 100%; text-transform: uppercase; color: var(--color-gray-600); }
 .text-80 {  font-size: 80px;font-weight: 600;color: var(--color-gray-600);letter-spacing: -.07em;line-height: 100%;}
