@@ -85,10 +85,8 @@
     position: relative;
     overflow: hidden;
 }
-.work-together__text {
-    white-space: pre-wrap;
-    word-break: break-word;
-    word-wrap: break-word;
+.work-together__text .line1{
+    text-indent:30px;
 }
 .work-together__button{width: 100%;}
 .work-together__button  .btn__block{justify-content: center;}
@@ -100,4 +98,5 @@
     .work-together__title ,.work-together__footer{max-width: 600px;}
     .work-together__container{padding: 100px var(--padding);}
     .work-together__image img{transform:scale(2);}
+    .work-together__text .line1{text-indent:0px;}
 }

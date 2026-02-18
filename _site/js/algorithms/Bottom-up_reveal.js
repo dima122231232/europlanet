@@ -1,5 +1,67 @@
-function Copy(e,t=!0,l=0){if(!e)return;const i=[],s=[];let r=e.hasAttribute("data-copy-wrapper")?[...e.children]:[e];r.forEach(o=>{const r=SplitText.create(o,{type:"lines",mask:"lines",linesClass:"line++"});i.push(r);const n=getComputedStyle(o).textIndent;n&&"0px"!==n&&(r.lines[0].style.paddingLeft=n,o.style.textIndent="0"),s.push(...r.lines)});const p=parseFloat(e.dataset.opacity||"0"),d=parseFloat(e.dataset.duration||"1");gsap.set(s,{y:"100%",opacity:p});const o={y:"0%",opacity:1,duration:d,stagger:.1,ease:"power4.out",delay:l};let n=null;const a=()=>{n&&n.kill();const r=e.dataset.start||"top 75%";n=t?gsap.to(s,{...o,scrollTrigger:{trigger:e,start:r,once:!0}}):gsap.to(s,o)},c=()=>{n&&n.kill(),i.forEach(e=>e&&e.revert&&e.revert())};return t&&a(),{play:a,kill:c}};document.querySelectorAll("[data-copy],[data-copy-wrapper]").forEach(e=>Copy(e,!0,parseFloat(e.dataset.delay||"0")));
+function Copy(sel, opts){
+  if(!window.gsap || !sel || !window.SplitText) return;
+  if(window.ScrollTrigger && gsap.registerPlugin) gsap.registerPlugin(ScrollTrigger);
 
-// Add data-copy and optionally data-delay:value | data-start="top 90%"
-//                  or
-//     Copy(-class-, false, 0).play(); 
+  const e = typeof sel === "string" ? document.querySelector(sel) : sel;
+  if(!e) return;
+
+  const v = opts || {};
+  const i=[], s=[];
+  const r = e.hasAttribute("data-copy-wrapper") ? [...e.children] : [e];
+
+  const type = (v.type || e.dataset.copyType || "lines").toLowerCase(); // lines | words | chars
+  const start = v.start || e.dataset.start || "top 75%";
+  const p = parseFloat(v.opacity ?? e.dataset.opacity ?? 0);
+  const d = parseFloat(v.duration ?? e.dataset.duration ?? 1);
+  const delay = parseFloat(v.delay ?? e.dataset.delay ?? 0);
+  const step = parseFloat(v.step ?? e.dataset.step ?? 0.1);
+
+  // начальные значения (как у тебя), но y/x могут переопределяться
+  const from = {
+    y: v.y ?? "100%",
+    x: v.x ?? "0%",
+    opacity: p
+  };
+
+  r.forEach(o=>{
+    const st = SplitText.create(o,{
+      type,                    // "lines" | "words" | "chars"
+      mask: type.includes("lines") ? "lines" : undefined,
+      linesClass: "line++",
+      wordsClass: "word++",
+      charsClass: "char++"
+    });
+
+    i.push(st);
+
+    // сохраняем твой фикс с textIndent для lines
+    if(type.includes("lines")){
+      const n = getComputedStyle(o).textIndent;
+      n && n!=="0px" && (st.lines[0].style.paddingLeft=n, o.style.textIndent="0");
+      s.push(...st.lines);
+    } else if(type.includes("words")){
+      s.push(...st.words);
+    } else {
+      s.push(...st.chars);
+    }
+  });
+
+  gsap.set(s, from);
+
+  const play = () =>
+    gsap.to(s,{
+      y: 0,
+      x: 0,
+      opacity: 1,
+      duration: d,
+      stagger: step,
+      ease: v.ease || e.dataset.ease || "power4.out",
+      delay,
+      scrollTrigger:{ trigger:e, start, once:true }
+    });
+
+  const kill = () => i.forEach(x=>x && x.revert && x.revert());
+
+  play();
+  return { play, kill };
+}

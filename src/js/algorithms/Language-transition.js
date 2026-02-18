@@ -1,4 +1,4 @@
-(() => {
+window.initAnimations = () => {
     if (!window.SplitText) return;
 
     const TEXT_SEL = "p,span,h1,h2,h3,h4,h5,h6,img";
@@ -31,4 +31,4 @@
             a.addEventListener("click", (e) => (e.preventDefault(), go(a.href)));
         });
     });
-})();
+}

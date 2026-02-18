@@ -18,22 +18,22 @@ pageTitle: "Main"
     <!-- <h1>{{ t.home.h1}}</h1>
     <p>{{ t.home.p1}}</p> -->
     <section class="hero">
-        <div class="hero-video" preload="auto" playsinline>
-            <video src="https://framerusercontent.com/assets/Qc6dhglAiYjaI04EEF5RsqHBU.mp4"></video>
+        <div class="hero-video">
+            <video src="https://framerusercontent.com/assets/Qc6dhglAiYjaI04EEF5RsqHBU.mp4" muted playsinline></video>
         </div>
         <div class="hero__content--bottom">
             <div class="hero__column hero__column--left">
                 <div class="hero__description">
-                    <p>        {{ t.home.hero.hero_description}}</span></p>
+                    <p class="hero-reveal">{{ t.home.hero.hero_description}}</span></p>
                 </div>
                 <div class="hero__trusted">
                     <p class="hero__trusted-label">trusted by:</p>
                     <section class="hero__trusted-logos">
                         <ul class="hero__trusted-list">
-                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow" loading="lazy"></li>
-                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow" loading="lazy"></li>
-                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow" loading="lazy"></li>
-                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow" loading="lazy"></li>
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/VdZYGP1aARcAIODj5sWnjn1vDac.png?width=1770&height=323" alt="arrow" ></li>
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/cKWxePeq3jR2Saj0Xn8To9npdU.png?scale-down-to=512&width=1322&height=329" alt="arrow" ></li>
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/zePNmwKsJJlIjKuawASK80nPtk.png?scale-down-to=512&width=1761&height=336" alt="arrow" ></li>
+                            <li class="hero__trusted-item"><img src="https://framerusercontent.com/images/fG5uqOgl43qhhiPH56hF84UrTs.png?scale-down-to=512&width=1300&height=336" alt="arrow" ></li>
                         </ul> 
                     </section>
                 </div>
@@ -43,7 +43,8 @@ pageTitle: "Main"
             </div>
         </div>
         <div class="hero__content--right">
-            <h1 class="text-56 hero__title" data-copy data-start="top 100%"><span>{{ t.home.hero.hero_title_1}}</span> {{ t.home.hero.hero_title_2}}</h1>
+            <!-- data-copy data-start="top 100%" -->
+            <h1 class="text-56 hero__title"><span>{{ t.home.hero.hero_title_1}}</span> {{ t.home.hero.hero_title_2}}</h1>
         </div>
     </section>
     <section class="about">
@@ -61,7 +62,7 @@ pageTitle: "Main"
     <section class="work">
         <div class="work__title">
             <div class="work__container">
-                <h2 class="text-140 work__heading" data-copy data-start="top 99%" data-opacity="0" data-duration="1.5">Latest work</h2>
+                <h2 class="text-140 work__heading">Latest work</h2>
                 <p class="text-16 work__count">(04)</p>
             </div>
         </div>
@@ -75,9 +76,9 @@ pageTitle: "Main"
                             <div class="work__index"><h6 class="text-140">03</h6><div class="work__dot"></div></div>
                         </div>
                         <div class="work__clients">
-                            <a href="" class="text-14 work__client"><div class="work__line"></div>Bima</a>
-                            <a href="" class="text-14 work__client"><div class="work__line"></div>Arjuna</a>
-                            <a href="" class="text-14 work__client"><div class="work__line"></div>Mandala</a>
+                            <a href="" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">Bima</div></a>
+                            <a href="" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">Arjuna</div></a>
+                            <a href="" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">Mandala</div></a>
                         </div>
                     </div>
                     <div class="work__details">
@@ -96,28 +97,28 @@ pageTitle: "Main"
             </div>
             <div class="work__right">
                 <div class="work__item">
-                    <a href="" class="work__link">
+                    <a href="" class="work__link lm-hover" data-lm="VIEW PROJECT">
                         <div class="work__thumb">
                             <div class="work__image">
-                                <img src="/img/home/work-img1.jpg" alt="work-image" loading="lazy">
+                                <img src="/img/home/work-img1.jpg" alt="work-image" >
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="work__item">
-                    <a href="" class="work__link">
+                    <a href="" class="work__link lm-hover" data-lm="VIEW PROJECT">
                         <div class="work__thumb">
                             <div class="work__image">
-                                <img src="/img/home/work-img1.jpg" alt="work-image" loading="lazy">
+                                <img src="/img/home/work-img2.jpg" alt="work-image" >
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="work__item">
-                    <a href="" class="work__link">
+                    <a href="" class="work__link lm-hover" data-lm="VIEW PROJECT">
                         <div class="work__thumb">
                             <div class="work__image">
-                                <img src="/img/home/work-img3.jpg" alt="work-image" loading="lazy">
+                                <img src="/img/home/work-img3.jpg" alt="work-image" >
                             </div>
                         </div>
                     </a>
@@ -127,7 +128,7 @@ pageTitle: "Main"
         <div class="work__body-adaptiv">
             <a href="" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
-                    <img src="/img/home/work-img1.jpg" alt="" class="work__adaptiv-img" loading="lazy">
+                    <img src="/img/home/work-img1.jpg" alt="" class="work__adaptiv-img" >
                     <div class="work__adaptiv-meta">
                         <h3 class="work__adaptiv-title">Arjuna</h3>
                         <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
@@ -136,7 +137,7 @@ pageTitle: "Main"
             </a>
             <a href="" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
-                    <img src="/img/home/work-img2.jpg" alt="" class="work__adaptiv-img" loading="lazy">
+                    <img src="/img/home/work-img2.jpg" alt="" class="work__adaptiv-img" >
                     <div class="work__adaptiv-meta">
                         <h3 class="work__adaptiv-title">Arjuna</h3>
                         <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
@@ -145,7 +146,7 @@ pageTitle: "Main"
             </a>
             <a href="" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
-                    <img src="/img/home/work-img3.jpg" alt="" class="work__adaptiv-img" loading="lazy">
+                    <img src="/img/home/work-img3.jpg" alt="" class="work__adaptiv-img" >
                     <div class="work__adaptiv-meta">
                         <h3 class="work__adaptiv-title">Arjuna</h3>
                         <p class="text-24 work__adaptiv-text">Personal Portfolio Website for talented design engineer</p>
@@ -161,17 +162,17 @@ pageTitle: "Main"
     </section>
     <section class="why-us">
         <div class="why-us__bg">
-            <img class="why-us__bg-image" src="/img/home/why-us-bg.jpg" alt="background image" loading="lazy">
+            <img class="why-us__bg-image" src="/img/home/why-us-bg.jpg" alt="background image" >
         </div>
 
         <div class="why-us__container">
             <div class="why-us__top">
                 <div class="why-us__heading">
                     <p class="text-16 why-us__label">(WHY US)</p>
-                    <h2 class="text-140 why-us__title">   NUMBERS DON'T LIE</h2>
+                    <h2 class="text-140 why-us__title">NUMBERS DON'T LIE</h2>
                 </div>
 
-                <p class="text-24 why-us__description">           With a decade of expertise, We crafts bold brands and high-impact digital experience that get results.</p>
+                <p class="text-24 why-us__description ">With a decade of expertise, We crafts bold brands and high-impact digital experience that get results.</p>
             </div>
 
             <div class="why-us__bottom">
@@ -183,7 +184,7 @@ pageTitle: "Main"
 
                         <div class="why-us__metric">
                             <div class="why-us__metric-header">
-                                <span class="text-80 why-us__value">300</span>
+                                <span class="text-80 why-us__value">200</span>
                                 <span class="text-80 why-us__icon">+</span>
                             </div>
 
@@ -198,7 +199,7 @@ pageTitle: "Main"
 
                         <div class="why-us__metric">
                             <div class="why-us__metric-header">
-                                <span class="text-80 why-us__value">10</span>
+                                <span class="text-80 why-us__value">0</span>
                                 <span class="text-80 why-us__icon">+</span>
                             </div>
 
@@ -213,7 +214,7 @@ pageTitle: "Main"
 
                         <div class="why-us__metric">
                             <div class="why-us__metric-header">
-                                <span class="text-80 why-us__value">99</span>
+                                <span class="text-80 why-us__value">0</span>
                                 <span class="text-80 why-us__icon">%</span>
                             </div>
 
@@ -228,7 +229,7 @@ pageTitle: "Main"
 
                         <div class="why-us__metric">
                             <div class="why-us__metric-header">
-                                <span class="text-80 why-us__value">25</span>
+                                <span class="text-80 why-us__value">0</span>
                                 <span class="text-80 why-us__icon">M</span>
                             </div>
 
@@ -255,7 +256,7 @@ pageTitle: "Main"
                         <div class="testimonial-polosa"></div>
                         <div class="testimonial__author">
                             <div class="testimonial__avatar">
-                                <img src="/img/home/testimonial-photo.jpg" alt="people photo" loading="lazy">
+                                <img src="/img/home/testimonial-photo.jpg" alt="people photo" >
                             </div>
 
                             <div class="testimonial__meta">
@@ -268,7 +269,7 @@ pageTitle: "Main"
 
                 <div class="testimonial__media">
                     <div class="testimonial__image">
-                        <img src="/img/home/work-img3.jpg" alt="photo" loading="lazy">
+                        <img src="/img/home/work-img3.jpg" alt="photo" >
                     </div>
                 </div>
             </div>
@@ -281,6 +282,7 @@ pageTitle: "Main"
         </div>
 
         <div class="services__list">
+            <div class="services__item-line"></div>
             <div class="services__item-wrapper">
                 <div class="services__item">
                 <div class="services__item-head">
@@ -289,7 +291,7 @@ pageTitle: "Main"
 
                 <div class="services__item-body">
                     <div class="services__media">
-                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" >
                     </div>
 
                     <div class="services__content">
@@ -323,6 +325,7 @@ pageTitle: "Main"
                 </div>
                 </div>
             </div>
+            <div class="services__item-line"></div>
             <div class="services__item-wrapper">
                 <div class="services__item">
                 <div class="services__item-head">
@@ -331,7 +334,7 @@ pageTitle: "Main"
 
                 <div class="services__item-body">
                     <div class="services__media">
-                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" >
                     </div>
 
                     <div class="services__content">
@@ -365,6 +368,7 @@ pageTitle: "Main"
                 </div>
                 </div>
             </div>
+            <div class="services__item-line"></div>
             <div class="services__item-wrapper">
                 <div class="services__item">
                 <div class="services__item-head">
@@ -373,7 +377,7 @@ pageTitle: "Main"
 
                 <div class="services__item-body">
                     <div class="services__media">
-                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" >
                     </div>
 
                     <div class="services__content">
@@ -407,6 +411,7 @@ pageTitle: "Main"
                 </div>
                 </div>
             </div>
+            <div class="services__item-line"></div>
             <div class="services__item-wrapper">
                 <div class="services__item">
                 <div class="services__item-head">
@@ -415,7 +420,7 @@ pageTitle: "Main"
 
                 <div class="services__item-body">
                     <div class="services__media">
-                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" loading="lazy">
+                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" >
                     </div>
 
                     <div class="services__content">
@@ -507,7 +512,7 @@ pageTitle: "Main"
 
                 <div class="testimonials__heading">
                     <p class="text-16 testimonials__label">(TESTIMONIALS)</p>
-                    <h3 class="text-56 testimonials__title">           We deliver data-driven and result-focused deliverables. Hear what they say about us.</h3>
+                    <h3 class="text-56 testimonials__title">We deliver data-driven and result-focused deliverables. Hear what they say about us.</h3>
                 </div>
 
             </div>
@@ -517,7 +522,7 @@ pageTitle: "Main"
                 <div class="testimonials__item">
                     <div class="testimonials__author">
                         <div class="testimonials__avatar">
-                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" loading="lazy">
+                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" >
                         </div>
 
                         <div class="testimonials__meta">
@@ -535,7 +540,7 @@ pageTitle: "Main"
                 <div class="testimonials__item">
                     <div class="testimonials__author">
                         <div class="testimonials__avatar">
-                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" loading="lazy">
+                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" >
                         </div>
 
                         <div class="testimonials__meta">
@@ -553,7 +558,7 @@ pageTitle: "Main"
                 <div class="testimonials__item">
                     <div class="testimonials__author">
                         <div class="testimonials__avatar">
-                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" loading="lazy">
+                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" >
                         </div>
 
                         <div class="testimonials__meta">
@@ -644,7 +649,10 @@ pageTitle: "Main"
 
                     <div class="pricing-card__price">
                         <div class="text-24 pricing-card__currency">$</div>
-                        <p class="text-56 pricing-card__amount">5999</p>
+                        <div class="text-56 pricing-card__amount pricing-card__amount-starter">
+                            <div class="price-tag pricing-starter-first"><span>5</span><span>4</span></div>
+                            <div class="price-tag pricing-starter-twise"><span>999</span><span>888</span><span>777</span><span>666</span><span>555</span><span>444</span><span>333</span><span>222</span><span>111</span><span>000</span><span>999</span></div>
+                        </div>
                         <span class="text-24 pricing-card__period">/mo</span>
                     </div>
 
@@ -690,7 +698,10 @@ pageTitle: "Main"
 
                     <div class="pricing-card__price">
                         <div class="text-24 pricing-card__currency">$</div>
-                        <p class="text-56 pricing-card__amount">5999</p>
+                        <div class="text-56 pricing-card__amount pricing-card__amount-growth">
+                            <div class="price-tag pricing-growth-first"><span>8</span><span>7</span></div>
+                            <div class="price-tag pricing-growth-twise"><span>999</span><span>888</span><span>777</span><span>666</span><span>555</span><span>444</span><span>333</span><span>222</span><span>111</span><span>000</span><span>999</span></div>
+                        </div>
                         <span class="text-24 pricing-card__period">/mo</span>
                     </div>
 
@@ -721,13 +732,13 @@ pageTitle: "Main"
             </div>
 
             <div class="blog-preview__body">
-                <div class="blog-preview__column blog-preview__column--left">
-                    <a href="" class="blog-preview__card">
+                <div class="blog-preview__column blog-preview__column--left lm-blog-preview--animation">
+                    <a href="" class="blog-preview__card lm-hover" data-lm="VIEW BLOG">
                         <div class="blog-preview__card-wrapper">
                             <div class="blog-preview__card-inner">
                                 <div class="blog-preview__image">
                                     <div class="blog-preview__image-wp">
-                                        <img src="/img/home/blog-photo1.jpg" alt="bg" class="blog-preview__img" loading="lazy">
+                                        <img src="/img/home/blog-photo1.jpg" alt="bg" class="blog-preview__img" >
                                         <div class="blog-preview__overlay"></div>
                                     </div>
                                     <div class="blog-preview__tag">
@@ -744,9 +755,9 @@ pageTitle: "Main"
                 </div>
 
                 <div class="blog-preview__column blog-preview__column--right">
-                    <a href="" class="blog-preview__item">
+                    <a href="" class="blog-preview__item lm-hover lm-blog-preview--animation" data-lm="VIEW BLOG">
                         <div class="blog-preview__item-image">
-                            <img src="/img/blog/blog-1.jpg" alt="bg" class="blog-preview__item-img" loading="lazy">
+                            <img src="/img/blog/blog-1.jpg" alt="bg" class="blog-preview__item-img" >
                         </div>
                         <div class="blog-preview__item-meta">
                             <p class="text-14 blog-preview__item-date">FEB 4,2025</p>
@@ -758,9 +769,9 @@ pageTitle: "Main"
                         </div>
                         <div class="blog-preview__tag"><p class="text-14 blog-preview__tag-text">Design Strategy</p></div>
                     </a>
-                    <a href="" class="blog-preview__item">
+                    <a href="" class="blog-preview__item lm-hover lm-blog-preview--animation" data-lm="VIEW BLOG">
                         <div class="blog-preview__item-image">
-                            <img src="/img/home/blog-photo1.jpg" alt="bg" class="blog-preview__item-img" loading="lazy">
+                            <img src="/img/home/blog-photo1.jpg" alt="bg" class="blog-preview__item-img" >
                         </div>
                         <div class="blog-preview__item-meta">
                             <p class="text-14 blog-preview__item-date">FEB 4,2025</p>
