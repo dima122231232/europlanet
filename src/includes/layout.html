@@ -53,12 +53,14 @@
         </svg>
     </div>
 
-    {% include "header.html" %}
+    <div class="fake-body">
+        {% include "header.html" %}
 
-    {{ content | safe }}
+        {{ content | safe }}
 
-    {% include "footer.html" %}
-    
+        {% include "footer.html" %}
+    </div>
+
     <div class="lm-float">
         <div class="lm-wrap">
             <div class="lm-text lm-st"></div>
@@ -73,7 +75,7 @@
     <script src="/js/algorithms/Text-reveal-words.js"></script>
     <script src="/js/algorithms/Block-animation.js"></script>
     <script src="/js/algorithms/Hover-block.js"></script>
-    <!-- <script src="/js/algorithms/Language-transition.js"></script> -->
+    <script src="/js/algorithms/Language-transition.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/home.js"></script>
     <script src="/js/header.js"></script>

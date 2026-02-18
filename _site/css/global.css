@@ -2,7 +2,7 @@
     --font-body: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --font-Anton: 'Anton', sans-serif;
 
-        /* Base */
+    /* Base */
     --color-black: #0a0a0a;
     --color-black-soft: #181818;
     --color-black-alpha: #0a0a0acc;
@@ -34,14 +34,13 @@
     --padding:24px;
 }
 *{margin: 0;padding: 0;box-sizing: border-box;-webkit-font-smoothing: inherit;}
-body {
-  font-family: var(--font-body);
-  color: var(--color-gray-600);
-  background-color: var(--color-black);
-}
+body {font-family: var(--font-body);color: var(--color-gray-600);background-color: var(--color-black);}
+
+
 html, body {scrollbar-width: none;}
 html::-webkit-scrollbar,body::-webkit-scrollbar {display: none;}
 
+.blog-preview__title, .faq__item, .faq__title, .header-animation, .lm-blog-preview--animation, .pricing-card, .pricing__bespoke-content, .pricing__billing, .pricing__title, .process__step, .process__title, .services__title, .testimonial__author, .testimonial__container > div:first-child, .testimonial__container > div:last-child, .testimonials__item, .testimonials__rating, .why-us__bottom > * > div, .why-us__description, .why-us__title, .work-together__button, .work-together__text, .work-together__title, .work__body-adaptiv, .work__heading { will-change: transform; }
 
 .lm-hover{cursor:none;}
 .lm-text{font-weight:700;font-size:16px;white-space:nowrap;}

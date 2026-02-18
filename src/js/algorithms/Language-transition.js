@@ -1,34 +1,101 @@
-window.initAnimations = () => {
-    if (!window.SplitText) return;
+(() => {
+    const reduce = matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
-    const TEXT_SEL = "p,span,h1,h2,h3,h4,h5,h6,img";
-    const LINK_SEL = ".lang-switch a";
-    const DUR_IN   =.6;
-    const DUR_OUT  =.6;
-
-    let split = null;
-
-    const debounce = (fn, ms = 150) => {
-        let t;
-        return (...args) => (clearTimeout(t), (t = setTimeout(() => fn(...args), ms)));
+    const ready = (fn) => {
+        let tries = 0;
+        const tick = () => {
+            if (document.body && window.gsap) return fn();
+            if (++tries > 240) return;
+            requestAnimationFrame(tick);
+        };
+        tick();
     };
 
-    const rebuild = () => {
-        if (split) split.revert();
-        split = new SplitText(TEXT_SEL, { type: "lines", linesClass: "lt-line" });
+    ready(() => {
+        const gsap = window.gsap;
+        const body = document.querySelector(".fake-body") || document.body;
+        const loader = document.querySelector(".loader");
 
-        gsap.set(split.lines, { "--p": 1 });
-        gsap.to(split.lines, { "--p": 0, duration: DUR_IN, ease: "power2.out" });
-    };
+        const reset = () => {
+            gsap.set(body, { clearProps: "opacity,transform" });
+            loader && gsap.set(loader, { clearProps: "transform" });
+        };
 
-    const go = (href) => gsap.to(split?.lines || [], { "--p": 1, duration: DUR_OUT, ease: "power2.inOut", onComplete: () => (window.location.href = href) });
+        addEventListener("pageshow", reset, { passive: true });
 
-    requestAnimationFrame(() => {
-        rebuild();
-        window.addEventListener("resize", debounce(rebuild), { passive: true });
+        const isSpecialClick = (e) =>
+            e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
 
-        document.querySelectorAll(LINK_SEL).forEach((a) => {
-            a.addEventListener("click", (e) => (e.preventDefault(), go(a.href)));
-        });
+        const isIgnorableLink = (a) =>
+            a.hasAttribute("download") ||
+            a.target === "_blank" ||
+            a.getAttribute("rel") === "external" ||
+            /^(mailto:|tel:|sms:|javascript:)/i.test(a.getAttribute("href") || "");
+
+        const norm = (u) => (u.origin + u.pathname).replace(/\/+$/, "");
+
+        const parseUrl = (href) =>
+            href ? new URL(href, location.href) : new URL(location.href);
+
+        const isSamePage = (href) => {
+            try {
+                return norm(parseUrl(href)) === norm(new URL(location.href));
+            } catch {
+                return false;
+            }
+        };
+
+        const isInternal = (href) => {
+            try {
+                return parseUrl(href).origin === location.origin;
+            } catch {
+                return false;
+            }
+        };
+
+        let locked = false;
+
+        const leave = (done) => {
+            if (locked) return;
+            locked = true;
+
+            if (reduce) return done();
+
+            gsap.killTweensOf(body);
+            loader && gsap.killTweensOf(loader);
+
+            gsap.timeline({ defaults: { overwrite: "auto" }, onComplete: done })
+                .set(loader || {}, { yPercent: 100 })
+                .to(body, { opacity: 0, y: -200, duration: 0.4, ease: "power2.in" }, 0)
+                .to(loader || {}, { yPercent: 0, duration: 0.4, ease: "power2.in" }, 0);
+        };
+
+        document.addEventListener(
+            "click",
+            (e) => {
+                const a = e.target.closest("a[href]");
+                if (!a) return;
+
+                const href = a.getAttribute("href") || "";
+
+                if (href === "#" || href === "" || isSamePage(href)) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    return;
+                }
+
+                if (isSpecialClick(e) || isIgnorableLink(a) || !isInternal(href)) return;
+
+                e.preventDefault();
+                const url = parseUrl(href).href;
+
+                let jumped = false;
+                const go = () => (jumped ? 0 : ((jumped = true), (location.href = url)));
+
+                leave(go);
+                setTimeout(go, 1200);
+            },
+            true
+        );
     });
-}
+})();

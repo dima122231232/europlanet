@@ -283,7 +283,7 @@ window.initAnimations = () => {
     //blog-preview-----------------------------
     {
         Copy(".blog-preview__title", {start:"top 90%",duration:1.35,opacity:0});
-        BlockReveal(".lm-blog-preview--animation", {start:"top 80%",step:.05,duration:.4,y:120,opacity:0});
+        BlockReveal(".lm-blog-preview--animation", {start:"top 80%",step:.05,duration:.4,y:200,opacity:0});
     }
 
     //work-together----------------------------------
