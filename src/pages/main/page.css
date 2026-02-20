@@ -2140,7 +2140,7 @@
     position: relative;
     border: 1px solid var(--color-gray-900);
     border-radius: 8px;
-    transition: var(--block-hover-transion);
+    /* transition: var(--block-hover-transion); */
 }
 .blog-preview__card {
     flex-flow: row;
@@ -2154,7 +2154,7 @@
     text-decoration: none;
     display: flex;
     position: relative;
-    transition: var(--block-hover-transion);
+    /* transition: var(--block-hover-transion); */
 }
 .blog-preview__card-wrapper{
     flex: 1 0 0;
@@ -2200,7 +2200,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: var(--block-hover-transion);
+    /* transition: var(--block-hover-transion); */
     transform: scale(1.01);
 }
 .blog-preview__img {
@@ -2236,7 +2236,7 @@
     position: absolute;
     inset: 0;
     overflow: hidden;
-    transition:var(--block-hover-transion);
+    /* transition:var(--block-hover-transion); */
 }
 .blog-preview__date {
     color: var(--color-gray-600);
@@ -2301,13 +2301,13 @@
     position: relative;
     justify-content: flex-start;
     text-decoration: none;
-    transition: var(--block-hover-transion);
+    /* transition: var(--block-hover-transion); */
 }
 .blog-preview__item-image {
     width: 100%;
     border-radius:8px;
     overflow: hidden;
-    transition: var(--block-hover-transion);
+    /* transition: var(--block-hover-transion); */
 }
 .no-transition{transition:none!important;}
 .blog-preview__item-img {
@@ -2318,7 +2318,7 @@
     object-position: center center;
     object-fit: cover;
     aspect-ratio: 1.52607;
-    transition: var(--block-hover-transion);
+    /* transition: var(--block-hover-transion); */
     
 }
 .blog-preview__item-meta {
@@ -2363,12 +2363,13 @@
 }
 
 @media screen and (min-width:801px){
-    .blog-preview__column--left:has(.blog-preview__card:hover){scale:.97;}
+    
+    /* .blog-preview__column--left:has(.blog-preview__card:hover){scale:.97;}
     .blog-preview__card:hover{scale:1.03;}
     .blog-preview__card:hover .blog-preview__image-wp{opacity: .6;}
     .blog-preview__item:hover{background-color: var(--color-black-soft);}
     .blog-preview__item:hover .blog-preview__item-image{scale:.96;opacity: .6;}
-    .blog-preview__item:hover .blog-preview__item-img{scale:1.04;}
+    .blog-preview__item:hover .blog-preview__item-img{scale:1.04;} */
 }
 @media screen and (max-width:1201px){
 .blog-preview__body{aspect-ratio:unset;flex-direction:column;height:min-content;}

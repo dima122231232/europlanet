@@ -283,7 +283,54 @@ window.initAnimations = () => {
     //blog-preview-----------------------------
     {
         Copy(".blog-preview__title", {start:"top 90%",duration:1.35,opacity:0});
-        BlockReveal(".lm-blog-preview--animation", {start:"top 80%",step:.05,duration:.4,y:200,opacity:0});
+        BlockReveal(".lm-blog-preview--animation", {start:"top 90%",step:.05,duration:1.35,y:100,opacity:0});
+        const D = 0.6;
+        const EASE = CustomEase
+            ? (gsap.registerPlugin(CustomEase), CustomEase.create("hover", "0.5,0,0.2,1"), "hover")
+            : "power2.out";
+
+        gsap.defaults({ duration: D, ease: EASE, overwrite: "auto" });
+
+        document.querySelectorAll(".blog-preview__card").forEach(card => {
+            const col   = card.closest(".blog-preview__column--left");
+            const imgWp = card.querySelector(".blog-preview__image-wp");
+
+            const enter = () => (
+            col   && gsap.to(col,  { scale: 0.97 }),
+            gsap.to(card,          { scale: 1.03 }),
+            imgWp && gsap.to(imgWp,{ opacity: 0.6 })
+            );
+
+            const leave = () => (
+            col   && gsap.to(col,  { scale: 1 }),
+            gsap.to(card,          { scale: 1 }),
+            imgWp && gsap.to(imgWp,{ opacity: 1 })
+            );
+
+            card.addEventListener("mouseenter", enter);
+            card.addEventListener("mouseleave", leave);
+        });
+
+        document.querySelectorAll(".blog-preview__item").forEach(item => {
+            const image = item.querySelector(".blog-preview__item-image");
+            const img   = item.querySelector(".blog-preview__item-img");
+
+            const enter = () => (
+            gsap.to(item,          { backgroundColor: "var(--color-black-soft)" }),
+            image && gsap.to(image,{ scale: 0.96, opacity: 0.6 }),
+            img   && gsap.to(img,  { scale: 1.04 })
+            );
+
+            const leave = () => (
+            gsap.to(item,          { backgroundColor: "var(--color-black)" }),
+            image && gsap.to(image,{ scale: 1, opacity: 1 }),
+            img   && gsap.to(img,  { scale: 1 })
+            );
+
+            item.addEventListener("mouseenter", enter);
+            item.addEventListener("mouseleave", leave);
+        });
+        
     }
 
     //work-together----------------------------------

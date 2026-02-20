@@ -39,6 +39,8 @@ body {font-family: var(--font-body);color: var(--color-gray-600);background-colo
 
 html, body {scrollbar-width: none;}
 html::-webkit-scrollbar,body::-webkit-scrollbar {display: none;}
+*::selection{background: var(--color-accent) !important;color: #fff !important;}
+*::-moz-selection , *::selection{background: var(--color-accent) !important;color: #fff !important;}
 
 .blog-preview__title, .faq__item, .faq__title, .header-animation, .lm-blog-preview--animation, .pricing-card, .pricing__bespoke-content, .pricing__billing, .pricing__title, .process__step, .process__title, .services__title, .testimonial__author, .testimonial__container > div:first-child, .testimonial__container > div:last-child, .testimonials__item, .testimonials__rating, .why-us__bottom > * > div, .why-us__description, .why-us__title, .work-together__button, .work-together__text, .work-together__title, .work__body-adaptiv, .work__heading { will-change: transform; }
 
@@ -49,7 +51,7 @@ html::-webkit-scrollbar,body::-webkit-scrollbar {display: none;}
 .lm-float svg path{stroke-width: .35;stroke: currentColor;}
 .lm-float svg{scale:1.1;transform: translateY(50%);flex:0 0 11px;flex-shrink:0;}
 
-.loader{position:fixed;inset:0;background:var(--color-accent);z-index:9999;display:flex;align-items: center;justify-content: center;overflow: hidden;}
+.loader{position:fixed;inset:0;background:var(--color-accent);z-index:9999;display:none;align-items: center;justify-content: center;overflow: hidden;}
 .loader-svg{width:clamp(300px, 20vw ,450px);opacity: 0;}
 /* .lt-line{ position:relative; display:block; }
 .lt-line::after{ content:""; position:absolute; inset:-0.12em -0.18em; background:currentColor; transform:scaleY(var(--p)); transform-origin:top; pointer-events:none; } */

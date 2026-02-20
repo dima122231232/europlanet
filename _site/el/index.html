@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/pages/main/page.css">
-    <link rel="stylesheet" href="/css/components/header.css">
+
 
     <script src="/vendor/lenis/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
@@ -62,7 +62,6 @@
 
 
 
-
   
 
   
@@ -74,36 +73,24 @@
 
 
 
+
+<link rel="stylesheet" href="/css/components/header.css">
 
 <header class="header">
-  <!-- <p>Europlanet</p> -->
-
-  <!-- <nav class="nav">
-    
-      
-        <span>Home</span>
-      
-    
-      
-        <a href="/el/about/">About</a>
-      
-    
-  </nav> -->
 
     <nav class="nav">
         <div class="nav__logo">
-            <a href="/"><img src="/img/logo.svg" alt=""></a>
+            <a href="/el/"><img src="/img/logo.svg" alt=""></a>
         </div>
 
         <div class="nav__right">
-            <div class="nav__label"><!-- text -->
+            <div class="nav__label">
+                <div class="lang-switch">
+                    <a href="/" class="text-16 lang-switch-link">EN</a>
+                    <a href="/el/" aria-current="page" class="text-16 lang-switch-link">EL</a>
+                </div>
+            </div>
 
-            <div class="lang-switch">
-                <a href="/">EN</a>
-                <a href="/el/" aria-current="page">EL</a>
-            </div>
-            
-            </div>
             <div class="nav__actions">
                 <button class="btn ">
     <a href="/contact/" class="btn__link">
@@ -139,10 +126,10 @@
         </div>
     </nav>
 
-
     <div class="header-menu">
         <nav class="header-menu__nav">
             <div class="header-menu__wrapper">
+
                 <div class="header-menu__top">
                     <div class="header-menu__title">
                         <div class="header-menu__cube"></div>
@@ -167,31 +154,47 @@
                 <div class="header-menu__content">
                     <div class="header-menu__content-wrap">
                         <div class="header-menu__items">
-                            <a class="header-menu__item header-animation">
+
+                            
+                            <a href="/el/"
+                               class="header-menu__item header-animation"
+                                aria-current="page">
                                 <h3 class="header-menu__item-text">Αρχική</h3>
                                 <div class="header-menu__item-cube"></div>
                             </a>
-
+                            
                             <div class="header-menu__divider"></div>
-
-                            <div class="header-menu__item header-animation">
+                            
+                            
+                            <a href="/el/works/"
+                               class="header-menu__item header-animation"
+                               >
                                 <h3 class="header-menu__item-text">ΕΡΓΑ</h3>
                                 <div class="header-menu__item-cube"></div>
-                            </div>
-
+                            </a>
+                            
                             <div class="header-menu__divider"></div>
-
-                            <div class="header-menu__item header-animation">
+                            
+                            
+                            <a href="/el/about/"
+                               class="header-menu__item header-animation"
+                               >
                                 <h3 class="header-menu__item-text">ΣΧΕΤΙΚΑ</h3>
                                 <div class="header-menu__item-cube"></div>
-                            </div>
-
+                            </a>
+                            
                             <div class="header-menu__divider"></div>
-
-                            <div class="header-menu__item header-animation">
+                            
+                            
+                            <a href="/el/contact/"
+                               class="header-menu__item header-animation"
+                               >
                                 <h3 class="header-menu__item-text">ΕΠΙΚΟΙΝΩΝΙΑ</h3>
                                 <div class="header-menu__item-cube"></div>
-                            </div>
+                            </a>
+                            
+                            
+
                         </div>
                     </div>
                 </div>
@@ -199,63 +202,53 @@
                 <div class="header-menu__footer">
                     <div class="header-menu__contact">
                         <p class="header-menu__contact-label header-animation">(EMAIL)</p>
-                        <div class="header-animation"><a href="" class="header-menu__contact-link">hello@nakula.com</a></div>
+                        <div class="header-animation">
+                            <a href="mailto:hello@nakula.com" class="header-menu__contact-link">hello@nakula.com</a>
+                        </div>
                     </div>
 
                     <div class="header-menu__socials">
                         <p class="header-menu__socials-label header-animation">(SOCIALS)</p>
+
                         <div class="header-menu__socials-list">
+
                             <div class="header-menu__block">
                                 <div class="header-menu__social">
-                                    <a class="header-menu__social-link header-animation">
-                                        <p class="header-menu__social-text ">X/Twitter</p>
-                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
-                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
-                                        </svg>
+                                    <a href="#" class="header-menu__social-link header-animation">
+                                        <p class="header-menu__social-text">X/Twitter</p>
                                     </a>
                                 </div>
 
                                 <div class="header-menu__social">
-                                    <a class="header-menu__social-link header-animation">
+                                    <a href="#" class="header-menu__social-link header-animation">
                                         <p class="header-menu__social-text">Instagram</p>
-                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
-                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
-                                        </svg>
                                     </a>
                                 </div>
                             </div>
+
                             <div class="header-menu__block">
                                 <div class="header-menu__social">
-                                    <a class="header-menu__social-link header-animation">
+                                    <a href="#" class="header-menu__social-link header-animation">
                                         <p class="header-menu__social-text">LinkedIn</p>
-                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
-                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
-                                        </svg>
                                     </a>
                                 </div>
 
                                 <div class="header-menu__social">
-                                    <a class="header-menu__social-link header-animation">
+                                    <a href="#" class="header-menu__social-link header-animation">
                                         <p class="header-menu__social-text">Behance</p>
-                                        <svg width="11" height="11" class="header-menu__social-svg" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.704711 9.59487C0.636407 9.52661 0.582222 9.44555 0.545254 9.35635C0.508285 9.26714 0.489258 9.17152 0.489258 9.07495C0.489258 8.97839 0.508285 8.88277 0.545254 8.79356C0.582222 8.70435 0.636407 8.6233 0.704711 8.55504L9.0351 0.224643C9.10288 0.154408 9.18396 0.0983749 9.27362 0.0598108C9.36328 0.0212467 9.45972 0.00092468 9.55731 3.0886e-05C9.65491 -0.000862908 9.75171 0.0176892 9.84206 0.0546048C9.93241 0.0915204 10.0145 0.146061 10.0835 0.215042C10.1526 0.284024 10.2072 0.366065 10.2442 0.456381C10.2812 0.546696 10.2999 0.643476 10.2991 0.741073C10.2983 0.838671 10.278 0.935131 10.2395 1.02483C10.2011 1.11452 10.1451 1.19565 10.0749 1.26349L1.74454 9.59389C1.60672 9.73153 1.4199 9.80885 1.22512 9.80885C1.03033 9.80885 0.84351 9.73153 0.705691 9.59389L0.704711 9.59487Z" fill="none"/>
-                                            <path d="M0 0.74461C0 0.549666 0.0774408 0.362707 0.215287 0.224861C0.353132 0.0870154 0.540091 0.00957504 0.735035 0.00957504L9.55545 0.00957504C9.75039 0.00957504 9.93735 0.0870154 10.0752 0.224861C10.213 0.362707 10.2905 0.549666 10.2905 0.74461L10.2905 9.56503C10.2905 9.75997 10.213 9.94693 10.0752 10.0848C9.93735 10.2226 9.75039 10.3001 9.55545 10.3001C9.36051 10.3001 9.17355 10.2226 9.0357 10.0848C8.89786 9.94693 8.82042 9.75997 8.82042 9.56503L8.82042 1.47964L0.735035 1.47964C0.540091 1.47964 0.353132 1.4022 0.215287 1.26436C0.0774408 1.12651 0 0.939553 0 0.74461Z" fill="none"/>
-                                        </svg>
                                     </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
+
             </div>
         </nav>
     </div>
 
 </header>
-
 
         
 <main>
@@ -614,16 +607,16 @@
             <div class="services__item-wrapper">
                 <div class="services__item">
                 <div class="services__item-head">
-                    <p class="text-80 services__index">01<span>.</span></p>
+                    <p class="text-80 services__index">02<span>.</span></p>
                 </div>
 
                 <div class="services__item-body">
                     <div class="services__media">
-                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" >
+                        <img class="services__image" src="/img/home/services2.jpg" alt="Branding" >
                     </div>
 
                     <div class="services__content">
-                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Web Design & Development</h3>
+                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Branding</h3>
                             <div class="services__button-p-m">
                                 <div class="services__button-line--first services__minus-line"></div>
                                 <div class="services__button-line--twise services__minus-line"></div>
@@ -632,21 +625,21 @@
 
                         <div class="services__details">
                             <div class="services__intro">
-                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Web Design & Development</p>
+                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Branding</p>
                                     <div class="services__button-p-m">
                                         <div class="services__button-line--first services__minus-line"></div>
                                         <div class="services__button-line--twise services__minus-line"></div>
                                     </div>
                                 </div>
 
-                                <p class="text-24 services__text">Logos, colors, type, your brand, fully alive.</p>
+                                <p class="text-24 services__text">Crafting visual identities that feel clear, timeless, and true to your brand.</p>
                             </div>
 
                             <div class="services__tags">
-                                <div class="text-16 services__tag">Responsive Design</div>
-                                <div class="text-16 services__tag">Interaction Design</div>
-                                <div class="text-16 services__tag">CMS Interaction</div>
-                                <div class="text-16 services__tag">SEO Optimization</div>
+                                <div class="text-16 services__tag">Logo Design</div>
+                                <div class="text-16 services__tag">Color System</div>
+                                <div class="text-16 services__tag">Typography</div>
+                                <div class="text-16 services__tag">Brand Direction</div>
                             </div>
                         </div>
                     </div>
@@ -657,16 +650,16 @@
             <div class="services__item-wrapper">
                 <div class="services__item">
                 <div class="services__item-head">
-                    <p class="text-80 services__index">01<span>.</span></p>
+                    <p class="text-80 services__index">03<span>.</span></p>
                 </div>
 
                 <div class="services__item-body">
                     <div class="services__media">
-                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" >
+                        <img class="services__image" src="/img/home/services3.jpg" alt="Social Media" >
                     </div>
 
                     <div class="services__content">
-                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Web Design & Development</h3>
+                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Social Media</h3>
                             <div class="services__button-p-m">
                                 <div class="services__button-line--first services__minus-line"></div>
                                 <div class="services__button-line--twise services__minus-line"></div>
@@ -675,21 +668,21 @@
 
                         <div class="services__details">
                             <div class="services__intro">
-                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Web Design & Development</p>
+                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Social Media</p>
                                     <div class="services__button-p-m">
                                         <div class="services__button-line--first services__minus-line"></div>
                                         <div class="services__button-line--twise services__minus-line"></div>
                                     </div>
                                 </div>
 
-                                <p class="text-24 services__text">Logos, colors, type, your brand, fully alive.</p>
+                                <p class="text-24 services__text">Branded templates and content systems to help you stay consistent and scroll-worthy.</p>
                             </div>
 
                             <div class="services__tags">
-                                <div class="text-16 services__tag">Responsive Design</div>
-                                <div class="text-16 services__tag">Interaction Design</div>
-                                <div class="text-16 services__tag">CMS Interaction</div>
-                                <div class="text-16 services__tag">SEO Optimization</div>
+                                <div class="text-16 services__tag">Instagram Design</div>
+                                <div class="text-16 services__tag">Story Kits</div>
+                                <div class="text-16 services__tag">Content Templates</div>
+                                <div class="text-16 services__tag">Visual Consistency</div>
                             </div>
                         </div>
                     </div>
@@ -700,16 +693,16 @@
             <div class="services__item-wrapper">
                 <div class="services__item">
                 <div class="services__item-head">
-                    <p class="text-80 services__index">01<span>.</span></p>
+                    <p class="text-80 services__index">04<span>.</span></p>
                 </div>
 
                 <div class="services__item-body">
                     <div class="services__media">
-                        <img class="services__image" src="/img/home/services1.jpg" alt="Web design & development" >
+                        <img class="services__image" src="/img/home/services4.jpg" alt="Motion Design" >
                     </div>
 
                     <div class="services__content">
-                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Web Design & Development</h3>
+                        <div class="services__subtitle-adaptiv services__name-adaptiv"><h3 class="services__name">Motion Design</h3>
                             <div class="services__button-p-m">
                                 <div class="services__button-line--first services__minus-line"></div>
                                 <div class="services__button-line--twise services__minus-line"></div>
@@ -718,21 +711,21 @@
 
                         <div class="services__details">
                             <div class="services__intro">
-                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Web Design & Development</p>
+                                <div class="services__subtitle-adaptiv"><p class="text-56 services__subtitle">Motion Design</p>
                                     <div class="services__button-p-m">
                                         <div class="services__button-line--first services__minus-line"></div>
                                         <div class="services__button-line--twise services__minus-line"></div>
                                     </div>
                                 </div>
 
-                                <p class="text-24 services__text">Logos, colors, type, your brand, fully alive.</p>
+                                <p class="text-24 services__text">Thoughtful animations that add rhythm, clarity, and life to your interface.</p>
                             </div>
 
                             <div class="services__tags">
-                                <div class="text-16 services__tag">Responsive Design</div>
-                                <div class="text-16 services__tag">Interaction Design</div>
-                                <div class="text-16 services__tag">CMS Interaction</div>
-                                <div class="text-16 services__tag">SEO Optimization</div>
+                                <div class="text-16 services__tag">Micro-interactions</div>
+                                <div class="text-16 services__tag">Scroll Effects</div>
+                                <div class="text-16 services__tag">Hover States</div>
+                                <div class="text-16 services__tag">Framer Motion</div>
                             </div>
                         </div>
                     </div>
@@ -757,24 +750,24 @@
                     </div>
                 </div>
                 <div class="process__step">
-                    <h6 class="process__step-index">STEP 1<span>.</span></h6>
+                    <h6 class="process__step-index">STEP 2<span>.</span></h6>
                     <div class="process__step-content">
-                        <p class="text-56 process__step-title">Discovery Phase</p>
-                        <p class="text-24 process__step-text">Understanding your, goals, pain points, audience, and what sets you apart.</p>
+                        <p class="text-56 process__step-title">Project Kickoff</p>
+                        <p class="text-24 process__step-text">Setting up projects, aligning on scope and milestones, and diving into the work.</p>
                     </div>
                 </div>
                 <div class="process__step">
-                    <h6 class="process__step-index">STEP 1<span>.</span></h6>
+                    <h6 class="process__step-index">STEP 3<span>.</span></h6>
                     <div class="process__step-content">
-                        <p class="text-56 process__step-title">Discovery Phase</p>
-                        <p class="text-24 process__step-text">Understanding your, goals, pain points, audience, and what sets you apart.</p>
+                        <p class="text-56 process__step-title">Receive & Refine</p>
+                        <p class="text-24 process__step-text">Sharing initial designs, gathering feedback, and fine-tuning together.</p>
                     </div>
                 </div>
                 <div class="process__step">
-                    <h6 class="process__step-index">STEP 1<span>.</span></h6>
+                    <h6 class="process__step-index">STEP 4<span>.</span></h6>
                     <div class="process__step-content">
-                        <p class="text-56 process__step-title">Discovery Phase</p>
-                        <p class="text-24 process__step-text">Understanding your, goals, pain points, audience, and what sets you apart.</p>
+                        <p class="text-56 process__step-title">Continue & Grow</p>
+                        <p class="text-24 process__step-text">Launching with confidence and supporting your next extraordinary moves.</p>
                     </div>
                 </div>
             </div>
@@ -825,17 +818,17 @@
                 <div class="testimonials__item">
                     <div class="testimonials__author">
                         <div class="testimonials__avatar">
-                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" >
+                            <img src="/img/home/testimonials-photo2.jpg" alt="avatar" >
                         </div>
 
                         <div class="testimonials__meta">
-                            <h4 class="text-24 testimonials__name">Mario Baskoro</h4>
-                            <p class="text-16 testimonials__role">CTO of Arjuna</p>
+                            <h4 class="text-24 testimonials__name">Evelyn Widjaja</h4>
+                            <p class="text-16 testimonials__role">Marketing Lead at Bima</p>
                         </div>
                     </div>
 
                     <div class="testimonials__content">
-                        <p class="testimonials__text">Our socials used to feel scattered and inconsistent. Now, everything is on-brand, engaging, and performing better.</p>
+                        <p class="testimonials__text">From branding to the website to social—everything was cohesive, strategic, and done with serious care.</p>
 
                         <div class="testimonials__mark">"</div>
                     </div>
@@ -843,17 +836,17 @@
                 <div class="testimonials__item">
                     <div class="testimonials__author">
                         <div class="testimonials__avatar">
-                            <img src="/img/home/testimonials-photo.jpg" alt="avatar" >
+                            <img src="/img/home/testimonials-photo3.jpg" alt="avatar" >
                         </div>
 
                         <div class="testimonials__meta">
-                            <h4 class="text-24 testimonials__name">Mario Baskoro</h4>
-                            <p class="text-16 testimonials__role">CTO of Arjuna</p>
+                            <h4 class="text-24 testimonials__name">Karina Wulandari</h4>
+                            <p class="text-16 testimonials__role">Founder at Batavia</p>
                         </div>
                     </div>
 
                     <div class="testimonials__content">
-                        <p class="testimonials__text">Our socials used to feel scattered and inconsistent. Now, everything is on-brand, engaging, and performing better.</p>
+                        <p class="testimonials__text">Working with them felt like having an in-house team that just gets it.</p>
 
                         <div class="testimonials__mark">"</div>
                     </div>
@@ -1114,7 +1107,7 @@
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">What’s your typical process for a new project?</h3>
+                    <h3 class="faq__question-title">How long does a project usually take?</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line"></div>
@@ -1122,13 +1115,13 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        We start with a discovery phase to understand your goals, audience, and competitors. From there, we move into strategy, design, and development—keeping you in the loop at every stage. Each service has its own milestones, but collaboration is constant throughout.
+                        It depends on the scope. A simple website or branding project can take 2 to 3 weeks. Larger projects with multiple pages, motion, or strategy may take 4 to 6 weeks. We’ll always set a clear timeline before we begin.
                     </p>
                 </div>
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">What’s your typical process for a new project?</h3>
+                    <h3 class="faq__question-title">Do you offer packages or custom quotes?</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line"></div>
@@ -1136,13 +1129,13 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        We start with a discovery phase to understand your goals, audience, and competitors. From there, we move into strategy, design, and development—keeping you in the loop at every stage. Each service has its own milestones, but collaboration is constant throughout.
+                        Both. We have a few starter packages to keep things simple, but we also offer custom quotes for projects with unique needs. Just tell us what you're planning — we’ll work around it.
                     </p>
                 </div>
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">What’s your typical process for a new project?</h3>
+                    <h3 class="faq__question-title">What’s included in a branding package?</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line"></div>
@@ -1150,13 +1143,12 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        We start with a discovery phase to understand your goals, audience, and competitors. From there, we move into strategy, design, and development—keeping you in the loop at every stage. Each service has its own milestones, but collaboration is constant throughout.
-                    </p>
+                        Our branding package covers the essentials: logo design, color palette, font pairing, and a mini style guide. We can also include social templates or creative direction if needed.                    </p>
                 </div>
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">What’s your typical process for a new project?</h3>
+                    <h3 class="faq__question-title">Can you work with our existing dev or marketing team?</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line"></div>
@@ -1164,7 +1156,7 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        We start with a discovery phase to understand your goals, audience, and competitors. From there, we move into strategy, design, and development—keeping you in the loop at every stage. Each service has its own milestones, but collaboration is constant throughout.
+                        Yes, absolutely. We’re happy to collaborate with your team — whether it's development, content, or marketing. Clear communication and teamwork always lead to better results.
                     </p>
                 </div>
             </div>
@@ -1306,6 +1298,8 @@
 
         
 
+
+<link rel="stylesheet" href="/css/components/footer.css">
 
 <footer class="footer">
   <small>© Europlanet</small>

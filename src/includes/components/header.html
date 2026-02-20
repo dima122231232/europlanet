@@ -1,0 +1,150 @@
+{% set lang = lang | default(locales.default) %}
+{% set t = i18n.main[lang] %}
+
+{% set base = ('' if lang == locales.default else '/' ~ lang) %}
+{% set cur = page.url %}
+
+{% set curNoLang = cur %}
+{% for l in locales.list %}
+  {% if l != locales.default %}
+    {% set curNoLang = curNoLang | replace('/' ~ l ~ '/', '/') %}
+  {% endif %}
+{% endfor %}
+
+{% set enUrl = curNoLang %}
+{% set elUrl = '/el' ~ curNoLang %}
+
+{% set nav = [
+  { title: t.header.menu.home, href: base ~ '/' },
+  { title: t.header.menu.works, href: base ~ '/works/' },
+  { title: t.header.menu.about, href: base ~ '/about/' },
+  { title: t.header.menu.contact, href: base ~ '/contact/' }
+] %}
+
+<link rel="stylesheet" href="/css/components/header.css">
+
+<header class="header">
+
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="{{ base ~ '/' }}"><img src="/img/logo.svg" alt=""></a>
+        </div>
+
+        <div class="nav__right">
+            <div class="nav__label">
+                <div class="lang-switch">
+                    <a href="{{ enUrl }}"{% if lang == 'en' %} aria-current="page"{% endif %} class="text-16 lang-switch-link">EN</a>
+                    <a href="{{ elUrl }}"{% if lang == 'el' %} aria-current="page"{% endif %} class="text-16 lang-switch-link">EL</a>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                {% btn t.header.nav.button, "/contact/", "" %}
+                <div class="nav__burger">
+                    <div class="nav__burger-inner">
+                        <div class="nav__bg-burger"></div>
+                        <div class="nav__burger-items">
+                            <div class="nav__burger-line nav__line-top"></div>
+                            <div class="nav__burger-line nav__line-bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-menu">
+        <nav class="header-menu__nav">
+            <div class="header-menu__wrapper">
+
+                <div class="header-menu__top">
+                    <div class="header-menu__title">
+                        <div class="header-menu__cube"></div>
+                        <p class="header-menu__label">MENU</p>
+                    </div>
+
+                    <div class="header-menu__close">
+                        <div class="header-menu__close-wrap">
+                            <div class="header-menu__close-inner">
+                                <div class="header-menu__close-bg"></div>
+                                <div class="header-menu__close-lines">
+                                    <div class="header-menu__close-line header-menu__close-line-top"></div>
+                                    <div class="header-menu__close-line header-menu__close-line-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-menu__divider"></div>
+
+                <div class="header-menu__content">
+                    <div class="header-menu__content-wrap">
+                        <div class="header-menu__items">
+
+                            {% for link in nav %}
+                            <a href="{{ link.href }}"
+                               class="header-menu__item header-animation"
+                               {% if cur == link.href %} aria-current="page"{% endif %}>
+                                <h3 class="header-menu__item-text">{{ link.title }}</h3>
+                                <div class="header-menu__item-cube"></div>
+                            </a>
+                            {% if not loop.last %}
+                            <div class="header-menu__divider"></div>
+                            {% endif %}
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-menu__footer">
+                    <div class="header-menu__contact">
+                        <p class="header-menu__contact-label header-animation">{{ t.header.menu.email }}</p>
+                        <div class="header-animation">
+                            <a href="mailto:hello@nakula.com" class="header-menu__contact-link">hello@nakula.com</a>
+                        </div>
+                    </div>
+
+                    <div class="header-menu__socials">
+                        <p class="header-menu__socials-label header-animation">{{ t.header.menu.socials }}</p>
+
+                        <div class="header-menu__socials-list">
+
+                            <div class="header-menu__block">
+                                <div class="header-menu__social">
+                                    <a href="#" class="header-menu__social-link header-animation">
+                                        <p class="header-menu__social-text">X/Twitter</p>
+                                    </a>
+                                </div>
+
+                                <div class="header-menu__social">
+                                    <a href="#" class="header-menu__social-link header-animation">
+                                        <p class="header-menu__social-text">Instagram</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="header-menu__block">
+                                <div class="header-menu__social">
+                                    <a href="#" class="header-menu__social-link header-animation">
+                                        <p class="header-menu__social-text">LinkedIn</p>
+                                    </a>
+                                </div>
+
+                                <div class="header-menu__social">
+                                    <a href="#" class="header-menu__social-link header-animation">
+                                        <p class="header-menu__social-text">Behance</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+
+</header>
