@@ -449,10 +449,9 @@
     overflow: hidden;
     padding-bottom: 4px;
 }
-.header-menu__item-text{ position:relative }
-.header-menu__underline{
+.menu__underline{
   position:absolute; left:0; right:0; bottom:0;
-  height:2px; background:var(--color-accent);
+  height:1px; background:var(--color-accent);
   transform:scaleX(0); transform-origin:left center;
   will-change:transform;
   pointer-events:none;
@@ -589,7 +588,7 @@
     overflow: hidden;
     padding-bottom: 4px;
 }
-.header-menu__social-text .header-menu__underline{height:1px;bottom:0px}
+.header-menu__social-text .menu__underline{height:1px;bottom:0px}
 .header-menu__social-text {
     font-size:24px;
     font-weight: 500;
@@ -598,16 +597,14 @@
     color: var(--color-gray-600);
 }
 .header-menu__social-svg {
-    height: 10px;
     margin-top: 2px;
-    width: 10px;
     color:  var(--color-gray-700);
     transition: .55s cubic-bezier(.4, 0, 0.2, 1.2);
 }
 
 .header-menu__social-svg path {
     stroke: currentColor;
-    stroke-width: .35;
+    stroke-width: .5;
     fill:currentColor;
 }
 .header-menu__social:hover .header-menu__social-svg{

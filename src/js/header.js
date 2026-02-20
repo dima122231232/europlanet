@@ -16,12 +16,12 @@
     const q = s => document.querySelectorAll(s);
 
     const underline = (wrapSel, textSel) => {
-        q(wrapSel).forEach(item => {
-        const t = item.querySelector(textSel);
+    q(wrapSel).forEach(item => {
+        const t = textSel ? item.querySelector(textSel) : item; 
         if (!t) return;
 
         const u = document.createElement("span");
-        u.className = "header-menu__underline";
+        u.className = "menu__underline";
         t.appendChild(u);
 
         gsap.set(u, { transformOrigin:"0% 50%", scaleX:0, xPercent:0 });
@@ -31,11 +31,13 @@
 
         item.addEventListener("pointerenter", enter, { passive:true });
         item.addEventListener("pointerleave", leave, { passive:true });
-        });
+    });
     };
 
     underline(".header-menu__item", ".header-menu__item-text");
     underline(".header-menu__social-link", ".header-menu__social-text");
+    underline(".footer__link");
+    underline(".footer__social-link");
 
     document.querySelector('.nav__burger').addEventListener('click', () => {
     document.querySelector('.header-menu').style.transform = 'translateX(0%)';
