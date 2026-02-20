@@ -16,7 +16,8 @@
         });
     });
 
-    if (innerWidth < 800) return;
-    gsap.fromTo(".footer__background",{y:-350},{y:-60,ease:"none",immediateRender:false,scrollTrigger:{trigger:".footer__background",start:"bottom center",end:"200% center",scrub:0,invalidateOnRefresh:true}});
-
+    gsap.matchMedia().add({
+        "(min-width: 801px)": () => gsap.fromTo(".footer__background",{y:-350},{y:-60,ease:"none",immediateRender:false,scrollTrigger:{trigger:".footer__background",start:"bottom center",end:"200% center",scrub:0,invalidateOnRefresh:true}}),
+        "(max-width: 800px)": () => gsap.fromTo(".footer__background",{y:-350},{y:0,ease:"none",immediateRender:false,scrollTrigger:{trigger:".footer__background",start:"bottom center",end:"200% center",scrub:0,invalidateOnRefresh:true}})
+    });
 })();

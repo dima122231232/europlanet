@@ -626,3 +626,7 @@
     .nav{height: 68px;align-items: center;}
     .nav__label{position: absolute;top: calc(68px + var(--padding));left: calc(var(--padding));}
 }
+@media screen and (max-width: 450px) {
+    .nav__logo img{max-width:80%;}
+    .nav__logo{width: 150px;}
+}

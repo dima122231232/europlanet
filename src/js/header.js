@@ -2,14 +2,14 @@
     gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
     CustomEase.create("header-anim","0.4, 0, 0.2, 1");
     CustomEase.create("menuEase", "0,0,1,.8");
-    gsap.set(".nav__logo img",{ scale:4 });
+    gsap.set(".nav__logo img",{ scale:3 });
 
     ScrollTrigger.create({
         start: 20,
         end: 1,         
         scrub: true,
         onUpdate: self => {
-            gsap.to(".nav__logo img",{scale: self.progress ? 1 : 4,duration: .72,ease: "power2.inOut",overwrite: "auto"});
+            gsap.to(".nav__logo img",{scale: self.progress ? 1 : 3,duration: .72,ease: "power2.inOut",overwrite: "auto"});
         }
     });
 
@@ -46,6 +46,10 @@
     });
     document.querySelector('.header-menu__close').addEventListener('click', () =>
             document.querySelector('.header-menu').style.transform = 'translateX(100%)',
+    );
+
+    gsap.matchMedia().add("(max-width: 801px)", () =>
+        gsap.fromTo(".nav__label",{y:0,scale:1,opacity:1},{y:-80,scale:.9,opacity:0,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"+=50%",scrub:1}})
     );
 })();
 
