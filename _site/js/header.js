@@ -1,7 +1,7 @@
 (() => {
     gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
     CustomEase.create("header-anim","0.4, 0, 0.2, 1");
-    CustomEase.create("menuEase", "0.7,0,1,1");
+    CustomEase.create("menuEase", "0,0,1,.8");
     gsap.set(".nav__logo img",{ scale:4 });
 
     ScrollTrigger.create({
@@ -14,21 +14,28 @@
     });
 
     const q = s => document.querySelectorAll(s);
-    q(".header-menu__item").forEach(item => {
-        const t = item.querySelector(".header-menu__item-text");
+
+    const underline = (wrapSel, textSel) => {
+        q(wrapSel).forEach(item => {
+        const t = item.querySelector(textSel);
         if (!t) return;
 
         const u = document.createElement("span");
         u.className = "header-menu__underline";
         t.appendChild(u);
+
         gsap.set(u, { transformOrigin:"0% 50%", scaleX:0, xPercent:0 });
 
-        const enter = () => (gsap.set(u,{ xPercent:0 }), gsap.to(u,{ scaleX:1, duration:.35, ease:"power1.in", overwrite:"auto" }));
-        const leave = () => gsap.to(u,{ scaleX:0, xPercent:100, duration:.3, ease:"power3.out", overwrite:"auto" });
+        const enter = () => (gsap.set(u,{ xPercent:0 }), gsap.to(u,{ scaleX:1, duration:.3, ease:"menuEase", overwrite:"auto" }));
+        const leave = () => gsap.to(u,{ scaleX:0, xPercent:100, duration:.3, ease:"power2.out", overwrite:"auto" });
 
-        item.addEventListener("pointerenter", enter, {passive:true});
-        item.addEventListener("pointerleave", leave, {passive:true});
-    });
+        item.addEventListener("pointerenter", enter, { passive:true });
+        item.addEventListener("pointerleave", leave, { passive:true });
+        });
+    };
+
+    underline(".header-menu__item", ".header-menu__item-text");
+    underline(".header-menu__social-link", ".header-menu__social-text");
 
     document.querySelector('.nav__burger').addEventListener('click', () => {
     document.querySelector('.header-menu').style.transform = 'translateX(0%)';
