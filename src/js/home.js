@@ -50,7 +50,7 @@ window.initAnimations = () => {
         const el = document.querySelector(".about__description");
         if (el) {
             const s = new SplitText(el,{type:"words"});
-            gsap.fromTo(s.words,{color:"#555"},{color:"#cacaca",stagger:.2,scrollTrigger:{trigger:el,start:"top 90%",end:"bottom 10%",scrub:true}});
+            gsap.fromTo(s.words,{color:"#555"},{color:"#cacaca",stagger:.2,duration:.5,scrollTrigger:{trigger:el,start:"top 90%",end:"bottom 10%",scrub:true}});
         }
     }
 

@@ -460,7 +460,7 @@
 }
 .footer-logo {
     max-height: 194px;
-    max-width: 100%;
+    max-width: 70%;
 }
 .footer__background-text {
     white-space: pre-wrap;
@@ -475,6 +475,7 @@
 .footer__background-title {
     color: var(--color-black);
     font-size: 56px!important;
+    text-align: end;
 }
 
 @media screen and (max-width: 1201px) {
@@ -490,5 +491,5 @@
     .footer__background-inner{flex-direction: column;justify-content: center;gap: 10px;align-items: end;}
     .footer__background-text{flex: none;width: 100%;text-align: end;}
     .footer__background-title {font-size: 48px!important;}
-    
+    .footer-logo{max-width: 100%;}
 }
