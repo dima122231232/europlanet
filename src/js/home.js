@@ -191,12 +191,12 @@ window.initAnimations = () => {
 
     onMedia("(min-width: 1201px)", () => {
 
-        const process = document.querySelector(".process");
+        const process = document.querySelector(".process__container");
         if (!process) return;
 
-        let process_w = process.offsetWidth;
+        let process_w = process.offsetWidth + 72;
 
-        ScrollTrigger.create({trigger:".process",start:"top top",end:"+=1000vh",scrub:1,pin:true,onUpdate:self=>gsap.to(".process",{x:`${-(process_w-vw)*self.progress}px`,duration:0,ease:"power3.out"})});
+        ScrollTrigger.create({trigger:".process",start:"top top",end:"+=1000vh",scrub:1,pin:true,onUpdate:self=>gsap.to(".process__container",{x:`${-(process_w-vw)*self.progress}px`,duration:0,ease:"none"})});
 
         const onResize = () => (vw = innerWidth, process_w = process.offsetWidth, ScrollTrigger.refresh());
         addEventListener("resize", onResize);

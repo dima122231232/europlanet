@@ -1284,10 +1284,13 @@
     padding: 150px var(--padding);
     display: flex;
     position: relative;
-    overflow: visible;
     background-color:var(--color-black);
     height: 100%;
     will-change: transform;
+}
+.process__wrapper{
+    width: calc(100vw - var(--padding));
+    overflow: hidden;
 }
 .process__container {
     z-index: 1;
