@@ -1,6 +1,13 @@
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 window.scrollTo(0, 0);
 
+addEventListener("pageshow", () => {
+    if (!window.gsap) return;
+
+    gsap.set(".loader", { clearProps: "all",yPercent: -100,opacity: 0 });
+    gsap.set(".loader-svg", { clearProps: "all", opacity: 0 });
+}, { passive: true });
+
 (() => {
     const start = async () => {
         await document.fonts.ready;

@@ -1,1 +1,14 @@
 function TextReveal(sel,opts){const v=opts||{},t=v.scroll!=null?!!v.scroll:!0,l=v.delay!=null?+v.delay:0,a=typeof sel==="string"?gsap.utils.toArray(sel):gsap.utils.toArray(sel?[sel]:[]),c=[],F=(e,k,f)=>v[k]!=null?+v[k]:+((e.dataset&&e.dataset[k])||f),S=(e,k,f)=>v[k]!=null?String(v[k]):String((e.dataset&&e.dataset[k])||f);a.forEach(e=>{if(!e||e.hasAttribute("data-copy")||e.hasAttribute("data-copy-wrapper"))return;const i=[],s=[];let r=e.hasAttribute("data-text-reveal-wrapper")?[...e.children]:[e];const type=S(e,"type",S(e,"split","words"));r.forEach(o=>{const sp=SplitText.create(o,{type:type,wordsClass:"word++",linesClass:"line++"});i.push(sp);const arr=type==="lines"?sp.lines:sp.words,n=getComputedStyle(o).textIndent;n&&"0px"!==n&&(arr[0].style.paddingLeft=n,o.style.textIndent="0");s.push(...arr)});const p=F(e,"opacity","0"),d=F(e,"duration","1"),b=F(e,"blur","0"),k=F(e,"scaleY","1"),y=F(e,"y","0"),g=F(e,"step",e.dataset.stagger||"0.1"),ease=S(e,"ease","power4.out"),start=S(e,"start","top 75%"),once=v.once!=null?!!v.once:!0;gsap.set(s,{display:"inline-block",transformOrigin:"50% 100%",opacity:p,scaleY:k,y:y,filter:b?`blur(${b}px)`:"blur(0px)"});const o={display:"inline-block",transformOrigin:"50% 100%",opacity:1,scaleY:1,y:0,filter:"blur(0px)",duration:d,stagger:g,ease,delay:l};let n=null;const play=()=>{n&&n.kill();n=t?gsap.to(s,{...o,scrollTrigger:{trigger:e,start,once}}):gsap.to(s,o)},kill=()=>{n&&n.kill();i.forEach(x=>x&&x.revert&&x.revert())};t&&play();e._reveal={play,kill};c.push(e._reveal)});return c.length===1?c[0]:c}
+
+// TextReveal — SplitText-based reveal for text (no mask).
+// Splits into words/lines, sets initial opacity / y / scaleY / blur,
+// animates to normal on scroll (or instantly). Supports stagger, ease,
+// custom start, repeat/once. Returns { play, kill }.
+
+// Options:
+// scroll, once, delay,
+// type (words|lines), split,
+// start, duration, step,
+// opacity, y, scaleY, blur, ease.
+
+// TextReveal(".text", { type:"words", y:20, opacity:0, duration:0.8, step:0.05 });

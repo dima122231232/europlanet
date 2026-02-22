@@ -1,0 +1,93 @@
+.works__section {
+    place-content: center;
+    align-items: center;
+    background-color: var(--color-black);
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 48px;
+    height: min-content;
+    overflow: visible;
+    padding: 150px var(--padding);
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+.works__container {
+    place-content: center;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 72px;
+    height: min-content;
+    max-width: 1400px;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    opacity: 0;
+}
+.works__title {
+    width: 100%;
+    will-change: transform , opacity;
+}
+.works__grid {
+    display: grid;
+    flex: 0 0 auto;
+    gap: 56px 24px;
+    grid-auto-rows: minmax(0px, 1fr);
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    height: min-content;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+.works__link {
+    place-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    gap: 32px;
+    height: min-content;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    cursor: none;
+    
+}
+.works__image-wrap {
+    border-radius:14px;
+    overflow: hidden;
+    transform-origin: 50% 50%;
+    will-change: transform;
+}
+.works__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center center;
+    object-fit: cover;
+}
+
+.works__meta{
+    place-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 16px;
+    height: min-content;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+@media screen and (max-width: 801px) {
+    .works__grid{grid-template-columns: repeat(1, minmax(50px, 1fr));}
+}

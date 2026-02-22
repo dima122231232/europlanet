@@ -48,8 +48,8 @@
             document.querySelector('.header-menu').style.transform = 'translateX(100%)',
     );
 
-    gsap.matchMedia().add("(max-width: 801px)", () =>
-        gsap.fromTo(".nav__label",{y:0,scale:1,opacity:1},{y:-80,scale:.9,opacity:0,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"+=50%",scrub:1}})
+    document.body.classList.contains("is-home") && gsap.matchMedia().add("(max-width: 801px)", () =>
+        document.querySelector(".hero") && gsap.fromTo(".nav__label",{y:0,scale:1,opacity:1},{y:-80,scale:.9,opacity:0,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"+=50%",scrub:1}})
     );
 })();
 

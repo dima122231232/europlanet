@@ -27,7 +27,7 @@
     
 }
 .work-together__image {
-    z-index: 0;
+    z-index: 1;
     flex-flow: row;
     flex: none;
     place-content: center;
@@ -50,14 +50,14 @@
 .work-together__image div{
     background-color: rgb(10, 10, 10);
     mask: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0) 81%, rgb(0, 0, 0) 100%);
-    z-index: 1;
+    z-index: 2;
     flex: none;
     position: absolute;
     inset: 0;
     overflow: visible;
 }
 .work-together__content {
-    z-index: 1;
+    z-index: 2;
     flex-flow: row;
     flex: none;
     place-content: center space-between;

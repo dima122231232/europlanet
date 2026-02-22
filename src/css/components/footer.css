@@ -460,7 +460,8 @@
 }
 .footer-logo {
     max-height: 194px;
-    max-width: 70%;
+    max-width: 65%;
+    width: 100%;
 }
 .footer__background-text {
     white-space: pre-wrap;

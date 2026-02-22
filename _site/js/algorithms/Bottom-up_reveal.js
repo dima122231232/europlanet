@@ -1,1 +1,12 @@
 function Copy(e,t){if(!window.gsap||!e||!window.SplitText)return;window.ScrollTrigger&&gsap.registerPlugin&&gsap.registerPlugin(ScrollTrigger);const o="string"==typeof e?document.querySelector(e):e;if(!o)return;const v=t||{},i=[],s=[],r=o.hasAttribute("data-copy-wrapper")?[...o.children]:[o],y=(v.type||o.dataset.copyType||"lines").toLowerCase(),a=v.start||o.dataset.start||"top 75%",p=parseFloat(v.opacity??o.dataset.opacity??0),d=parseFloat(v.duration??o.dataset.duration??1),l=parseFloat(v.delay??o.dataset.delay??0),g=parseFloat(v.step??o.dataset.step??.1),f={y:v.y??"100%",x:v.x??"0%",opacity:p};r.forEach(e=>{const t=SplitText.create(e,{type:y,mask:y.includes("lines")?"lines":void 0,linesClass:"line++",wordsClass:"word++",charsClass:"char++"});i.push(t),y.includes("lines")?(n=getComputedStyle(e).textIndent,n&&"0px"!==n&&(t.lines[0].style.paddingLeft=n,e.style.textIndent="0"),s.push(...t.lines)):y.includes("words")?s.push(...t.words):s.push(...t.chars);var n});gsap.set(s,f);const c=()=>gsap.to(s,{y:0,x:0,opacity:1,duration:d,stagger:g,ease:v.ease||o.dataset.ease||"power4.out",delay:l,scrollTrigger:{trigger:o,start:a,once:!0}}),u=()=>i.forEach(e=>e&&e.revert&&e.revert());return c(),{play:c,kill:u}}
+
+// Copy — SplitText + ScrollTrigger reveal for text.
+// Splits text into lines / words / chars (with optional line masks), sets them to y/x + opacity,
+// then animates to normal when the block hits the start point. Returns { play, kill } (kill = revert SplitText).
+
+// Options (also via data-* on the element):
+// type (lines|words|chars), start, duration, delay, step, ease,
+// opacity, y, x.
+// Extra: add data-copy-wrapper on a parent to split/animate each child separately.
+
+// Copy(".text", { type:"lines", y:"100%", opacity:0, duration:1, step:.1, start:"top 75%" });

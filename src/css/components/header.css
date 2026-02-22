@@ -464,6 +464,7 @@
     position: relative;
     width: 8px;
     transform: translateY(-2px);
+    display: none;
 }
 .header-menu__divider {
     position: relative;
@@ -618,6 +619,7 @@
 }
 .lang-switch-link[aria-current="page"]{opacity: .2;cursor:no-drop;}
 .header-menu__item[aria-current="page"]{pointer-events:none}
+.header-menu__item[aria-current="page"] .header-menu__item-cube{display: block;}
 @media screen and (max-width: 1201px) {
     .nav__logo img{transform: scale(1)!important;}
 }

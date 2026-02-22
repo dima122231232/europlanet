@@ -1,1 +1,12 @@
 function BlockReveal(s,o){if(!window.gsap)return;window.ScrollTrigger&&gsap.registerPlugin&&gsap.registerPlugin(ScrollTrigger);const v=o||{},D={scroll:!0,start:"top 80%",once:!0,duration:1,ease:"power4.out",delay:0,step:.06,y:20,x:0,scale:1,scaleX:1,scaleY:1,opacity:0,blur:0,overwrite:"auto",device:"all",slide:!1,slideClass:"br-mask"},g=(k,d)=>v[k]!=null?v[k]:d,n=t=>"string"==typeof t&&/^\s*\d+%?\s+(top|center|bottom)\s*$/i.test(t)?t.replace(/\s+/g," ").split(" ").reverse().join(" "):t,m=(e,c)=>{const p=e.parentNode;if(!p||p.classList&&p.classList.contains(c))return;const w=document.createElement("div");w.className=c,w.style.overflow="hidden",w.style.display="block","inline"===getComputedStyle(e).display&&(e.style.display="inline-block"),p.insertBefore(w,e),w.appendChild(e)},r=()=>{const M=String(g("device",D.device)),i=innerWidth<1201;if("mobile"===M&&!i||"desktop"===M&&i)return;const a=gsap.utils.toArray(s),O={...D,...v},S=n(g("start",D.start)),d=+g("duration",O.duration),l=+g("delay",O.delay),t=+g("step",O.step),h=!!g("slide",O.slide),c=String(g("slideClass",O.slideClass)||"br-mask"),p=+g("opacity",O.opacity),y=+g("y",O.y),x=+g("x",O.x),b=+g("blur",O.blur),T=g("trigger",null),C=T?("string"==typeof T?document.querySelector(T):T):null;h&&a.forEach(e=>m(e,c)),gsap.set(a,{willChange:"transform,opacity,filter",opacity:p,x:x,...(h?{yPercent:100}:{y:y}),scale:+g("scale",O.scale),scaleX:+g("scaleX",O.scaleX),scaleY:+g("scaleY",O.scaleY),filter:b?`blur(${b}px)`:"none"});if(!g("scroll",O.scroll)||!window.ScrollTrigger)return void a.forEach((e,i)=>{gsap.to(e,{opacity:1,x:0,...(h?{yPercent:0}:{y:0}),scale:1,scaleX:1,scaleY:1,filter:"blur(0px)",duration:d,delay:l+i*t,ease:g("ease",O.ease),overwrite:g("overwrite",O.overwrite)})});a.forEach((e,i)=>{gsap.to(e,{opacity:1,y:0,x:0,scale:1,scaleX:1,scaleY:1,filter:"blur(0px)",...(h?{yPercent:0,y:null}:null),duration:d,delay:l+i*t,ease:g("ease",O.ease),overwrite:g("overwrite",O.overwrite),scrollTrigger:{trigger:C||e,start:S,once:!!g("once",O.once)}})})},mm=gsap.matchMedia?gsap.matchMedia():null;return mm?(mm.add("(min-width: 0px)",r),mm):r()}
+
+// BlockReveal — scroll-based reveal animation helper.
+// Supports fade / move / scale / blur, optional mask slide,
+// stagger via step, repeat or once, custom trigger/start, device targeting.
+
+// Options:
+// scroll, start, once, duration, ease, delay, step,
+// y, x, scale, scaleX, scaleY, opacity, blur,
+// overwrite, device, slide, slideClass, trigger.
+
+// BlockReveal(".element", { y: 40, opacity: 0, duration: 0.8 });

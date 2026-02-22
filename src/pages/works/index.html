@@ -1,0 +1,74 @@
+---
+layout: layout.html
+pageCss: /pages/works/page.css
+
+pagination:
+  data: locales.list
+  size: 1
+  alias: lang
+
+permalink: "{% if lang == locales.default %}/works/{% else %}/{{ lang }}/works/{% endif %}"
+
+lang: "{{ lang }}"
+pageTitle: "Works"
+---
+
+{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+
+<main>
+    <section class="works__section">
+        <div class="works__container">
+            <h1 class="text-140 works__title">OUR WORKS</h1>
+            <div class="works__grid">
+                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                    <div class="works__image-wrap">
+                        <img class="works__image" src="/img/works/work1.jpg" alt="works image">
+                    </div>
+                    <div class="works__meta">
+                        <h3 class="text-56 works__name">Arjuna</h3>
+                        <p class="text-24 works__description">Personal Portfolio Website for talented design engineer</p>
+                    </div>
+                </a>
+                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                    <div class="works__image-wrap">
+                        <img class="works__image" src="/img/works/work2.jpg" alt="works image">
+                    </div>
+                    <div class="works__meta">
+                        <h3 class="text-56 works__name">Bima</h3>
+                        <p class="text-24 works__description">Website and branding for AI Automation Company</p>
+                    </div>
+                </a>
+                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                    <div class="works__image-wrap">
+                        <img class="works__image" src="/img/works/work3.jpg" alt="works image">
+                    </div>
+                    <div class="works__meta">
+                        <h3 class="text-56 works__name">Mandala</h3>
+                        <p class="text-24 works__description">Website and branding for Design Agency</p>
+                    </div>
+                </a>
+                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                    <div class="works__image-wrap">
+                        <img class="works__image" src="/img/works/work4.jpg" alt="works image">
+                    </div>
+                    <div class="works__meta">
+                        <h3 class="text-56 works__name">Batavia</h3>
+                        <p class="text-24 works__description">Website and branding for award-winning fashion brand</p>
+                    </div>
+                </a>
+                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                    <div class="works__image-wrap">
+                        <img class="works__image" src="/img/works/work5.jpg" alt="works image">
+                    </div>
+                    <div class="works__meta">
+                        <h3 class="text-56 works__name">Blockhaus</h3>
+                        <p class="text-24 works__description">Website and branding for streetwear fashion ecommerce</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    {% include "components/work_together.html" %}
+</main>
+
+<script src="/js/works.js"></script>
