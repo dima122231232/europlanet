@@ -16,12 +16,24 @@
         const body = document.querySelector(".fake-body") || document.body;
         const loader = document.querySelector(".loader");
 
-        const reset = () => {
+        let transitioning = false;
+
+        const resetBody = () => {
+            gsap.killTweensOf(body);
             gsap.set(body, { clearProps: "opacity,transform" });
-            loader && gsap.set(loader, { yPercent: -100, opacity: 0 });
         };
 
-        addEventListener("pageshow", reset, { passive: true });
+        const hidePageLoader = () => {
+            if (!loader) return;
+            gsap.killTweensOf(loader);
+            gsap.set(loader, { yPercent: -100, overwrite: true });
+        };
+
+        addEventListener("pageshow", (e) => {
+            resetBody();
+
+            if (e && e.persisted && !transitioning) hidePageLoader();
+        }, { passive: true });
 
         const isSpecialClick = (e) =>
             e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
@@ -33,9 +45,7 @@
             /^(mailto:|tel:|sms:|javascript:)/i.test(a.getAttribute("href") || "");
 
         const norm = (u) => (u.origin + u.pathname).replace(/\/+$/, "");
-
-        const parseUrl = (href) =>
-            href ? new URL(href, location.href) : new URL(location.href);
+        const parseUrl = (href) => (href ? new URL(href, location.href) : new URL(location.href));
 
         const isSamePage = (href) => {
             try {
@@ -53,49 +63,47 @@
             }
         };
 
-        let locked = false;
-
         const leave = (done) => {
-            if (locked) return;
-            locked = true;
+            if (transitioning) return;
+            transitioning = true;
 
             if (reduce) return done();
+            if (!loader) return done();
 
             gsap.killTweensOf(body);
-            loader && gsap.killTweensOf(loader);
+            gsap.killTweensOf(loader);
 
-            gsap.timeline({ defaults: { overwrite: "auto" }, onComplete: done })
-                .set(loader || {}, { yPercent: 100 })
-                .to(body, { opacity: 0, y: -200, duration: 0.4, ease: "power2.in" }, 0)
-                .to(loader || {}, { yPercent: 0, duration: 0.4, ease: "power2.in" }, 0);
+            gsap.timeline({
+                defaults: { overwrite: "auto" },
+                onComplete: done
+            })
+            .set(loader, { yPercent: 100 })
+            .to(body, { opacity: 0, y: -200, duration: 0.4, ease: "power2.in" }, 0)
+            .to(loader, { yPercent: 0, duration: 0.4, ease: "power2.in" }, 0);
         };
 
-        document.addEventListener(
-            "click",
-            (e) => {
-                const a = e.target.closest("a[href]");
-                if (!a) return;
+        document.addEventListener("click", (e) => {
+            const a = e.target.closest("a[href]");
+            if (!a) return;
 
-                const href = a.getAttribute("href") || "";
+            const href = a.getAttribute("href") || "";
 
-                if (href === "#" || href === "" || isSamePage(href)) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    return;
-                }
-
-                if (isSpecialClick(e) || isIgnorableLink(a) || !isInternal(href)) return;
-
+            if (href === "#" || href === "" || isSamePage(href)) {
                 e.preventDefault();
-                const url = parseUrl(href).href;
+                e.stopImmediatePropagation();
+                return;
+            }
 
-                let jumped = false;
-                const go = () => (jumped ? 0 : ((jumped = true), (location.href = url)));
+            if (isSpecialClick(e) || isIgnorableLink(a) || !isInternal(href)) return;
 
-                leave(go);
-                setTimeout(go, 1200);
-            },
-            true
-        );
+            e.preventDefault();
+            const url = parseUrl(href).href;
+
+            let jumped = false;
+            const go = () => (jumped ? 0 : ((jumped = true), (location.href = url)));
+
+            leave(go);
+            setTimeout(go, 1200);
+        }, true);
     });
 })();

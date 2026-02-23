@@ -1,24 +1,9 @@
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 window.scrollTo(0, 0);
 
-addEventListener("pageshow", () => {
-    if (!window.gsap) return;
-
-    gsap.set(".loader", { clearProps: "all",yPercent: -100,opacity: 0 });
-    gsap.set(".loader-svg", { clearProps: "all", opacity: 0 });
-}, { passive: true });
-
 (() => {
     const start = async () => {
-
-        gsap.set(".loader", { yPercent: 0, opacity: 1 });
-
-        if (document.fonts && document.fonts.ready) {
-            await Promise.race([
-                document.fonts.ready,
-                new Promise(r => setTimeout(r, 1500))
-            ]);
-        }
+        await document.fonts.ready;
         await new Promise(r => requestAnimationFrame(r));
 
         gsap.set(".loader-svg", { opacity: 0, y: 50 });
