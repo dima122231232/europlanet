@@ -10,7 +10,15 @@ addEventListener("pageshow", () => {
 
 (() => {
     const start = async () => {
-        await document.fonts.ready;
+
+        gsap.set(".loader", { yPercent: 0, opacity: 1 });
+
+        if (document.fonts && document.fonts.ready) {
+            await Promise.race([
+                document.fonts.ready,
+                new Promise(r => setTimeout(r, 1500))
+            ]);
+        }
         await new Promise(r => requestAnimationFrame(r));
 
         gsap.set(".loader-svg", { opacity: 0, y: 50 });

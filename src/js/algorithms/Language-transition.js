@@ -18,7 +18,7 @@
 
         const reset = () => {
             gsap.set(body, { clearProps: "opacity,transform" });
-            loader && gsap.set(loader, { clearProps: "transform" });
+            loader && gsap.set(loader, { yPercent: -100, opacity: 0 });
         };
 
         addEventListener("pageshow", reset, { passive: true });
