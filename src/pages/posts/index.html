@@ -1,52 +1,93 @@
 ---
 layout: layout.html
-pageCss: /pages/blog/page.css
+pageCss: /pages/posts/page.css
 
 pagination:
   data: locales.list
   size: 1
   alias: lang
 
-permalink: "{% if lang == locales.default %}/blog/{% else %}/{{ lang }}/blog/{% endif %}"
+permalink: "{% if lang == locales.default %}/posts/{% else %}/{{ lang }}/posts/{% endif %}"
 
 lang: "{{ lang }}"
-pageTitle: "blog"
+pageTitle: "posts"
 ---
 
 {% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
-<main>
-    <section class="blog">
-        <div class="blog__container">
-            <div class="blog__top">
-                <div class="blog__top-header">
-                    <p class="text-16 blog__label">(BLOG)</p>
-                    <h1 class="text-140 blog__title">LATEST INSIGHTS</h1>
+
+<main >
+    <section class="blog-post">
+        <div class="blog-post__container">
+            <div class="blog-post__header">
+                <div class="blog-post__header-main">
+                    <div class="text-14 blog-post__category">SOCIAL MEDIA</div>
+
+                    <div class="blog-post__intro">
+                        <h1 class="text-56 blog-post__title">Why Motion Design Makes Your Website Feel Alive</h1>
+                        <p class="text-24 blog-post__subtitle">
+                            Motion helps your website feel modern and clear.
+                                    Here’s why it matters and how to use it without overdoing it.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="blog__featured">
-                    <div class="blog__featured-item">
-                        <a href="" class="blog__featured-link lm-hover" data-lm="VIEW BLOG">
-                            <div class="blog__featured-card">
-                                <div class="text-14 blog__category">DESIGN STRATEGY</div>
+                <div class="blog-post__divider"></div>
 
-                                <div class="blog__image">
-                                    <img src="/img/blog/blog-2.jpg" alt="" class="blog__image-el">
-                                    <div class="blog__image-bg"></div>
-                                </div>
-
-                                <div class="blog__meta">
-                                    <p class="text-14 blog__date">Feb 4, 2025</p>
-                                    <h3 class="blog__featured-title">
-                                        Why Clarity Beats Creativity in Web Design
-                                    </h3>
-                                </div>
-                            </div>
-                        </a>
+                <div class="blog-post__meta">
+                    <div class="blog-post__author">
+                        <img src="/img/blog/avtor.jpg" alt="avtatar" class="blog-post__author-avatar">
+                        <p class="blog-post__author-name">Sri Iyem</p>
                     </div>
+                    <p class="text-16 blog-post__date">Feb 4, 2025</p>
                 </div>
             </div>
 
-            <div class="blog__list">
+            <div class="blog-post__hero">
+                <div class="blog-post__hero-wrapper">
+                    <img src="/img/blog/blog-1.jpg" alt="blog photo" class="blog-post__hero-image">
+                </div>
+            </div>
+
+            <div class="blog-post__content">
+                <h3 class="blog-post__heading">Introduction</h3>
+                <p class="blog-post__text">
+                    Framer has many templates. Some are simple, others are packed with features. But not all are made well. If you want a clean, flexible, and high-quality site, here’s what to check.
+                </p>
+
+                <h3 class="blog-post__heading">1. Clean Layout and Spacing</h3>
+                <p class="blog-post__text">
+                    A good template has balance. It gives your content room to breathe. Look for structure that feels calm, not crowded.
+                </p>
+
+                <h3 class="blog-post__heading">Introduction</h3>
+                <p class="blog-post__text">
+                    Framer has many templates. Some are simple, others are packed with features. But not all are made well. If you want a clean, flexible, and high-quality site, here’s what to check.
+                </p>
+
+                <h3 class="blog-post__heading">1. Clean Layout and Spacing</h3>
+                <p class="blog-post__text">
+                    A good template has balance. It gives your content room to breathe. Look for structure that feels calm, not crowded.
+                </p>
+
+                <h3 class="blog-post__heading">Introduction</h3>
+                <p class="blog-post__text">
+                    Framer has many templates. Some are simple, others are packed with features. But not all are made well. If you want a clean, flexible, and high-quality site, here’s what to check.
+                </p>
+
+                <h3 class="blog-post__heading">1. Clean Layout and Spacing</h3>
+                <p class="blog-post__text">
+                    A good template has balance. It gives your content room to breathe. Look for structure that feels calm, not crowded.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="post-more">
+        <div class="post-more__container">
+            <div class="post-more__top">
+                <h2 class="text-140 post-more__title">MORE INSIGHTS</h2>
+                {% btn "SEE ALL", "//", "btn-arrow post-more__button" %}
+            </div>
+            <div class="post__list">
                 <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
                     <div class="blog__post">
                         <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
@@ -94,52 +135,6 @@ pageTitle: "blog"
                     </div>
                 </a>
                  <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
-
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
-
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
-
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                 <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
-
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
-
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
-
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
                     <div class="blog__post">
                         <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
 
