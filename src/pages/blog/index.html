@@ -1,0 +1,20 @@
+---
+layout: layout.html
+pageCss: /pages/blog/page.css
+
+pagination:
+  data: locales.list
+  size: 1
+  alias: lang
+
+permalink: "{% if lang == locales.default %}/blog/{% else %}/{{ lang }}/blog/{% endif %}"
+
+lang: "{{ lang }}"
+pageTitle: "blog"
+---
+
+{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+
+<main>
+
+</main>

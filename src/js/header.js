@@ -2,14 +2,14 @@
     gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
     CustomEase.create("header-anim","0.4, 0, 0.2, 1");
     CustomEase.create("menuEase", "0,0,1,.8");
-    gsap.set(".nav__logo img",{ scale:3 });
+    gsap.set(".nav__logo img",{ scale:2.6 });
 
     ScrollTrigger.create({
         start: 20,
         end: 1,         
         scrub: true,
         onUpdate: self => {
-            gsap.to(".nav__logo img",{scale: self.progress ? 1 : 3,duration: .72,ease: "power2.inOut",overwrite: "auto"});
+            gsap.to(".nav__logo img",{scale: self.progress ? 1 : 2.6,duration: .72,ease: "power2.inOut",overwrite: "auto"});
         }
     });
 
