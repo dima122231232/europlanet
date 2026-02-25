@@ -13,20 +13,20 @@ lang: "{{ lang }}"
 pageTitle: "Works"
 ---
 
-{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+{% set t = (i18n.works[lang] if i18n and i18n.works and i18n.works[lang] else {}) %}
 
 <main>
     <section class="works__section">
         <div class="works__container">
-            <h1 class="text-140 works__title">OUR WORKS</h1>
+            <h1 class="text-140 works__title">{{ t.our_works }}</h1>
             <div class="works__grid">
                 <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
                     <div class="works__image-wrap">
                         <img class="works__image" src="/img/works/work1.jpg" alt="works image">
                     </div>
                     <div class="works__meta">
-                        <h3 class="text-56 works__name">Arjuna</h3>
-                        <p class="text-24 works__description">Personal Portfolio Website for talented design engineer</p>
+                        <h3 class="text-56 works__name">{{ t.arjuna }}</h3>
+                        <p class="text-24 works__description">{{ t.personal_portfolio_website_for_talented_design }}</p>
                     </div>
                 </a>
                 <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
@@ -34,8 +34,8 @@ pageTitle: "Works"
                         <img class="works__image" src="/img/works/work2.jpg" alt="works image">
                     </div>
                     <div class="works__meta">
-                        <h3 class="text-56 works__name">Bima</h3>
-                        <p class="text-24 works__description">Website and branding for AI Automation Company</p>
+                        <h3 class="text-56 works__name">{{ t.bima }}</h3>
+                        <p class="text-24 works__description">{{ t.website_and_branding_for_ai_automation }}</p>
                     </div>
                 </a>
                 <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
@@ -43,8 +43,8 @@ pageTitle: "Works"
                         <img class="works__image" src="/img/works/work3.jpg" alt="works image">
                     </div>
                     <div class="works__meta">
-                        <h3 class="text-56 works__name">Mandala</h3>
-                        <p class="text-24 works__description">Website and branding for Design Agency</p>
+                        <h3 class="text-56 works__name">{{ t.mandala }}</h3>
+                        <p class="text-24 works__description">{{ t.website_and_branding_for_design_agency }}</p>
                     </div>
                 </a>
                 <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
@@ -52,8 +52,8 @@ pageTitle: "Works"
                         <img class="works__image" src="/img/works/work4.jpg" alt="works image">
                     </div>
                     <div class="works__meta">
-                        <h3 class="text-56 works__name">Batavia</h3>
-                        <p class="text-24 works__description">Website and branding for award-winning fashion brand</p>
+                        <h3 class="text-56 works__name">{{ t.batavia }}</h3>
+                        <p class="text-24 works__description">{{ t.website_and_branding_for_awardwinning_fashion }}</p>
                     </div>
                 </a>
                 <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
@@ -61,8 +61,8 @@ pageTitle: "Works"
                         <img class="works__image" src="/img/works/work5.jpg" alt="works image">
                     </div>
                     <div class="works__meta">
-                        <h3 class="text-56 works__name">Blockhaus</h3>
-                        <p class="text-24 works__description">Website and branding for streetwear fashion ecommerce</p>
+                        <h3 class="text-56 works__name">{{ t.blockhaus }}</h3>
+                        <p class="text-24 works__description">{{ t.website_and_branding_for_streetwear_fashion }}</p>
                     </div>
                 </a>
             </div>

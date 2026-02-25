@@ -1,0 +1,31 @@
+{
+    "menu": {
+        "menu": "ΜΕΝΟΥ",
+        "home": "Αρχική",
+        "works": "ΕΡΓΑ",
+        "about": "ΣΧΕΤΙΚΑ",
+        "contact": "ΕΠΙΚΟΙΝΩΝΙΑ",
+        "email": "(ΗΛ.ΤΑΧΥΔΡΟΜΕΙΟ)",
+        "socials": "(ΚΟΙΝΩΝΙΚΑ)"
+    },
+    "nav": {
+        "button": "ΑΣ ΜΙΛΗΣΟΥΜΕ"
+    },
+    "status": {
+        "available": "Διαθέσιμοι για έργο",
+        "date": "ΑΡΧΕΣ ΦΕΒ 2025"
+    },
+    "contact": {
+        "email": "hello@nakula.com"
+    },
+    "socials": {
+        "x": "X/Twitter",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "behance": "Behance"
+    },
+    "lang": {
+        "en": "EN",
+        "el": "EL"
+    }
+}

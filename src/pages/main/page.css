@@ -1309,9 +1309,6 @@
 .process__header {
     z-index: 0;
     flex-flow: row;
-    flex: none;
-    place-content: center flex-start;
-    align-items: center;
     gap: 10px;
     width: 530px;
     height: min-content;
@@ -1367,6 +1364,7 @@
 .process__step-index span{
     color: var(--color-accent);
 }
+.process__title{width: 100%;}
 .process__step-content {
     flex-flow: column;
     flex: none;
@@ -2390,3 +2388,6 @@
 .blog-preview__item-meta{gap:10px;}
 .blog-preview{padding:100px var(--padding);}
 }
+
+
+html[lang="el"] .why-us__text{max-width: 90%;}

@@ -1,19 +1,22 @@
+{% set lang = lang | default(locales.default) %}
+{% set t = (i18n.faq[lang] if i18n and i18n.faq and i18n.faq[lang] else {}) %}
+
 <link rel="stylesheet" href="/css/components/faq.css">
 
 <section class="faq">
     <div class="faq__bg"><img src="/img/home/why-us-bg.jpg" alt="faq image bg"></div>
     <div class="faq__container">
         <div class="faq__header">
-            <h2 class="text-140 faq__title">FAQ</h2>
+            <h2 class="text-140 faq__title">{{ t.faq }}</h2>
             <div class="faq__contact">
-                <p class="text-16 faq__contact-text">Got specific questions?</p>
-                <a href="" class="text-16 faq__contact-link">Contact Us</a>
+                <p class="text-16 faq__contact-text">{{ t.got_specific_questions }}</p>
+                <a href="" class="text-16 faq__contact-link">{{ t.contact_us }}</a>
             </div>
         </div>
         <div class="faq__list">
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">What’s your typical process for a new project?</h3>
+                    <h3 class="faq__question-title">{{ t.whats_your_typical_process_for_a }}</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line faq__toggle--line-animation"></div>
@@ -21,13 +24,13 @@
                 </div>
                 <div class="faq__answer">
                     <p class="text-16 faq__answer-text">
-                        We start with a discovery phase to understand your goals, audience, and competitors. From there, we move into strategy, design, and development—keeping you in the loop at every stage. Each service has its own milestones, but collaboration is constant throughout.
+                        {{ t.we_start_with_a_discovery_phase }}
                     </p>
                 </div>
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">How long does a project usually take?</h3>
+                    <h3 class="faq__question-title">{{ t.how_long_does_a_project_usually }}</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line faq__toggle--line-animation"></div>
@@ -35,13 +38,13 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        It depends on the scope. A simple website or branding project can take 2 to 3 weeks. Larger projects with multiple pages, motion, or strategy may take 4 to 6 weeks. We’ll always set a clear timeline before we begin.
+                        {{ t.it_depends_on_the_scope_a }}
                     </p>
                 </div>
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">Do you offer packages or custom quotes?</h3>
+                    <h3 class="faq__question-title">{{ t.do_you_offer_packages_or_custom }}</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line faq__toggle--line-animation"></div>
@@ -49,13 +52,13 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        Both. We have a few starter packages to keep things simple, but we also offer custom quotes for projects with unique needs. Just tell us what you're planning — we’ll work around it.
+                        {{ t.both_we_have_a_few_starter }}
                     </p>
                 </div>
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">What’s included in a branding package?</h3>
+                    <h3 class="faq__question-title">{{ t.whats_included_in_a_branding_package }}</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line faq__toggle--line-animation"></div>
@@ -63,12 +66,12 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        Our branding package covers the essentials: logo design, color palette, font pairing, and a mini style guide. We can also include social templates or creative direction if needed.                    </p>
+                        {{ t.our_branding_package_covers_the_essentials }}                    </p>
                 </div>
             </div>
             <div class="faq__item">
                 <div class="faq__question">
-                    <h3 class="faq__question-title">Can you work with our existing dev or marketing team?</h3>
+                    <h3 class="faq__question-title">{{ t.can_you_work_with_our_existing }}</h3>
                     <div class="faq__toggle">
                         <div class="faq__toggle-line"></div>
                         <div class="faq__toggle-line faq__toggle--line-animation"></div>
@@ -76,7 +79,7 @@
                 </div>
                 <div class="faq__answer">
                     <p class="faq__answer-text">
-                        Yes, absolutely. We’re happy to collaborate with your team — whether it's development, content, or marketing. Clear communication and teamwork always lead to better results.
+                        {{ t.yes_absolutely_were_happy_to_collaborate }}
                     </p>
                 </div>
             </div>

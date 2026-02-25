@@ -13,7 +13,7 @@ lang: "{{ lang }}"
 pageTitle: "About"
 ---
 
-{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+{% set t = (i18n.about[lang] if i18n and i18n.about and i18n.about[lang] else {}) %}
 
 <main>
     <section class="about-hero">
@@ -25,12 +25,12 @@ pageTitle: "About"
         </div>
         <div class="about-hero__content">
             <div class="about-hero__header">
-                <p class="text-16 about-hero__label">(ABOUT US)</p>
-                <h1 class="text-140 about-hero__title">BEHIND<br> NAKULA</h1>
+                <p class="text-16 about-hero__label">{{ t.about_us }}</p>
+                <h1 class="text-140 about-hero__title">{{ t.behind }}<br> {{ t.nakula }}</h1>
             </div>
             <div class="about-hero__body">
                 <div class="about-hero__text">
-                    <h3 class="about-hero__description">We combines years of web design and branding expertise <span>to craft meaningful, story-driven experiences.</span></h3>
+                    <h3 class="about-hero__description">{{ t.we_combines_years_of_web_design }} <span>{{ t.to_craft_meaningful_storydriven_experiences }}</span></h3>
                 </div>
             </div>
         </div>
@@ -48,17 +48,17 @@ pageTitle: "About"
             <div class="about-values__content">
                     <div class="about-values__item-wrap">
                         <div class="about-values__item">
-                            <h2 class="text-140 about-values__title about-values__title-first">BEYOND VISUALS.</h2>
+                            <h2 class="text-140 about-values__title about-values__title-first">{{ t.beyond_visuals }}</h2>
                             <p class="text-24 about-values__text about-values__text-first">
-                                With a decade of expertise, We crafts bold brands and high-impact digital experience that get results.
+                                {{ t.with_a_decade_of_expertise_we }}
                             </p>
                         </div>
                     </div>
                     <div class="about-values__item-wrap">
                         <div class="about-values__item">
-                            <h2 class="text-140 about-values__title about-values__title-twise">Built with Vision.</h2>
+                            <h2 class="text-140 about-values__title about-values__title-twise">{{ t.built_with_vision }}</h2>
                             <p class="text-24 about-values__text about-values__text-twise">
-                                Every brand we build starts with a clear strategy and bold ideas. We design with brand’s growth in mind, not just look the part.
+                                {{ t.every_brand_we_build_starts_with }}
                             </p>
                         </div>
                     </div>
@@ -68,9 +68,9 @@ pageTitle: "About"
     <section class="about-origins">
         <div class="about-origins__container">
             <div class="about-origins__content">
-                <h2 class="text-140 about-origins__title">origins</h2>
+                <h2 class="text-140 about-origins__title">{{ t.origins }}</h2>
                 <p class="text-24 about-origins__text">
-                    Rooted in Indonesia, our journey blends heritage and innovation, shaping meaningful digital stories that connect brands globally.
+                    {{ t.rooted_in_indonesia_our_journey_blends }}
                 </p>
             </div>
             <div class="about-origins__media">
@@ -80,15 +80,15 @@ pageTitle: "About"
     </section>
     <section class="about-awards">
         <div class="about-awards__container">
-            <h2 class="text-140 about-awards__title">awards</h2>
+            <h2 class="text-140 about-awards__title">{{ t.awards }}</h2>
 
             <div class="about-awards__list">
                 <div class="about-awards__item">
                     <p class="about-awards__index">01<span class="about-awards__dot">.</span></p>
                     <div class="about-awards__content">
                         <div class="about-awards__info">
-                            <p class="text-24 about-awards__source">Awwwards</p>
-                            <h3 class="about-awards__name">Site of the Day - Nakula</h3>
+                            <p class="text-24 about-awards__source">{{ t.awwwards }}</p>
+                            <h3 class="about-awards__name">{{ t.site_of_the_day_nakula }}</h3>
                         </div>
                         <p class="about-awards__year">2024</p>
                     </div>
@@ -100,8 +100,8 @@ pageTitle: "About"
                     <p class="about-awards__index">01<span class="about-awards__dot">.</span></p>
                     <div class="about-awards__content">
                         <div class="about-awards__info">
-                            <p class="text-24 about-awards__source">Awwwards</p>
-                            <h3 class="about-awards__name">Site of the Day - Nakula</h3>
+                            <p class="text-24 about-awards__source">{{ t.awwwards }}</p>
+                            <h3 class="about-awards__name">{{ t.site_of_the_day_nakula }}</h3>
                         </div>
                         <p class="about-awards__year">2024</p>
                     </div>
@@ -113,8 +113,8 @@ pageTitle: "About"
                     <p class="about-awards__index">01<span class="about-awards__dot">.</span></p>
                     <div class="about-awards__content">
                         <div class="about-awards__info">
-                            <p class="text-24 about-awards__source">Awwwards</p>
-                            <h3 class="about-awards__name">Site of the Day - Nakula</h3>
+                            <p class="text-24 about-awards__source">{{ t.awwwards }}</p>
+                            <h3 class="about-awards__name">{{ t.site_of_the_day_nakula }}</h3>
                         </div>
                         <p class="about-awards__year">2024</p>
                     </div>
@@ -126,8 +126,8 @@ pageTitle: "About"
                     <p class="about-awards__index">01<span class="about-awards__dot">.</span></p>
                     <div class="about-awards__content">
                         <div class="about-awards__info">
-                            <p class="text-24 about-awards__source">Awwwards</p>
-                            <h3 class="about-awards__name">Site of the Day - Nakula</h3>
+                            <p class="text-24 about-awards__source">{{ t.awwwards }}</p>
+                            <h3 class="about-awards__name">{{ t.site_of_the_day_nakula }}</h3>
                         </div>
                         <p class="about-awards__year">2024</p>
                     </div>
@@ -138,9 +138,9 @@ pageTitle: "About"
     <section class="about-team">
         <div class="about-team__container">
             <div class="about-team__header">
-                <h2 class="text-140 about-team__title">meet our team</h2>
+                <h2 class="text-140 about-team__title">{{ t.meet_our_team }}</h2>
                 <p class="text-24 about-team__text">
-                    We’re a tight-knit crew of designers, strategists, and builders who care deeply about great work and the people we create it with.
+                    {{ t.were_a_tightknit_crew_of_designers }}
                 </p>
             </div>
 
@@ -151,14 +151,14 @@ pageTitle: "About"
                     </div>
 
                     <div class="about-team__info">
-                        <h6 class="about-team__name">Marvin Putra</h6>
+                        <h6 class="about-team__name">{{ t.marvin_putra }}</h6>
 
                         <div class="about-team__divider"></div>
 
                         <div class="about-team__meta">
                             <div class="about-team__role">
                                 <div class="about-team__dot"></div>
-                                <p class="text-14 about-team__position">CEO, FOUNDER</p>
+                                <p class="text-14 about-team__position">{{ t.ceo_founder }}</p>
                             </div>
 
                             <div class="about-team__socials">
@@ -205,14 +205,14 @@ pageTitle: "About"
                     </div>
 
                     <div class="about-team__info">
-                        <h6 class="about-team__name">Kristin Anggraini</h6>
+                        <h6 class="about-team__name">{{ t.kristin_anggraini }}</h6>
 
                         <div class="about-team__divider"></div>
 
                         <div class="about-team__meta">
                             <div class="about-team__role">
                                 <div class="about-team__dot"></div>
-                                <p class="text-14 about-team__position">MARRKETING MANAGER</p>
+                                <p class="text-14 about-team__position">{{ t.marrketing_manager }}</p>
                             </div>
 
                             <div class="about-team__socials">
@@ -259,14 +259,14 @@ pageTitle: "About"
                     </div>
 
                     <div class="about-team__info">
-                        <h6 class="about-team__name">Ari Kurniawan</h6>
+                        <h6 class="about-team__name">{{ t.ari_kurniawan }}</h6>
 
                         <div class="about-team__divider"></div>
 
                         <div class="about-team__meta">
                             <div class="about-team__role">
                                 <div class="about-team__dot"></div>
-                                <p class="text-14 about-team__position">LEAD DESIGNER</p>
+                                <p class="text-14 about-team__position">{{ t.lead_designer }}</p>
                             </div>
 
                             <div class="about-team__socials">
@@ -313,14 +313,14 @@ pageTitle: "About"
                     </div>
 
                     <div class="about-team__info">
-                        <h6 class="about-team__name">Evelyn Dewanti</h6>
+                        <h6 class="about-team__name">{{ t.evelyn_dewanti }}</h6>
 
                         <div class="about-team__divider"></div>
 
                         <div class="about-team__meta">
                             <div class="about-team__role">
                                 <div class="about-team__dot"></div>
-                                <p class="text-14 about-team__position">LEAD DEVELOPER</p>
+                                <p class="text-14 about-team__position">{{ t.lead_developer }}</p>
                             </div>
 
                             <div class="about-team__socials">

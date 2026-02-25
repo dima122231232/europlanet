@@ -478,6 +478,9 @@
     font-size: 56px!important;
     text-align: end;
 }
+html[lang="el"] .footer__nav {
+    gap: 30px;
+}
 
 @media screen and (max-width: 1201px) {
     .footer__top{flex-direction: column;justify-content: center;gap: 64px;}

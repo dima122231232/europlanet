@@ -1,3 +1,5 @@
+{% set lang = lang | default(locales.default) %}
+{% set t = (i18n.post[lang] if i18n and i18n.post and i18n.post[lang] else {}) %}
 
 {% set lang = lang or (page.fileSlug and page.filePathStem) %}
 {% set category = category or "—" %}
@@ -24,7 +26,8 @@
         <div class="blog-post__meta">
           <div class="blog-post__author">
             <img src="/img/blog/avtor.jpg" alt="avatar" class="blog-post__author-avatar">
-            <p class="blog-post__author-name">Sri Iyem</p>
+            {% set authorName = authorName or author or "{{ t.sri_iyem }}" %}
+            <p class="blog-post__author-name">{{ authorName }}</p>
           </div>
 
           <p class="text-16 blog-post__date">{{ dateText or "—" }}</p>
@@ -49,8 +52,8 @@
   <section class="post-more">
     <div class="post-more__container">
       <div class="post-more__top">
-        <h2 class="text-140 post-more__title">MORE INSIGHTS</h2>
-        {% btn "SEE ALL", "/blog", "btn-arrow post-more__button" %}
+        <h2 class="text-140 post-more__title">{{ t.more_insights }}</h2>
+        {% btn t.see_all, "/blog", "btn-arrow post-more__button" %}
       </div>
 
       {# простая версия: покажем 4 последних поста этого же языка, кроме текущего #}

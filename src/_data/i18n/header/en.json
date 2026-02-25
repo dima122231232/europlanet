@@ -1,0 +1,31 @@
+{
+    "menu": {
+        "menu": "MENU",
+        "home": "HOME",
+        "works": "WORKS",
+        "about": "ABOUT",
+        "contact": "CONTACT",
+        "email": "(EMAIL)",
+        "socials": "(SOCIALS)"
+    },
+    "nav": {
+        "button": "LET'S TALK"
+    },
+    "status": {
+        "available": "Available for project",
+        "date": "EARLY FEB 2025"
+    },
+    "contact": {
+        "email": "hello@nakula.com"
+    },
+    "socials": {
+        "x": "X/Twitter",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "behance": "Behance"
+    },
+    "lang": {
+        "en": "EN",
+        "el": "EL"
+    }
+}

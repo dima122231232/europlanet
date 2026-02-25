@@ -13,18 +13,18 @@ lang: "{{ lang }}"
 pageTitle: "Contact"
 ---
 
-{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+{% set t = (i18n.contact[lang] if i18n and i18n.contact and i18n.contact[lang] else {}) %}
 
 <main >
     <section class="contact__section">
         <div class="contact__container">
             <div class="contact__header">
                 <div class="contact__heading">
-                    <p class="text-14 contact__label">(CONTACT US)</p>
-                    <h1 class="text-140 contact__title">LET’S WORK TOGETHER</h1>
+                    <p class="text-14 contact__label">{{ t.contact_us }}</p>
+                    <h1 class="text-140 contact__title">{{ t.lets_work_together }}</h1>
                 </div>
                 <p class="text-24 contact__intro">
-                    Have a project in mind? We’d love to hear about it. Let’s create something great together!
+                    {{ t.have_a_project_in_mind_wed }}
                 </p>
             </div>
 
@@ -51,31 +51,31 @@ pageTitle: "Contact"
                         </label>
 
                         <div class="contact__actions">
-                            <p class="text-16 contact__terms">By submitting you agree to<br>our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
+                            <p class="text-16 contact__terms">{{ t.by_submitting_you_agree_to }}<br>{{ t.our }} <a href="">{{ t.terms_of_service }}</a> {{ t.and }} <a href="">{{ t.privacy_policy }}</a></p>
                             {% btn "SUBSCRIBE", "//", "btn-arrow contact__button" %}
                         </div>
                     </form>
 
                     <p class="text-24 contact__alternative">
-                        Prefer to hop on a call?
-                        <a class="contact__link" href="">Book a call</a>
-                        instead.
+                        {{ t.prefer_to_hop_on_a_call }}
+                        <a class="contact__link" href="">{{ t.book_a_call }}</a>
+                        {{ t.instead }}
                     </p>
                 </div>
 
                 <div class="contact__divider "></div>
 
                 <div class="contact__info">
-                    <h3 class="contact__info-title">Visit Us</h3>
+                    <h3 class="contact__info-title">{{ t.visit_us }}</h3>
                     <div class="contact__info-grid">
                         <div class="contact__info-item">
-                            <p class="text-14 contact__info-label">(ADDRESS)</p>
-                            <div><p class="text-24 contact__info-text">123 Market Street,<br> Suite 400<br> Los Angeles, CA 90001</p></div>
+                            <p class="text-14 contact__info-label">{{ t.address }}</p>
+                            <div><p class="text-24 contact__info-text">{{ t.123_market_street }}<br> {{ t.suite_400 }}<br> {{ t.los_angeles_ca_90001 }}</p></div>
                         </div>
                         <div class="contact__info-item">
-                            <p class="text-14 contact__info-label">(OFFICE HOURS)</p>
+                            <p class="text-14 contact__info-label">{{ t.office_hours }}</p>
                             <div><p class="text-24 contact__info-text">
-                                Monday - Friday<br> 9:00 AM – 6:00 PM (GMT+7)
+                                {{ t.monday_friday }}<br> {{ t.900_am_600_pm_gmt7 }}
                             </p></div>
                         </div>
                     </div>

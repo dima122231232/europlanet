@@ -13,7 +13,7 @@ lang: "{{ lang }}"
 pageTitle: "blog"
 ---
 
-{% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+{% set t = (i18n.blog[lang] if i18n and i18n.blog and i18n.blog[lang] else {}) %}
 {% set posts = (collections.postsByLang[lang] if collections.postsByLang and collections.postsByLang[lang] else []) %}
 
 {# Featured: first post with featured:true, otherwise newest.
@@ -34,8 +34,8 @@ pageTitle: "blog"
         <div class="blog__container">
             <div class="blog__top">
                 <div class="blog__top-header">
-                    <p class="text-16 blog__label">(BLOG)</p>
-                    <h1 class="text-140 blog__title">LATEST INSIGHTS</h1>
+                    <p class="text-16 blog__label">{{ t.blog }}</p>
+                    <h1 class="text-140 blog__title">{{ t.latest_insights }}</h1>
                 </div>
 
                 {% if featured %}
