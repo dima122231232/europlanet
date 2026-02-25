@@ -1,9 +1,9 @@
 {
-    "scripts": {
-    "prebuild": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\"",
+  "scripts": {
+    "prebuild": "rimraf _site",
     "build": "eleventy",
     "dev": "eleventy --serve"
-    },
+  },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "lenis": "^1.3.17",
@@ -12,8 +12,5 @@
   },
   "devDependencies": {
     "rimraf": "^6.1.2"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }
