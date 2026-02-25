@@ -1,0 +1,102 @@
+.error-404 {
+    place-content: center;
+    align-items: center;
+    background-color: var(--color-black);
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 48px;
+    height: 100svh;
+    overflow: visible;
+    padding: 150px var(--padding);
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    opacity:0;
+}
+.error-404__image {
+    inset: 0px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+}
+.error-404__image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center center;
+    object-fit: cover;
+    opacity: 0;
+    scale: .9;
+}
+.error-404__content {
+    place-content: center space-between;
+    align-items: center;
+    display: flex;
+    flex: 1 0 0px;
+    flex-flow: column;
+    height: 1px;
+    max-width: 1400px;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+.error-404__header {
+        place-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 16px;
+    height: min-content;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+.error-404__label {
+}
+.error-404__title {
+    flex: 0 0 auto;
+    height: auto;
+    max-width: 520px;
+}
+.error-404__body{
+    place-content: flex-end center;
+    align-items: flex-end;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 10px;
+    height: min-content;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+.error-404__body-content{
+    place-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column;
+    gap: 32px;
+    height: min-content;
+    max-width: 448px;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+.error-404__text {
+    color: var(--color-gray-600);
+}
+.error-404__text .line1{ text-indent:15px;}
+.error-404__button {
+    width: 100%;
+}
+@media screen and (max-width: 801px) {.error-404__image img{opacity: .16;};.error-404__text .line1{ text-indent:0px;}}

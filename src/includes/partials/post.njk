@@ -1,0 +1,93 @@
+
+{% set lang = lang or (page.fileSlug and page.filePathStem) %}
+{% set category = category or "—" %}
+
+<main>
+  <section class="blog-post">
+    <div class="blog-post__container">
+
+      <div class="blog-post__header">
+        <div class="blog-post__header-main">
+          <div class="text-14 blog-post__category">{{ category }}</div>
+
+          <div class="blog-post__intro">
+            <h1 class="text-56 blog-post__title">{{ title }}</h1>
+
+            {% if excerpt %}
+              <p class="text-24 blog-post__subtitle">{{ excerpt }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="blog-post__divider"></div>
+
+        <div class="blog-post__meta">
+          <div class="blog-post__author">
+            <img src="/img/blog/avtor.jpg" alt="avatar" class="blog-post__author-avatar">
+            <p class="blog-post__author-name">Sri Iyem</p>
+          </div>
+
+          <p class="text-16 blog-post__date">{{ dateText or "—" }}</p>
+        </div>
+      </div>
+
+      {% if cover %}
+        <div class="blog-post__hero">
+          <div class="blog-post__hero-wrapper">
+            <img src="{{ cover }}" alt="" class="blog-post__hero-image">
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="blog-post__content">
+        {{ content | safe }}
+      </div>
+
+    </div>
+  </section>
+
+  <section class="post-more">
+    <div class="post-more__container">
+      <div class="post-more__top">
+        <h2 class="text-140 post-more__title">MORE INSIGHTS</h2>
+        {% btn "SEE ALL", "/blog", "btn-arrow post-more__button" %}
+      </div>
+
+      {# простая версия: покажем 4 последних поста этого же языка, кроме текущего #}
+      {% set posts = (collections.postsByLang[lang] if collections.postsByLang and collections.postsByLang[lang] else collections.posts) %}
+      <div class="post__list">
+        {% set shown = 0 %}
+        {% for p in posts %}
+          {% if p.url != page.url and shown < 4 %}
+            <a href="{{ p.url }}" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
+              <div class="blog__post">
+                <div class="text-14 blog__post-category">{{ p.data.category or "—" }}</div>
+
+                {% if p.data.cover %}
+                  <div class="blog__post-image">
+                    <img src="{{ p.data.cover }}" alt="" class="blog__post-image-el">
+                  </div>
+                {% endif %}
+
+                <div class="blog__post-meta">
+                <p class="text-14 blog__post-date">{{ p.data.dateText or "—" }}</p>
+
+                <div class="blog__post-content">
+                    <h4 class="text-24 blog__post-title">{{ p.data.title }}</h4>
+
+                    {% if p.data.excerpt %}
+                    <p class="text-16 blog__post-excerpt">{{ p.data.excerpt }}</p>
+                    {% endif %}
+                </div>
+                </div>
+              </div>
+            </a>
+            {% set shown = shown + 1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% include "components/work_together.html" %}
+</main>

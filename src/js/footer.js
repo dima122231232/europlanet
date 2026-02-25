@@ -1,6 +1,6 @@
 (() => {
     const p = document.querySelector(".footer__input-placeholder");
-    const b = document.querySelector(".footer__input-bg"); // без пробела
+    const b = document.querySelector(".footer__input-bg");
 
     gsap.set(p, { x:0, y:0, scale:1 });
 

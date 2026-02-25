@@ -2,11 +2,11 @@
 layout: layouts/post.html
 title: "Why Motion Design Makes Your Website Feel Alive"
 dateText: "Feb 4, 2025"
-lang: en
+lang: el
 category: "SOCIAL MEDIA"
 excerpt: "Motion helps your website feel modern and clear. Here’s why it matters and how to use it without overdoing it."
-cover: /img/blog/blog-1.jpg
-featured: false
+cover: /img/blog/blog-2.jpg
+featured: true
 
 ---
 

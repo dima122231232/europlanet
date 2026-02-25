@@ -1,26 +1,52 @@
 const btn = require("./src/includes/shortcodes/button");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("src/img");
-    eleventyConfig.addPassthroughCopy("src/css");
-    eleventyConfig.addPassthroughCopy("src/pages");
-    eleventyConfig.addPassthroughCopy("src/js");
+  /* ----------------- Passthrough ----------------- */
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/pages");
+  eleventyConfig.addPassthroughCopy("src/js");
 
-    eleventyConfig.addPassthroughCopy({ "node_modules/lenis/dist": "vendor/lenis" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/lenis/dist": "vendor/lenis",
+  });
 
-    eleventyConfig.addWatchTarget("src/css");
-    eleventyConfig.addWatchTarget("src/pages");
+  /* ----------------- Watch ----------------- */
+  eleventyConfig.addWatchTarget("src/css");
+  eleventyConfig.addWatchTarget("src/pages");
 
-    eleventyConfig.addShortcode("btn", btn);
+  /* ----------------- Shortcodes ----------------- */
+  eleventyConfig.addShortcode("btn", btn);
 
-    return {
-        dir: {
-            input: "src",
-            includes: "includes",
-            data: "_data",
-            output: "_site",
-        },
-        htmlTemplateEngine: "njk",
-        markdownTemplateEngine: "njk",
-    };
+  /* ----------------- Filters ----------------- */
+  /* ----------------- Collections ----------------- */
+  eleventyConfig.addCollection("posts", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("./src/posts/**/*.md")
+      .sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("postsByLang", (collectionApi) => {
+    const posts = collectionApi
+      .getFilteredByGlob("./src/posts/**/*.md")
+      .sort((a, b) => b.date - a.date);
+
+    return posts.reduce((acc, post) => {
+      const lang = post.data.lang || "en";
+      (acc[lang] ||= []).push(post);
+      return acc;
+    }, {});
+  });
+
+  /* ----------------- Return Config ----------------- */
+  return {
+    dir: {
+      input: "src",
+      includes: "includes",
+      data: "_data",
+      output: "_site",
+    },
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+  };
 };

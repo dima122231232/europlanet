@@ -14,6 +14,21 @@ pageTitle: "blog"
 ---
 
 {% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+{% set posts = (collections.postsByLang[lang] if collections.postsByLang and collections.postsByLang[lang] else []) %}
+
+{# Featured: first post with featured:true, otherwise newest.
+   Avoid non-standard filters (selectattr/first) for maximum compatibility. #}
+{% set featured = posts[0] if posts and posts.length else null %}
+{% set featuredPicked = false %}
+{% if posts and posts.length %}
+    {% for p in posts %}
+        {% if not featuredPicked and p and p.data and p.data.featured %}
+            {% set featured = p %}
+            {% set featuredPicked = true %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
 <main>
     <section class="blog">
         <div class="blog__container">
@@ -23,170 +38,73 @@ pageTitle: "blog"
                     <h1 class="text-140 blog__title">LATEST INSIGHTS</h1>
                 </div>
 
-                <div class="blog__featured">
-                    <div class="blog__featured-item">
-                        <a href="" class="blog__featured-link lm-hover" data-lm="VIEW BLOG">
-                            <div class="blog__featured-card">
-                                <div class="text-14 blog__category">DESIGN STRATEGY</div>
+                {% if featured %}
+                    <div class="blog__featured">
+                        <div class="blog__featured-item">
+                            <a href="{{ featured.url }}" class="blog__featured-link lm-hover" data-lm="VIEW BLOG">
+                                <div class="blog__featured-card">
+                                    <div class="text-14 blog__category">{{ featured.data.category or "—" }}</div>
 
-                                <div class="blog__image">
-                                    <img src="/img/blog/blog-2.jpg" alt="" class="blog__image-el">
-                                    <div class="blog__image-bg"></div>
-                                </div>
+                                    <div class="blog__image">
+                                        {% if featured.data.cover %}
+                                            <img src="{{ featured.data.cover }}" alt="" class="blog__image-el">
+                                        {% endif %}
+                                        <div class="blog__image-bg"></div>
+                                    </div>
 
-                                <div class="blog__meta">
-                                    <p class="text-14 blog__date">Feb 4, 2025</p>
-                                    <h3 class="blog__featured-title">
-                                        Why Clarity Beats Creativity in Web Design
-                                    </h3>
+                                    <div class="blog__meta">
+                                        <p class="text-14 blog__date">
+                                            {{ featured.data.dateText or "—" }}
+                                        </p>
+
+                                        <h3 class="blog__featured-title">
+                                            {{ featured.data.title }}
+                                        </h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                {% endif %}
             </div>
 
             <div class="blog__list">
-                <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
+                {% for p in posts %}
+                    {% if not (featured and p.url == featured.url) %}
+                        <a href="{{ p.url }}" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
+                            <div class="blog__post">
+                                <div class="text-14 blog__post-category">{{ p.data.category or "—" }}</div>
 
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
+                                {% if p.data.cover %}
+                                    <div class="blog__post-image">
+                                        <img src="{{ p.data.cover }}" alt="blog img" class="blog__post-image-el">
+                                    </div>
+                                {% endif %}
 
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
+                                <div class="blog__post-meta">
+                                    <p class="text-14 blog__post-date">
+                                        {{ p.data.dateText or "—" }}
+                                    </p>
 
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
+                                    <div class="blog__post-content">
+                                        <h4 class="text-24 blog__post-title">
+                                            {{ p.data.title }}
+                                        </h4>
+                                        {% if p.data.excerpt %}
+                                            <p class="text-16 blog__post-excerpt">
+                                                {{ p.data.excerpt }}
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
-
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
-
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
-
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                 <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
-
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
-
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
-
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                 <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
-
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
-
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
-
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
-
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
-
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
-
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                 <a href="" class="blog__post-link lm-hover" data-lm="VIEW BLOG">
-                    <div class="blog__post">
-                        <div class="text-14 blog__post-category">SOCIAL MEDIA</div>
-
-                        <div class="blog__post-image">
-                            <img src="/img/blog/blog-1.jpg" alt="blog img" class="blog__post-image-el">
-                        </div>
-
-                        <div class="blog__post-meta">
-                            <p class="text-14 blog__post-date">Feb 4, 2025</p>
-
-                            <div class="blog__post-content">
-                                <h4 class="text-24 blog__post-title">
-                                    Why Motion Design Makes Your Website Feel Alive
-                                </h4>
-                                <p class="text-16 blog__post-excerpt">
-                                    Motion helps your website feel modern and clear.
-                                    Here’s why it matters and how to use it without overdoing it.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                        </a>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </section>
     {% include "components/work_together.html" %}
 </main>
+
+<script src="/js/blog/blog.js"></script>

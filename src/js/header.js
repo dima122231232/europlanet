@@ -3,6 +3,9 @@
     CustomEase.create("header-anim","0.4, 0, 0.2, 1");
     CustomEase.create("menuEase", "0,0,1,.8");
     gsap.set(".nav__logo img",{ scale:2.6 });
+    // gsap.set(".nav",{ opacity:0,scale:.95 });
+
+    // gsap.to(".nav", {opacity:1,scale:1,duration:1.35,delay:1.5})
 
     ScrollTrigger.create({
         start: 20,
@@ -38,6 +41,7 @@
     underline(".header-menu__social-link", ".header-menu__social-text");
     underline(".footer__link");
     underline(".footer__social-link");
+    underline(".waitlist__social-link");
 
     document.querySelector('.nav__burger').addEventListener('click', () => {
     document.querySelector('.header-menu').style.transform = 'translateX(0%)';
