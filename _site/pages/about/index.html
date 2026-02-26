@@ -14,7 +14,18 @@ pageTitle: "About"
 ---
 
 {% set t = (i18n.about[lang] if i18n and i18n.about and i18n.about[lang] else {}) %}
-
+<!-- <div class="ss"></div> -->
+<div style="display: none;">
+    <div class="about-years__item--base">
+        <div class="about-years__base-content">
+            <div class="about-years__base-icon">
+                <img src="/img/about/years/1.svg" alt="svg photo home">
+            </div>
+            <p class="about-years__base-text">Company is founded</p>
+        </div>
+        <div class="about-years__base-year">2001</div>
+    </div>
+</div>
 <main>
     <section class="about-hero">
         <div class="about-hero__container">
@@ -78,6 +89,7 @@ pageTitle: "About"
             </div>
         </div>
     </section>
+    
     <section class="about-awards">
         <div class="about-awards__container">
             <h2 class="text-140 about-awards__title">{{ t.awards }}</h2>
@@ -133,6 +145,21 @@ pageTitle: "About"
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="about-years">
+        <div class="about-years__container">
+            <div class="about-years__inner">
+                <div class="about-years__effect">
+                    <div class="about-years__effect-wrapper">
+                        <div class="about-years__grid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-years-bg"><img src="/img/about/yrBg.jpg" alt="about years bg"></div>
+            </div>
+            <div class="about-years__divider"></div>
         </div>
     </section>
     <section class="about-team">
