@@ -8,17 +8,15 @@ window.scrollTo(0, 0);
 
         gsap.set(".loader-svg", { opacity: 0, y: 50 });
         gsap.delayedCall(1.3, () => document.querySelector(".hero-video video")?.play().catch(() => {}));
-  
-        
+
+        initLenis();
+        await window.initAnimations?.();
+        window.ScrollTrigger?.refresh();
+
         gsap.timeline()
-        // .to(".loader-svg", { opacity: 1, y: 0, duration: 0.5, delay: 0.3 })
-        // .to(".loader", { yPercent: -100, duration: 0.6, ease: "power2.in" }, "+=0.3")
-        // .to(".loader-svg", { y: "40vw", duration: 0.6, ease: "power2.in", opacity: 0 }, "1.1")
-        .add(() => {
-            initLenis();
-            window.initAnimations?.();
-            window.ScrollTrigger?.refresh();
-        });
+            .to(".loader-svg", { opacity: 1, y: 0, duration: 0.5, delay: 0.3 })
+            .to(".loader", { yPercent: -100, duration: 0.6, ease: "power2.in" }, "+=0.3")
+            .to(".loader-svg", { y: "40vw", duration: 0.6, ease: "power2.in", opacity: 0 }, "1.1");
     };
 
     const initLenis = () => {

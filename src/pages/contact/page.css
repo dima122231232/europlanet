@@ -329,4 +329,7 @@
     .contact__info-grid{flex-direction: column;}
     .contact__info-title{font-size: 24px;}
     .contact__section{padding: 152px var(--padding) 100px;}
+    .contact__intro .line1{text-indent:0px;}
+
+
 }

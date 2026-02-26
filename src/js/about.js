@@ -1,4 +1,4 @@
-window.initAnimations = () => {
+window.initAnimations = async () => {
 
     gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
     CustomEase.create("about-anim","0.77,0,0.175,1");
@@ -105,7 +105,7 @@ window.initAnimations = () => {
         h = 46.8,
         rot = 0,
         col = YEARS_DATA.length,
-        spead = 150,
+        spead = innerWidth < 801 ? 50 : 150,
         k = 0,
         j = 0,
         prevJ = j,
@@ -242,11 +242,11 @@ window.initAnimations = () => {
 
         gsap.set(g, { rotate: gsap.utils.clamp(-col * 9 - h, -h, j * 9 - h) });
 
-        document.querySelectorAll(".about-years__itemIn").forEach(el => {
+        gsap.utils.toArray(".about-years__itemIn").forEach(el => {
             gsap.set(el, { rotate: (+el.dataset.rin || 0) - rot });
         });
 
-        document.querySelectorAll(".about-years__base-content").forEach(el => {
+        gsap.utils.toArray(".about-years__base-content").forEach(el => {
             gsap.set(el, { rotate: (+el.dataset.rin || 0) - rot });
         });
     };
@@ -328,7 +328,7 @@ window.initAnimations = () => {
 
     setRotation();
     startAuto();
-
+    await new Promise(r => requestAnimationFrame(r));
 
 
 
