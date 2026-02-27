@@ -14,6 +14,7 @@ pageTitle: "About"
 ---
 
 {% set t = (i18n.about[lang] if i18n and i18n.about and i18n.about[lang] else {}) %}
+{% set base = ('' if lang == locales.default else '/' ~ lang) %}
 <!-- <div class="ss"></div> -->
 <div style="display: none;">
     <div class="about-years__item--base">
@@ -190,7 +191,7 @@ pageTitle: "About"
 
                             <div class="about-team__socials">
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,7 +202,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +214,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +245,7 @@ pageTitle: "About"
 
                             <div class="about-team__socials">
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -255,7 +256,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -267,7 +268,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -298,7 +299,7 @@ pageTitle: "About"
 
                             <div class="about-team__socials">
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -309,7 +310,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,7 +322,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,7 +353,7 @@ pageTitle: "About"
 
                             <div class="about-team__socials">
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -363,7 +364,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -375,7 +376,7 @@ pageTitle: "About"
                                 </div>
 
                                 <div class="about-team__social">
-                                    <a class="about-team__link" href="">
+                                    <a class="about-team__link" href="mailto:hello@nakula.com">
                                         <div class="about-team__link-bg"></div>
                                         <div class="about-team__link-icon">
                                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">

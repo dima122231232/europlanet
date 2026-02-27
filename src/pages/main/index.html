@@ -15,6 +15,7 @@ pageTitle: "Main"
 
 <main>
     {% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
+{% set base = ('' if lang == locales.default else '/' ~ lang) %}
     <!-- <h1>{{ t.home.h1}}</h1>
     <p>{{ t.home.p1}}</p> -->
     <section class="hero">
@@ -76,9 +77,9 @@ pageTitle: "Main"
                             <div class="work__index"><h6 class="text-140">03</h6><div class="work__dot"></div></div>
                         </div>
                         <div class="work__clients">
-                            <a href="" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">{{ t.home.bima }}</div></a>
-                            <a href="" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">{{ t.home.arjuna }}</div></a>
-                            <a href="" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">{{ t.home.mandala }}</div></a>
+                            <a href="{{ base }}/works/" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">{{ t.home.bima }}</div></a>
+                            <a href="{{ base }}/works/" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">{{ t.home.arjuna }}</div></a>
+                            <a href="{{ base }}/works/" class="text-14 work__client"><div class="work__line"></div><div class="work__client-text">{{ t.home.mandala }}</div></a>
                         </div>
                     </div>
                     <div class="work__details">
@@ -97,7 +98,7 @@ pageTitle: "Main"
             </div>
             <div class="work__right">
                 <div class="work__item">
-                    <a href="" class="work__link lm-hover" data-lm="VIEW PROJECT">
+                    <a href="{{ base }}/works/" class="work__link lm-hover" data-lm="VIEW PROJECT">
                         <div class="work__thumb">
                             <div class="work__image">
                                 <img src="/img/home/work-img1.jpg" alt="work-image" >
@@ -106,7 +107,7 @@ pageTitle: "Main"
                     </a>
                 </div>
                 <div class="work__item">
-                    <a href="" class="work__link lm-hover" data-lm="VIEW PROJECT">
+                    <a href="{{ base }}/works/" class="work__link lm-hover" data-lm="VIEW PROJECT">
                         <div class="work__thumb">
                             <div class="work__image">
                                 <img src="/img/home/work-img2.jpg" alt="work-image" >
@@ -115,7 +116,7 @@ pageTitle: "Main"
                     </a>
                 </div>
                 <div class="work__item">
-                    <a href="" class="work__link lm-hover" data-lm="VIEW PROJECT">
+                    <a href="{{ base }}/works/" class="work__link lm-hover" data-lm="VIEW PROJECT">
                         <div class="work__thumb">
                             <div class="work__image">
                                 <img src="/img/home/work-img3.jpg" alt="work-image" >
@@ -126,7 +127,7 @@ pageTitle: "Main"
             </div>
         </div>
         <div class="work__body-adaptiv">
-            <a href="" class="work__body-adaptiv--link">
+            <a href="{{ base }}/works/" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
                     <img src="/img/home/work-img1.jpg" alt="" class="work__adaptiv-img" >
                     <div class="work__adaptiv-meta">
@@ -135,7 +136,7 @@ pageTitle: "Main"
                     </div>
                 </div>
             </a>
-            <a href="" class="work__body-adaptiv--link">
+            <a href="{{ base }}/works/" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
                     <img src="/img/home/work-img2.jpg" alt="" class="work__adaptiv-img" >
                     <div class="work__adaptiv-meta">
@@ -144,7 +145,7 @@ pageTitle: "Main"
                     </div>
                 </div>
             </a>
-            <a href="" class="work__body-adaptiv--link">
+            <a href="{{ base }}/works/" class="work__body-adaptiv--link">
                 <div class="work__body-adaptiv--indexs">
                     <img src="/img/home/work-img3.jpg" alt="" class="work__adaptiv-img" >
                     <div class="work__adaptiv-meta">
@@ -730,12 +731,12 @@ pageTitle: "Main"
                     <h2 class="text-140 blog-preview__title">{{ t.home.latest_insights }}</h2>
                     <p class="text-16 blog-preview__label">{{ t.home.blog }}</p>
                 </div>
-                 {% btn "SEE ALL", "//", "btn-arrow blog-preview__button" %}
+                 {% btn "SEE ALL", base ~ "/blog/", "btn-arrow blog-preview__button" %}
             </div>
 
             <div class="blog-preview__body">
                 <div class="blog-preview__column blog-preview__column--left lm-blog-preview--animation">
-                    <a href="" class="blog-preview__card lm-hover" data-lm="VIEW BLOG">
+                    <a href="{{ base }}/blog/" class="blog-preview__card lm-hover" data-lm="VIEW BLOG">
                         <div class="blog-preview__card-wrapper">
                             <div class="blog-preview__card-inner">
                                 <div class="blog-preview__image">
@@ -757,7 +758,7 @@ pageTitle: "Main"
                 </div>
 
                 <div class="blog-preview__column blog-preview__column--right">
-                    <a href="" class="blog-preview__item lm-hover lm-blog-preview--animation" data-lm="VIEW BLOG">
+                    <a href="{{ base }}/blog/" class="blog-preview__item lm-hover lm-blog-preview--animation" data-lm="VIEW BLOG">
                         <div class="blog-preview__item-image">
                             <img src="/img/blog/blog-1.jpg" alt="bg" class="blog-preview__item-img" >
                         </div>
@@ -771,7 +772,7 @@ pageTitle: "Main"
                         </div>
                         <div class="blog-preview__tag"><p class="text-14 blog-preview__tag-text">{{ t.home.design_strategy }}</p></div>
                     </a>
-                    <a href="" class="blog-preview__item lm-hover lm-blog-preview--animation" data-lm="VIEW BLOG">
+                    <a href="{{ base }}/blog/" class="blog-preview__item lm-hover lm-blog-preview--animation" data-lm="VIEW BLOG">
                         <div class="blog-preview__item-image">
                             <img src="/img/home/blog-photo1.jpg" alt="bg" class="blog-preview__item-img" >
                         </div>
@@ -792,7 +793,7 @@ pageTitle: "Main"
     </section>
     {% include "components/work_together.html" %}
     
-    <div style="height: 1vh;"></div>
+    <!-- <div style="height: 1vh;"></div> -->
 </main>
 
 <script src="/js/home.js"></script>

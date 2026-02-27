@@ -1,0 +1,29 @@
+---
+layout: layout.html
+pageTitle: "Terms of Service"
+
+pagination:
+  data: locales.list
+  size: 1
+  alias: lang
+
+permalink: "{% if lang == locales.default %}/terms/{% else %}/{{ lang }}/terms/{% endif %}"
+---
+
+{% set title = "Terms of Service" if lang == locales.default else "Όροι Χρήσης" %}
+
+<main>
+  <section class="legal" style="padding: 120px 0;">
+    <div class="container" style="max-width: 980px; margin: 0 auto; padding: 0 24px;">
+      <h1 class="text-56" style="margin: 0 0 24px;">{{ title }}</h1>
+      <p class="text-16" style="margin: 0 0 16px;">
+        {% if lang == locales.default %}
+          This page is a placeholder. Replace this text with your terms of service content.
+        {% else %}
+          Αυτή η σελίδα είναι προσωρινή. Αντικαταστήστε αυτό το κείμενο με το περιεχόμενο της σελίδας.
+        {% endif %}
+      </p>
+      {% btn "BACK TO HOME", base ~ "/", "btn-arrow" %}
+    </div>
+  </section>
+</main>

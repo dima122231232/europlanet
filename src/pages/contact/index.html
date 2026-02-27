@@ -14,6 +14,7 @@ pageTitle: "Contact"
 ---
 
 {% set t = (i18n.contact[lang] if i18n and i18n.contact and i18n.contact[lang] else {}) %}
+{% set base = ('' if lang == locales.default else '/' ~ lang) %}
 
 <main >
     <section class="contact__section">
@@ -51,14 +52,14 @@ pageTitle: "Contact"
                         </label>
 
                         <div class="contact__actions">
-                            <p class="text-16 contact__terms">{{ t.by_submitting_you_agree_to }}<br>{{ t.our }} <a href="">{{ t.terms_of_service }}</a> {{ t.and }} <a href="">{{ t.privacy_policy }}</a></p>
+                            <p class="text-16 contact__terms">{{ t.by_submitting_you_agree_to }}<br>{{ t.our }} <a href="{{ base }}/terms/">{{ t.terms_of_service }}</a> {{ t.and }} <a href="{{ base }}/privacy/">{{ t.privacy_policy }}</a></p>
                             {% btn "SUBSCRIBE", "//", "btn-arrow contact__button" %}
                         </div>
                     </form>
 
                     <p class="text-24 contact__alternative">
                         {{ t.prefer_to_hop_on_a_call }}
-                        <a class="contact__link" href="">{{ t.book_a_call }}</a>
+                        <a class="contact__link" href="mailto:hello@nakula.com">{{ t.book_a_call }}</a>
                         {{ t.instead }}
                     </p>
                 </div>

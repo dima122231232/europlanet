@@ -1,8 +1,14 @@
 ---
-permalink: 404.html
 layout: layout.html
 pageCss: /pages/404/page.css
 pageTitle: "404"
+
+pagination:
+  data: locales.list
+  size: 1
+  alias: lang
+
+permalink: "{% if lang == locales.default %}404.html{% else %}{{ lang }}/404.html{% endif %}"
 ---
 
 {% set t = (i18n.not_found[lang] if i18n and i18n.not_found and i18n.not_found[lang] else {}) %}
@@ -15,12 +21,12 @@ pageTitle: "404"
         <div class="error-404__content">
             <div class="error-404__header">
                 <p class="text-16 error-404__label">(404)</p>
-                <h1 class="text-140 error-404__title">PAGE NOT FOUND</h1>
+                <h1 class="text-140 error-404__title">{{ t.page_not_found }}</h1>
             </div>
             <div class="error-404__body">
                 <div class="error-404__body-content">
-                    <p class="text-24 error-404__text">The page you are looking for does not exist or may have been moved. Let’s get back home.</p>
-                    {% btn "BACK TO HOME", "/", "btn-arrow error-404__button" %}
+                    <p class="text-24 error-404__text">{{ t.the_page_you_are_looking_for }}</p>
+                    {% btn "BACK TO HOME", base ~ "/", "btn-arrow error-404__button" %}
                 </div>
             </div>
         </div>

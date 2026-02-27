@@ -14,13 +14,14 @@ pageTitle: "Works"
 ---
 
 {% set t = (i18n.works[lang] if i18n and i18n.works and i18n.works[lang] else {}) %}
+{% set base = ('' if lang == locales.default else '/' ~ lang) %}
 
 <main>
     <section class="works__section">
         <div class="works__container">
             <h1 class="text-140 works__title">{{ t.our_works }}</h1>
             <div class="works__grid">
-                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                <a class="works__link lm-hover" href="{{ base }}/contact/" data-lm="VIEW PROJECT">
                     <div class="works__image-wrap">
                         <img class="works__image" src="/img/works/work1.jpg" alt="works image">
                     </div>
@@ -29,7 +30,7 @@ pageTitle: "Works"
                         <p class="text-24 works__description">{{ t.personal_portfolio_website_for_talented_design }}</p>
                     </div>
                 </a>
-                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                <a class="works__link lm-hover" href="{{ base }}/contact/" data-lm="VIEW PROJECT">
                     <div class="works__image-wrap">
                         <img class="works__image" src="/img/works/work2.jpg" alt="works image">
                     </div>
@@ -38,7 +39,7 @@ pageTitle: "Works"
                         <p class="text-24 works__description">{{ t.website_and_branding_for_ai_automation }}</p>
                     </div>
                 </a>
-                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                <a class="works__link lm-hover" href="{{ base }}/contact/" data-lm="VIEW PROJECT">
                     <div class="works__image-wrap">
                         <img class="works__image" src="/img/works/work3.jpg" alt="works image">
                     </div>
@@ -47,7 +48,7 @@ pageTitle: "Works"
                         <p class="text-24 works__description">{{ t.website_and_branding_for_design_agency }}</p>
                     </div>
                 </a>
-                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                <a class="works__link lm-hover" href="{{ base }}/contact/" data-lm="VIEW PROJECT">
                     <div class="works__image-wrap">
                         <img class="works__image" src="/img/works/work4.jpg" alt="works image">
                     </div>
@@ -56,7 +57,7 @@ pageTitle: "Works"
                         <p class="text-24 works__description">{{ t.website_and_branding_for_awardwinning_fashion }}</p>
                     </div>
                 </a>
-                <a class="works__link lm-hover" href="" data-lm="VIEW PROJECT">
+                <a class="works__link lm-hover" href="{{ base }}/contact/" data-lm="VIEW PROJECT">
                     <div class="works__image-wrap">
                         <img class="works__image" src="/img/works/work5.jpg" alt="works image">
                     </div>

@@ -1,5 +1,6 @@
 <!doctype html>
 {% set lang = lang | default(locales.default) %}
+{% set base = ('' if lang == locales.default else '/' ~ lang) %}
 {% set t = (i18n.main[lang] if i18n and i18n.main and i18n.main[lang] else {}) %}
 
 <html lang="{{ lang }}">
@@ -53,7 +54,7 @@
         </svg>
     </div>
 
-    <div class="fake-body">
+    <div class="fake-body" style="position: relative;">
         {% include "components/header.html" %}
 
         {{ content | safe }}

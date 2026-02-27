@@ -78,7 +78,7 @@
                 onComplete: done
             })
             .set(loader, { yPercent: 100 })
-            .to(body, { opacity: 0, y: -200, duration: 0.4, ease: "power2.in" }, 0)
+            .to(body, { opacity: 0, top: -200, duration: 0.4, ease: "power2.in" }, 0)
             .to(loader, { yPercent: 0, duration: 0.4, ease: "power2.in" }, 0);
         };
 
