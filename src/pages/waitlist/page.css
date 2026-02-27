@@ -332,5 +332,6 @@
     .waitlist__bottom{flex-direction: column;order: 2;place-content: flex-start center;align-items: flex-start;gap: 16px;}
     .waitlist__form{padding: 16px;}
     .waitlist-bg{opacity:.16;}
+    .waitlist__text .line1{text-indent:0px;}
     .waitlist-main{height: min-content;padding: 24px 16px;}
 }

@@ -4,11 +4,13 @@ window.initAnimations = async () => {
     CustomEase.create("about-anim","0.77,0,0.175,1");
 
     // 1------------------------------
-    gsap.fromTo(".about-hero",{y:0,scale:1,opacity:1},{y:-100,scale:.9,opacity:0,ease:"none",scrollTrigger:{trigger:".about-hero",start:"top top",end:"+=100%",scrub:0}});
-    gsap.set(".about-hero__title, .about-hero__description", {opacity:1});
-    Copy(".about-hero__title", {opacity:0});
-    Copy(".about-hero__description",{type:"lines",step:.25,y:30,opacity:0,duration:1.35,start:"top 100%"});
-    
+    afterLoader(() => {
+        gsap.fromTo(".about-hero",{y:0,scale:1,opacity:1},{y:-100,scale:.9,opacity:0,ease:"none",scrollTrigger:{trigger:".about-hero",start:"top top",end:"+=100%",scrub:0}});
+        gsap.set(".about-hero__title, .about-hero__description", {opacity:1});
+        Copy(".about-hero__title", {opacity:0});
+        Copy(".about-hero__description",{type:"lines",step:.25,y:30,opacity:0,duration:1.35,start:"top 100%"});
+        gsap.fromTo(".about-hero__image",{opacity:0}, {opacity:3,duration:5});
+    });
     // 2------------------------------
     BlockReveal(".about-values__numbers",{opacity:0,slide:true,device:"desktop",start:"top 90%"});
     Copy(".about-values__title-first", {start:"top 90%",opacity:0});

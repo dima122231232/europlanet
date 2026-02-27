@@ -1,9 +1,11 @@
 window.initAnimations = () => {
-    gsap.set(".blog",{opacity:1})
-    Copy(".blog__title", {opacity:0,delay:.1});
-    Copy(".blog__label", {opacity:0});
-    BlockReveal(".blog__featured",{opacity:0,y:100,delay:.05,scroll:false});
-    BlockReveal(".blog__list",{opacity:0,y:100,delay:.15,scroll:false});
+    afterLoader(() => {
+        gsap.set(".blog",{opacity:1})
+        Copy(".blog__title", {opacity:0,delay:.1});
+        Copy(".blog__label", {opacity:0});
+        BlockReveal(".blog__featured",{opacity:0,y:100,delay:.05,scroll:false});
+        BlockReveal(".blog__list",{opacity:0,y:100,delay:.15,scroll:false});
+    });
 
     //work-together----------------------------------
     {

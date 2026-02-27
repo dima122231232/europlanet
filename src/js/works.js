@@ -3,10 +3,11 @@ window.initAnimations = () => {
     gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
     CustomEase.create("works-anim", ".8, .2, .3, 1");
     //1----------------------------------
+    afterLoader(() => {
     gsap.set(".works__container", {opacity:1});
-    Copy(".works__title", {opacity:0});
-    BlockReveal(".works__link",{opacity:0,y:30,scroll:false});
-
+        Copy(".works__title", {opacity:0});
+        BlockReveal(".works__link",{opacity:0,y:30,scroll:false});
+    });
     document.querySelectorAll(".works__link").forEach(el => {
         const image = el.querySelector(".works__image-wrap");
         const in_image = el.querySelector(".works__image");

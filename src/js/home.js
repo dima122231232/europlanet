@@ -14,12 +14,13 @@ window.initAnimations = () => {
         return () => ctx.revert();
     });
     // home------------------------------
-    TextReveal(".hero-reveal",{duration:2,scaleY:.7,step:0.01,y:-20,blur:10,opacity:0,delay:.2});
-    TextReveal(".hero__title",{step:0.05,y:-10,opacity:0});
+    afterLoader(() => {
+        TextReveal(".hero-reveal",{duration:2,scaleY:.7,step:0.01,y:-20,blur:10,opacity:0,delay:.2});
+        TextReveal(".hero__title",{step:0.05,y:-10,opacity:0});
 
-    gsap.fromTo(".hero__content--bottom, .hero-video",{scale:.9,opacity:0},{scale:1,opacity:1,ease:"power2.out",duration:1});
-    gsap.fromTo(".hero",{y:0,scale:1,opacity:1},{y:-100,scale:.9,opacity:0,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"+=50%",scrub:1}});
-
+        gsap.fromTo(".hero__content--bottom, .hero-video",{scale:.9,opacity:0},{scale:1,opacity:1,ease:"power2.out",duration:1});
+        gsap.fromTo(".hero",{y:0,scale:1,opacity:1},{y:-100,scale:.9,opacity:0,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"+=50%",scrub:1}});
+    });
     {
         const ul = document.querySelector(".hero__trusted-list");
         if (ul && window.gsap) {

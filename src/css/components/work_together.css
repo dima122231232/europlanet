@@ -88,8 +88,13 @@
 .work-together__text .line1{
     text-indent:30px;
 }
-.work-together__button{width: 100%;}
-.work-together__button  .btn__block{justify-content: center;}
+.work-together__button{width: 100%;height: 64px;background-color: var(--color-accent);}
+.work-together__button .btn__label{font-size: 24px;color: var(--color-accent);}
+.work-together__button:hover .btn__label{color: var(--color-black);}
+.work-together__button .btn__link{background-color: var(--color-surface-dark);}
+.work-together__button .btn__text {height: 24px;}
+.work-together__button .btn__block{justify-content: center;}
+.work-together__button .btn__bg{background-color: var(--color-accent);}
 .work-together__button svg{display: none;}
 
 
