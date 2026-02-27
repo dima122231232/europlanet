@@ -1,6 +1,6 @@
 window.initAnimations = () => {
-    gsap.set(".waitlist-main",{opacity:1})
     afterLoader(() => {
+        gsap.set(".waitlist-main",{opacity:1})
         Copy(".waitlist__label", {opacity:0});
         Copy(".waitlist__title", {opacity:0,delay:.05});
         Copy(".waitlist__text",{type:"lines",step:.15,y:30,opacity:0,duration:1,start:"top 100%"});
