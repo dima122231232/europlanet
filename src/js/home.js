@@ -36,12 +36,32 @@ window.initAnimations = () => {
             Object.assign(track.style, { display: "flex", width: "max-content", willChange: "transform" });
             [ul, clone].forEach(n => Object.assign(n.style, { flex: "0 0 auto", width: "auto" }));
 
-            let tl;
-            const build = () => (tl?.kill(), gsap.set(track,{x:0}), tl = gsap.to(track,{x:-ul.scrollWidth,duration:ul.scrollWidth/30,ease:"none",repeat:-1}));
-            const onResize = () => requestAnimationFrame(build);
+            let tl, lastW = 0;
+
+            const build = () => {
+                const w = document.documentElement.clientWidth;
+                if (w === lastW && tl) return;
+                lastW = w;
+
+                const p = tl ? tl.progress() : 0;
+                tl?.kill();
+
+                const dist = ul.scrollWidth || 1;
+                const dur = dist / 30;
+
+                tl = gsap.to(track, { x: -dist, duration: dur, ease: "none", repeat: -1 });
+                tl.progress(p);
+            };
 
             requestAnimationFrame(build);
-            addEventListener("resize", onResize);
+
+            let raf = 0;
+            const onResize = () => {
+                cancelAnimationFrame(raf);
+                raf = requestAnimationFrame(build);
+            };
+
+            addEventListener("resize", onResize, { passive: true });
 
         }
     }

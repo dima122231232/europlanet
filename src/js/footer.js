@@ -16,7 +16,7 @@ afterLoader(() => {
         });
     });
     
-
-    gsap.fromTo(".footer__background",{y:-350},{y:innerWidth<801?0:-60,ease:"none",immediateRender:false,scrollTrigger:{trigger:".footer__background",start:"-100% bottom",end:"100% bottom",scrub:0,invalidateOnRefresh:true}});
+    innerWidth>=801&&gsap.fromTo(".footer__background",{y:-350},{y:-60,ease:"none",immediateRender:false,scrollTrigger:{trigger:".footer__background",start:"-100% bottom",end:"100% bottom",scrub:0}});
+    // gsap.fromTo(".footer__background",{y:-350},{y:innerWidth<801?0:-60,ease:"none",immediateRender:false,scrollTrigger:{trigger:".footer__background",start:"-100% bottom",end:"100% bottom",scrub:0}});
     ScrollTrigger.refresh();
 });

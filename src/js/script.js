@@ -23,11 +23,9 @@ window.__loaderDone = false;
 
         gsap.timeline({
             onComplete: () => {
-                // --- ДОБАВИЛИ ---
                 window.__loaderDone = true;
                 window.__loaderQueue?.forEach(fn => fn());
                 window.__loaderQueue = [];
-                // ----------------
             }
         })
             .to(".loader-svg", { opacity: 1, y: 0, duration: 0.5, delay: 0.3 })
