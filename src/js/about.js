@@ -63,40 +63,72 @@ window.initAnimations = async () => {
     });
 
     //about-years----------------------------------  
+    Copy(".about-years__title", {start:"top 80%",duration:1,opacity:0});
+
     const YEARS_DATA = [
-        { year: "1992", text: "Company is founded", icon: "/img/about/years/1.svg", alt: "Company founded" },
-        { year: "1993", text: "First big milestone", icon: "/img/about/years/1.svg", alt: "Milestone" },
-        { year: "1994", text: "Expansion", icon: "/img/about/years/1.svg", alt: "Expansion" },
-        { year: "1995", text: "New office", icon: "/img/about/years/1.svg", alt: "New office" },
-        { year: "1996", text: "International projects", icon: "/img/about/years/1.svg", alt: "International projects" },
-        { year: "1997", text: "Awards", icon: "/img/about/years/1.svg", alt: "Awards" },
-        { year: "1998", text: "New direction", icon: "/img/about/years/1.svg", alt: "New direction" },
-        { year: "1999", text: "Today", icon: "/img/about/years/1.svg", alt: "Today" },
-        { year: "2000", text: "Company is founded", icon: "/img/about/years/1.svg", alt: "Company founded" },
-        { year: "2001", text: "First big milestone", icon: "/img/about/years/1.svg", alt: "Milestone" },
-        { year: "2002", text: "Expansion", icon: "/img/about/years/1.svg", alt: "Expansion" },
-        { year: "2003", text: "New office", icon: "/img/about/years/1.svg", alt: "New office" },
-        { year: "2004", text: "International projects", icon: "/img/about/years/1.svg", alt: "International projects" },
-        { year: "2005", text: "Awards", icon: "/img/about/years/1.svg", alt: "Awards" },
-        { year: "2006", text: "New direction", icon: "/img/about/years/1.svg", alt: "New direction" },
-        { year: "2007", text: "Today", icon: "/img/about/years/1.svg", alt: "Today" },
-        { year: "2008", text: "Company is founded", icon: "/img/about/years/1.svg", alt: "Company founded" },
-        { year: "2009", text: "First big milestone", icon: "/img/about/years/1.svg", alt: "Milestone" },
-        { year: "2010", text: "Expansion", icon: "/img/about/years/1.svg", alt: "Expansion" },
-        { year: "2011", text: "New office", icon: "/img/about/years/1.svg", alt: "New office" },
-        { year: "2012", text: "International projects", icon: "/img/about/years/1.svg", alt: "International projects" },
-        { year: "2013", text: "Awards", icon: "/img/about/years/1.svg", alt: "Awards" },
-        { year: "2014", text: "New direction", icon: "/img/about/years/1.svg", alt: "New direction" },
-        { year: "2015", text: "Today", icon: "/img/about/years/1.svg", alt: "Today" },
-        { year: "2016", text: "Company is founded", icon: "/img/about/years/1.svg", alt: "Company founded" },
-        { year: "2017", text: "First big milestone", icon: "/img/about/years/1.svg", alt: "Milestone" },
-        { year: "2018", text: "Expansion", icon: "/img/about/years/1.svg", alt: "Expansion" },
-        { year: "2019", text: "New office", icon: "/img/about/years/1.svg", alt: "New office" },
-        { year: "2020", text: "International projects", icon: "/img/about/years/1.svg", alt: "International projects" },
-        { year: "2021", text: "Awards", icon: "/img/about/years/1.svg", alt: "Awards" },
-        { year: "2022", text: "New direction", icon: "/img/about/years/1.svg", alt: "New direction" },
-        
+        { year: "1992", text: "Company is founded", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been used as the industry’s standard text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. This marked the beginning of a long journey full of innovation and growth.", icon: "/img/about/years/1.svg", alt: "Company founded" },
+
+        { year: "1993", text: "First big milestone", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. During this year, the company achieved its first major milestone, proving that dedication and strategic planning could transform a small idea into something much bigger and more sustainable for the future.", icon: "/img/about/years/1.svg", alt: "Milestone" },
+
+        { year: "1994", text: "Expansion", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. The company began expanding into new markets, building partnerships and strengthening its reputation. This expansion laid the groundwork for international collaboration and steady long-term growth.", icon: "/img/about/years/1.svg", alt: "Expansion" },
+
+        { year: "1995", text: "New office", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Opening a new office symbolized stability and ambition, providing more space for innovation, collaboration, and the growing team that supported the company’s evolving vision.", icon: "/img/about/years/1.svg", alt: "New office" },
+
+        { year: "1996", text: "International projects", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This year marked the start of international projects, expanding beyond local boundaries and introducing new cultural perspectives that enriched both creativity and strategic development.", icon: "/img/about/years/1.svg", alt: "International projects" },
+
+        { year: "1997", text: "Awards", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Recognition came in the form of awards and public acknowledgment, validating the team’s hard work and positioning the company as a respected name within the industry.", icon: "/img/about/years/1.svg", alt: "Awards" },
+
+        { year: "1998", text: "New direction", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A strategic shift introduced a new direction, redefining priorities and opening doors to innovative approaches that would shape the company’s future for years to come.", icon: "/img/about/years/1.svg", alt: "New direction" },
+
+        { year: "1999", text: "Today", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. By the end of the decade, the company had established itself as a forward-thinking organization, ready to embrace the challenges of a rapidly changing digital world.", icon: "/img/about/years/1.svg", alt: "Today" },
+
+        { year: "2000", text: "Company is founded", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Entering a new millennium brought renewed energy and a strong commitment to innovation, ensuring that the company remained adaptable and resilient in a competitive market.", icon: "/img/about/years/1.svg", alt: "Company founded" },
+
+        { year: "2001", text: "First big milestone", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Achieving another milestone reinforced the company’s strategic direction and demonstrated consistent performance, customer trust, and sustainable development.", icon: "/img/about/years/1.svg", alt: "Milestone" },
+
+        { year: "2002", text: "Expansion", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Growth continued steadily, with new partnerships and expanded services that strengthened market presence and diversified the company’s portfolio.", icon: "/img/about/years/1.svg", alt: "Expansion" },
+
+        { year: "2003", text: "New office", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A new workspace created opportunities for collaboration, innovation, and cultural development within the team, fostering creativity and shared ambition.", icon: "/img/about/years/1.svg", alt: "New office" },
+
+        { year: "2004", text: "International projects", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Global partnerships became stronger, and the company embraced cross-border cooperation, enriching both experience and technical expertise.", icon: "/img/about/years/1.svg", alt: "International projects" },
+
+        { year: "2005", text: "Awards", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Industry awards highlighted the company’s consistent performance and innovation, strengthening brand credibility and public recognition.", icon: "/img/about/years/1.svg", alt: "Awards" },
+
+        { year: "2006", text: "New direction", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A refined strategic direction emphasized digital transformation, efficiency, and creative experimentation in emerging markets.", icon: "/img/about/years/1.svg", alt: "New direction" },
+
+        { year: "2007", text: "Today", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. The company stood stronger than ever, equipped with experience, global partnerships, and a clear vision for sustainable growth.", icon: "/img/about/years/1.svg", alt: "Today" },
+
+        { year: "2008", text: "Company is founded", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Despite economic challenges, resilience and innovation allowed the company to maintain stability and prepare for future breakthroughs.", icon: "/img/about/years/1.svg", alt: "Company founded" },
+
+        { year: "2009", text: "First big milestone", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Another key milestone reaffirmed the strength of the company’s long-term strategy and adaptability during uncertain times.", icon: "/img/about/years/1.svg", alt: "Milestone" },
+
+        { year: "2010", text: "Expansion", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Expansion efforts focused on innovation, digital services, and building long-term client relationships across multiple industries.", icon: "/img/about/years/1.svg", alt: "Expansion" },
+
+        { year: "2011", text: "New office", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A modern office environment reflected the company’s forward-thinking culture and commitment to employee well-being and productivity.", icon: "/img/about/years/1.svg", alt: "New office" },
+
+        { year: "2012", text: "International projects", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Large-scale international collaborations expanded expertise and strengthened the company’s presence in competitive global markets.", icon: "/img/about/years/1.svg", alt: "International projects" },
+
+        { year: "2013", text: "Awards", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Recognition at international events solidified the company’s reputation as a trusted and innovative partner.", icon: "/img/about/years/1.svg", alt: "Awards" },
+
+        { year: "2014", text: "New direction", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Strategic adjustments introduced new services, technologies, and creative methodologies aligned with evolving client needs.", icon: "/img/about/years/1.svg", alt: "New direction" },
+
+        { year: "2015", text: "Today", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Continuous innovation and dedication allowed the company to maintain a strong market position and sustainable growth trajectory.", icon: "/img/about/years/1.svg", alt: "Today" },
+
+        { year: "2016", text: "Company is founded", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. This period reinforced long-term strategy and strengthened internal processes, ensuring efficiency and consistent quality delivery.", icon: "/img/about/years/1.svg", alt: "Company founded" },
+
+        { year: "2017", text: "First big milestone", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A breakthrough year that reflected maturity, stability, and the successful implementation of strategic innovations.", icon: "/img/about/years/1.svg", alt: "Milestone" },
+
+        { year: "2018", text: "Expansion", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Expansion into new verticals diversified revenue streams and strengthened long-term sustainability.", icon: "/img/about/years/1.svg", alt: "Expansion" },
+
+        { year: "2019", text: "New office", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A refreshed workspace fostered collaboration, innovation, and a culture of continuous improvement.", icon: "/img/about/years/1.svg", alt: "New office" },
+
+        { year: "2020", text: "International projects", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Even during global challenges, international projects demonstrated resilience, adaptability, and technological readiness.", icon: "/img/about/years/1.svg", alt: "International projects" },
+
+        { year: "2021", text: "Awards", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Continued recognition highlighted excellence, innovation, and a commitment to delivering outstanding results.", icon: "/img/about/years/1.svg", alt: "Awards" },
+
+        { year: "2022", text: "New direction", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. A renewed strategic focus embraced digital transformation, sustainability, and long-term global collaboration.", icon: "/img/about/years/1.svg", alt: "New direction" }
     ];
+
     const main_grid = document.querySelectorAll(".about-years__grid"),
         w = document.querySelector(".about-years__effect-wrapper"),
         g = document.querySelector(".about-years__grid");
@@ -139,15 +171,17 @@ window.initAnimations = async () => {
             }
             autoIndex += 1;
             goToIndex(autoIndex);
-        }, 3500);
+        }, 2500);
     };
 
     const fillBase = (baseEl, data) => {
         const txt = baseEl.querySelector(".about-years__base-text");
+        const desc = baseEl.querySelector(".about-years__base-description");
         const year = baseEl.querySelector(".about-years__base-year");
         const img = baseEl.querySelector(".about-years__base-icon img");
 
         if (txt) txt.textContent = data?.text ?? "";
+        if (desc) desc.textContent = data?.description ?? "";
         if (year) year.textContent = data?.year ?? "";
         if (img) {
             img.src = data?.icon ?? "";
@@ -315,6 +349,7 @@ window.initAnimations = async () => {
             .to(op[index].querySelector(".about-years__base-content"), { backgroundColor: "rgb(0, 153, 255)" }, 0)
             .to(op[index].querySelector(".about-years__base-year"), { opacity: 1 }, 0)
             .to(op[index].querySelector(".about-years__base-text"), { opacity: 1 }, 0)
+            .to(op[index].querySelector(".about-years__base-description"), { opacity: 1 }, 0)
             .to(op[index].querySelector(".about-years__base-icon"), { opacity: 1, transform: "translateX(-50%) translateY(calc(100% + 20px)) scale(1.5)" }, 0);
 
         if (k !== index) {
@@ -322,6 +357,7 @@ window.initAnimations = async () => {
                 .to(op[k].querySelector(".about-years__base-content"), { backgroundColor: "rgb(161, 161, 161)" }, 0)
                 .to(op[k].querySelector(".about-years__base-year"), { opacity: 0.5 }, 0)
                 .to(op[k].querySelector(".about-years__base-text"), { opacity: 0 }, 0)
+                .to(op[k].querySelector(".about-years__base-description"), { opacity: 0 }, 0)
                 .to(op[k].querySelector(".about-years__base-icon"), { opacity: 0.5, transform: "translateX(-50%) translateY(calc(100% + 4px)) scale(1)" }, 0);
         }
 
@@ -329,10 +365,17 @@ window.initAnimations = async () => {
     };
 
     setRotation();
-    startAuto();
+
+    const section = w.closest(".about-years") || w;
+
+    const io = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) startAuto();
+        else if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    }, { threshold: 0.25 });
+
+    io.observe(section);
+
     await new Promise(r => requestAnimationFrame(r));
-
-
 
 
 

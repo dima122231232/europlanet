@@ -99,5 +99,4 @@ body:not(.is-home) .nav__logo img {transform: scale(1) !important;}
     .text-140{font-size:80px;}
     .text-80{font-size: 56px;}
     body:not(.is-home) .nav__label {display: none !important;}
-    .about-years__item--base{pointer-events: none;}
 }
